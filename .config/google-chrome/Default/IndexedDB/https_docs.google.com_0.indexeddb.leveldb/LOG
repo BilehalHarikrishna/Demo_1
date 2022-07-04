@@ -1,0 +1,15 @@
+2022/07/01-15:08:27.113 4d9f Reusing MANIFEST /home/agile/.config/google-chrome/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/07/01-15:08:27.113 4d9f Recovering log #4
+2022/07/01-15:08:27.114 4d9f Reusing old log /home/agile/.config/google-chrome/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/000004.log 
+2022/07/04-16:46:53.428 1258c Level-0 table #8: started
+2022/07/04-16:46:53.435 1258c Level-0 table #8: 1199 bytes OK
+2022/07/04-16:46:53.443 1258c Delete type=0 #4
+2022/07/04-16:46:53.443 1258c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2022/07/04-16:46:53.443 1258c Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01\x16\x00d\x00o\x00c\x00s\x00O\x00f\x00f\x00l\x00i\x00n\x00e\x00I\x00f\x00r\x00a\x00m\x00e\x00A\x00p\x00i\x00-\x00n' @ 668 : 1
+2022/07/04-16:46:53.443 1258c Compacting 1@1 + 1@2 files
+2022/07/04-16:46:53.450 1258c Generated table #9@1: 206 keys, 3049 bytes
+2022/07/04-16:46:53.450 1258c Compacted 1@1 + 1@2 files => 3049 bytes
+2022/07/04-16:46:53.459 1258c compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/07/04-16:46:53.459 1258c Delete type=2 #5
+2022/07/04-16:46:53.459 1258c Delete type=2 #8
+2022/07/04-16:46:53.460 1258c Manual compaction at level-1 from '\x00\x02\x01\x02\x01\x16\x00d\x00o\x00c\x00s\x00O\x00f\x00f\x00l\x00i\x00n\x00e\x00I\x00f\x00r\x00a\x00m\x00e\x00A\x00p\x00i\x00-\x00n' @ 668 : 1 .. (end); will stop at (end)

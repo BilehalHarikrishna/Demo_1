@@ -1,0 +1,77 @@
+{
+  "Version": "20.04",
+  "OEM": {
+    "Vendor": "BIOSTAR Group",
+    "Product": "H81MHV3 3.0",
+    "Family": "None"
+  },
+  "BIOS": {
+    "Vendor": "American Megatrends Inc.",
+    "Version": "4.6.5"
+  },
+  "CPU": {
+    "OpMode": "32-bit, 64-bit",
+    "CPUs": "4",
+    "Threads": "1",
+    "Cores": "4",
+    "Sockets": "1",
+    "Vendor": "GenuineIntel",
+    "Family": "6",
+    "Model": "60",
+    "Stepping": "3",
+    "Name": "Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz",
+    "Virtualization": "VT-x"
+  },
+  "Arch": "amd64",
+  "GPU": [
+    {
+      "Vendor": "8086",
+      "Model": "0412"
+    }
+  ],
+  "RAM": 8.1,
+  "Disks": [
+    128
+  ],
+  "Partitions": [
+    122,
+    0.5
+  ],
+  "Screens": [
+    {
+      "Size": "480mmx270mm",
+      "Resolution": "1920x1080",
+      "Frequency": "60.00"
+    }
+  ],
+  "Autologin": false,
+  "LivePatch": false,
+  "Session": {
+    "DE": "ubuntu:GNOME",
+    "Name": "ubuntu",
+    "Type": "x11"
+  },
+  "Language": "en_IN",
+  "Timezone": "Asia/Kolkata",
+  "Install": {
+    "Media": "Ubuntu 20.04.4 LTS \"Focal Fossa\" - Release amd64 (20220223)",
+    "Type": "GTK",
+    "OEM": false,
+    "PartitionMethod": "use_device",
+    "DownloadUpdates": false,
+    "Language": "en",
+    "Minimal": true,
+    "RestrictedAddons": false,
+    "Stages": {
+      "0": "language",
+      "4": "console_setup",
+      "9": "prepare",
+      "23": "partman",
+      "26": "start_install",
+      "36": "timezone",
+      "38": "usersetup",
+      "56": "user_done",
+      "559": "done"
+    }
+  }
+}

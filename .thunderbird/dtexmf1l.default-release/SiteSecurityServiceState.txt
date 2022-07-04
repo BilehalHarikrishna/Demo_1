@@ -1,0 +1,6 @@
+www.mozilla.org:HSTS	0	19174	1672377347324,1,1,2
+services.addons.thunderbird.net:HSTS	1	19177	1688443878170,1,0,2
+location.services.mozilla.com:HSTS	0	19173	1688129913721,1,1,2
+www.mozilla.org^partitionKey=%28http%2Cmozilla.org%29:HSTS	0	19174	1672377347151,1,1,2
+start.thunderbird.net^partitionKey=%28http%2Cthunderbird.net%29:HSTS	0	19174	1688192435742,1,0,2
+autoconfig.thunderbird.net:HSTS	1	19174	1688192387542,1,0,2

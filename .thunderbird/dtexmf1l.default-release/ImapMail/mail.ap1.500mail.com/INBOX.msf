@@ -1,0 +1,292 @@
+// <!-- <mdb:mork:z v="1.4"/> -->
+< <(a=c)> // (f=iso-8859-1)
+  (B8=highestModSeq)(B9=imapFlags)(BA=highestRecordedUID)(BB=replyTo)
+  (BC=ns:msg:db:row:scope:pending:all)(BD=ns:msg:db:table:kind:pending)
+  (BE=dateReceived)(BF=ProtoThreadFlags)(C0=preview)(C1=folderName)
+  (C2=storeToken)(C3=gloda-id)(C4=gloda-dirty)(C5=junkscore)(C6=keywords)
+  (C7=imageSize)(C8=sender_name)(C9=customSortCol)
+  (CA=ns:msg:db:row:scope:ops:all)(CB=ns:msg:db:table:kind:ops)
+  (CC=notAPhishMessage)(CD=retainBy)(CE=daysToKeepHdrs)(CF=numHdrsToKeep)
+  (D0=daysToKeepBodies)(D1=useServerDefaults)(D2=cleanupBodies)
+  (D3=applyToFlaggedMessages)(D4=useServerRetention)(D5=imip_method)
+  (D6=account)(D7=remoteContentPolicy)(80=ns:msg:db:row:scope:msgs:all)
+  (81=subject)(82=sender)(83=message-id)(84=references)(85=recipients)
+  (86=date)(87=size)(88=flags)(89=priority)(8A=label)(8B=statusOfset)
+  (8C=numLines)(8D=ccList)(8E=bccList)(8F=msgThreadId)(90=threadId)
+  (91=threadFlags)(92=threadNewestMsgDate)(93=children)
+  (94=unreadChildren)(95=threadSubject)(96=msgCharSet)
+  (97=ns:msg:db:table:kind:msgs)(98=ns:msg:db:table:kind:thread)
+  (99=ns:msg:db:table:kind:allthreads)
+  (9A=ns:msg:db:row:scope:threads:all)(9B=threadParent)(9C=threadRoot)
+  (9D=msgOffset)(9E=offlineMsgSize)
+  (9F=ns:msg:db:row:scope:dbfolderinfo:all)
+  (A0=ns:msg:db:table:kind:dbfolderinfo)(A1=numMsgs)(A2=numNewMsgs)
+  (A3=folderSize)(A4=expungedBytes)(A5=folderDate)(A6=highWaterKey)
+  (A7=mailboxName)(A8=UIDValidity)(A9=totPendingMsgs)
+  (AA=unreadPendingMsgs)(AB=expiredMark)(AC=version)(AD=forceReparse)
+  (AE=fixedBadRefThreading)(AF=onlineName)(B0=MRUTime)(B1=sortType)
+  (B2=sortOrder)(B3=viewFlags)(B4=viewType)(B5=sortColumns)
+  (B6=columnStates)(B7=aclFlags)>
+<(95=3683b)(91=62be8f2c)(81=0)(80=1)>
+[1:m(^9C^95)(^90^95)(^92^91)(^91=0)(^93=1)(^94=0)]
+<(AD=3685b)(AB=62be92bf)>[2:m(^9C^AD)(^90^AD)(^92^AB)(^91=0)(^93=1)
+    (^94=0)]
+<(BB=3685f)(B9=62be926c)>[3:m(^9C^BB)(^90^BB)(^92^B9)(^91=0)(^93=1)
+    (^94=0)]
+<(CA=3689a)(C8=62be9277)>[4:m(^9C^CA)(^90^CA)(^92^C8)(^91=0)(^93=1)
+    (^94=0)]
+<(DA=36a8c)(D7=62bec7c1)>[5:m(^9C^DA)(^90^DA)(^92^D7)(^91=0)(^93=1)
+    (^94=0)]
+<(EC=36c25)(EA=62bf0d38)>[6:m(^9C^EC)(^90^EC)(^92^EA)(^91=0)(^93=1)
+    (^94=0)]
+<(FC=36ca6)(FA=62bf1df2)>[7:m(^9C^FC)(^90^FC)(^92^FA)(^91=0)(^93=1)
+    (^94=0)]
+
+<(A3=81)(F6=Sign <noreply@500apps-campaigns.com>)(F7
+    ='Sign' via Bilehal Hari Krishna <hari.bilehal@500apps.com>)(A8
+    =Hari <hari.bilehal@500apps.com>)(F8=Signature Required)(F9
+    =nq9PToYTRyO2WnlsdHZuTg@geopod-ismtpd-1-1)(102=4bea)(94=ffffffff)
+  (FF=0|'Sign' via Bilehal Hari Krishna)(100=1e525)(101=124197)(103=4c3d)
+  (104=18b)(86=)(105=26)>
+{36CA6:^80 {(k^98:c)(s=9)7:m } [36CA6(^88=81)(^BB^F6)(^82^F7)(^85^A8)(^81^F8)
+    (^83^F9)(^BE^FA)(^86^FA)(^89=1)(^87^102)(^9B^94)(^8F^FC)(^BF=0)
+    (^C8^FF)(^9D^100)(^C2^101)(^9E^103)(^8C=18b)(^C0=)(^C3=26)(^C6=)
+    (^8A=0)(^C4=1)(^D7=1)]}
+
+<(108=10000081)(D2=muthukumar.jegadeesan@500apps.com)(D3
+    =hari.bilehal@mantragroup.com, Amarlapudi Pradeep <pradeep.amarlapudi@500a\
+pps.com>, Shoaib Akthar Mohammed <shoaib.mohammed@500apps.com>, Mogili Anil Ku\
+mar <anil.mogili@500apps.com>, Bilehal Hari Krishna <hari.bilehal@500apps.com>\
+, Saishankar Tangudu <saishankar.tangudu@500apps.com>, Sumit Patel <sumit.pate\
+l@500apps.com>)(D4=subramaniyam.kolluri@500apps.com)(D5
+    =Invitation: Dev Ops Training @ Weekly from 2pm to 3pm on weekdays (IST\) \
+(hari.bilehal@mantragroup.com\))(D6
+    =00000000000082f05a05e2bb939b@google.com)(E0=6a1e)(DD
+    =0|muthukumar.jegadeesan@500apps.com)(DE=9304)(DF=37636)(E2=6a71)
+  (E3=19c)(E4=REQUEST)(E5=24)>
+{36A8C:^80 {(k^98:c)(s=9)5:m } [36A8C(^88^108)(^82^D2)(^85^D3)(^8D^D4)
+    (^81^D5)(^83^D6)(^BE^D7)(^86^D7)(^89=1)(^87^E0)(^9B^94)(^8F^DA)
+    (^BF=0)(^C8^DD)(^9D^DE)(^C2^DF)(^9E^E2)(^8C^E3)(^C0=)(^D5^E4)(^C3=24)
+    (^C6=)(^8A=0)(^C4=0)]}
+
+<(A6=500apps <noreply@500apps-campaigns.com>)(A7
+    ='500apps' via Bilehal Hari Krishna <hari.bilehal@500apps.com>)
+  (A9=Verification Code 9123 to Login into 500apps)(AA
+    =4u-fO-nRT5qGZBcTrmYn9Q@geopod-ismtpd-1-1)(B0=2578)(AE
+    =0|'500apps' via Bilehal Hari Krishna)(98=28c7)(AF=10439)(B1=25cb)
+  (B2=a8)(B3
+    =Hey, We have received a login request from hari.bilehal@500apps.com Pleas\
+e authenticate your account by using the 4 digit code below:=20 9123 - 500apps)
+  (B5=21)>
+{3685B:^80 {(k^98:c)(s=9)2:m } [3685B(^88=81)(^BB^A6)(^82^A7)(^85^A8)(^81^A9)
+    (^83^AA)(^BE^AB)(^86^AB)(^89=1)(^87^B0)(^9B^94)(^8F^AD)(^BF=0)(^C8^AE)
+    (^9D^98)(^C2^AF)(^9E^B1)(^8C=a8)(^C0^B3)(^C3=21)(^C6=)(^8A=0)(^C4=1)]}
+
+<(8C=hr@agilecrm.com)(8D
+    ='HR Portal' via Bilehal Hari Krishna <hari.bilehal@500apps.com>)
+  (8E=hari.bilehal@500apps.com)(8F=Welcome to greytHR)(90
+    =01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap-south-1.a\
+mazonses.com)(96=2874)(99=b5)(9C=0|'HR Portal' via Bilehal Hari Krishna)
+  (9E=20)(B6=500apps <noreply@500apps.com>)(B7
+    =Verification Code 8902 to Login into 500apps)(B8
+    =01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@email.amazon\
+ses.com)(C1=21f0)(BE=0|500apps)(BF=4e92)(C0=20114)(C2=2243)(C3=99)(C4
+    =Hey, We have received a login request from hari.bilehal@500apps.com Pleas\
+e authenticate your account by using the 4 digit code below: 8902 - 500apps)
+  (C5=22)(C6=Verification Code 9637 to Login into 500apps)(C7
+    =01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@email.amazon\
+ses.com)(CE=21dc)(CC=70d5)(CD=28885)(CF=222f)(D0
+    =Hey, We have received a login request from hari.bilehal@500apps.com Pleas\
+e authenticate your account by using the 4 digit code below: 9637 - 500apps)
+  (D1=23)(E6=satya.chinta@500apps.com)(E7
+    =hari.bilehal@mantragroup.com, Gollapothu Leela Naresh <naresh.gollapothu@\
+500apps.com>, Siripothu Prathyusha <prathyusha.siripothu@500apps.com>, Sudathi\
+ Swetha <swetha.sudathi@500apps.com>, Reddi Kota satya Manikanta <manikanta.re\
+ddi@500apps.com>, Shoaib Akthar Mohammed <shoaib.mohammed@500apps.com>, Amarla\
+pudi Pradeep <pradeep.amarlapudi@500apps.com>, Saishankar Tangudu <saishankar.\
+tangudu@500apps.com>, Mogili Anil Kumar <anil.mogili@500apps.com>, Bilehal Har\
+i Krishna <hari.bilehal@500apps.com>, Vinod Dodda <vinod.dodda@500apps.com>, m\
+anoj.kumar@500apps.com, hasan.syed@500apps.com, sireesha.kosaraju@500apps.com,\
+ robert.smith@500apps.com, hidayath.mohammed@500apps.com, arun.muppina@500apps\
+.com, pavani.puchakayala@500apps.com, chandrasekhar.bandaru@500apps.com, chakr\
+adhar.kalapureddy@500apps.com, abhijit.das@500apps.com)(E8
+    =Invitation: M'Gauge with Abhijit @ Mon Jul 4, 2022 11am - 12pm (IST\) (ha\
+ri.bilehal@mantragroup.com\))(E9=0000000000007cf5b705e2bfb70c@google.com)
+  (F2=e75d)(EF=0|satya.chinta@500apps.com)(F0=fd75)(F1=64885)(F3=e7b0)
+  (F4=428)(F5=25)>
+{1:^80 {(k^97:c)(s=9)} 
+  [3683B(^88=81)(^BB^8C)(^82^8D)(^85^8E)(^81^8F)(^83^90)(^BE^91)(^86^91)
+    (^89=1)(^87^96)(^9B^94)(^8F^95)(^BF=0)(^9D=0)(^C2=0)(^9E^98)(^8C=b5)
+    (^C0=)(^C8^9C)(^C6=)(^8A=0)(^C3=20)(^C4=0)]3685B 
+  [3685F(^88=81)(^82^B6)(^85^8E)(^81^B7)(^83^B8)(^BE^B9)(^86^B9)(^89=1)
+    (^87^C1)(^9B^94)(^8F^BB)(^BF=0)(^C8^BE)(^9D^BF)(^C2^C0)(^9E^C2)
+    (^8C=99)(^C0^C4)(^C3=22)(^C6=)(^8A=0)(^C4=0)]
+  [3689A(^88=81)(^82^B6)(^85^8E)(^81^C6)(^83^C7)(^BE^C8)(^86^C8)(^89=1)
+    (^87^CE)(^9B^94)(^8F^CA)(^BF=0)(^C8^BE)(^9D^CC)(^C2^CD)(^9E^CF)
+    (^8C=99)(^C0^D0)(^C3=23)(^C6=)(^8A=0)(^C4=1)]36A8C 
+  [36C25(^88^108)(^82^E6)(^85^E7)(^81^E8)(^83^E9)(^BE^EA)(^86^EA)(^89=1)
+    (^87^F2)(^9B^94)(^8F^EC)(^BF=0)(^C8^EF)(^9D^F0)(^C2^F1)(^9E^F3)
+    (^8C^F4)(^C0=)(^D5^E4)(^C3=25)(^C6=)(^8A=0)(^C4=0)(^D7=1)]36CA6 }
+{3683B:^80 {(k^98:c)(s=9)1:m } 3683B }
+{36C25:^80 {(k^98:c)(s=9)6:m } 36C25 }
+{3685F:^80 {(k^98:c)(s=9)3:m } 3685F }
+{3689A:^80 {(k^98:c)(s=9)4:m } 3689A }
+{FFFFFFFD:^9A {(k^99:c)(s=9)} [3683B(^95^8F)]
+  [3685B(^95^A9)]
+  [3685F(^95^B7)]
+  [3689A(^95^C6)]
+  [36A8C(^95^D5)]
+  [36C25(^95^E8)]
+  [36CA6(^95^F8)]}
+
+<(82=INBOX)(8B=88083014)(FE=1656692219)(85=12)(9B
+    ={"selectCol":{"visible":false,"ordinal":"1"},"threadCol":{"visible":true,\
+"ordinal":"3"},"flaggedCol":{"visible":true,"ordinal":"5"},"attachmentCol":{"v\
+isible":true,"ordinal":"7"},"subjectCol":{"visible":true,"ordinal":"15"},"unre\
+adButtonColHeader":{"visible":true,"ordinal":"9"},"senderCol":{"visible":false\
+,"ordinal":"17"},"recipientCol":{"visible":false,"ordinal":"19"},"corresponden\
+tCol":{"visible":true,"ordinal":"21"},"junkStatusCol":{"visible":true,"ordinal\
+":"11"},"receivedCol":{"visible":false,"ordinal":"23"},"dateCol":{"visible":tr\
+ue,"ordinal":"25"},"statusCol":{"visible":false,"ordinal":"27"},"sizeCol":{"vi\
+sible":false,"ordinal":"29"},"tagsCol":{"visible":false,"ordinal":"31"},"accou\
+ntCol":{"visible":false,"ordinal":"33"},"priorityCol":{"visible":false,"ordina\
+l":"35"},"unreadCol":{"visible":false,"ordinal":"37"},"totalCol":{"visible":fa\
+lse,"ordinal":"39"},"locationCol":{"visible":false,"ordinal":"41"},"idCol":{"v\
+isible":false,"ordinal":"43"},"deleteCol":{"visible":false,"ordinal":"13"}})
+  (88=2ff)(107=11)(89=ee00)(8A=95d)(FD=7)>
+{1:^9F {(k^A0:c)(s=9)} 
+  [1(^AC=1)(^AD=0)(^AE=1)(^AF^82)(^88^8B)(^A7^82)(^B0^FE)(^B1=12)(^B2=1)
+    (^B3=0)(^B4=0)(^B5=)(^B6^9B)(^B7^88)(^B8=11)(^B9^89)(^A8^8A)(^BA^FC)
+    (^A1=7)(^A2=0)(^A6^FC)(^D4=1)]}
+
+@$${45{@
+@$$}45}@
+
+@$${46{@
+[3689A:^80(^C4=0)]
+[36CA6:^80(^C4=0)]
+[3685B:^80(^C4=0)]
+@$$}46}@
+
+@$${47{@
+@$$}47}@
+
+@$${48{@
+@$$}48}@
+
+@$${49{@
+@$$}49}@
+
+@$${4A{@
+<(10C=375d2)(10A=62c2bfe0)>[-8:m(^9C^10C)(^90^10C)(^92^10A)(^91=0)
+    (^93=1)(^94=1)]
+
+<(D8=10000000)(109
+    =01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap-south-1.a\
+mazonses.com)(10B=27fb)>
+{1:^80 {(k^97:c)(s=9)} 
+  [-375D2(^88^D8)(^BB^8C)(^82^8D)(^85^8E)(^81^8F)(^83^109)(^BE^10A)
+    (^86^10A)(^89=1)(^87^10B)(^9B^94)(^8F^10C)(^BF=0)]}
+{-375D2:^80 {(k^98:c)(s=9)8:m } 375D2 }
+{FFFFFFFD:^9A {(k^99:c)(s=9)} [-375D2(^95^8F)]}
+<(10E=1656930288)(10D=8)>[-1:^9F(^AC=1)(^AD=0)(^AE=1)(^AF^82)(^88^8B)
+    (^A7^82)(^B0^10E)(^B1=12)(^B2=1)(^B3=0)(^B4=0)(^B5=)(^B6^9B)(^B7^88)
+    (^B8=11)(^B9^89)(^A8^8A)(^BA^FC)(^A1=8)(^A2=1)(^A6^10C)(^D4=1)]
+@$$}4A}@
+
+@$${4B{@
+<(9A=80)(111=286d)(10F=23162)(110=143714)(112=28c0)>
+[-375D2:^80(^88=80)(^BB^8C)(^82^8D)(^85^8E)(^81^8F)(^83^109)(^BE^10A)
+    (^86^10A)(^89=1)(^87^111)(^9B^94)(^8F^10C)(^BF=0)(^9D^10F)(^C2^110)
+    (^9E^112)(^8C=b5)(^C0=)]
+[1:^9F(^BA^10C)]
+@$$}4B}@
+
+@$${4C{@
+@$$}4C}@
+
+@$${4D{@
+<(113=27)>[375D2:^80(^C3=27)]
+@$$}4D}@
+
+@$${4E{@
+[-375D2:^80(^88=80)(^BB^8C)(^82^8D)(^85^8E)(^81^8F)(^83^109)(^BE^10A)
+    (^86^10A)(^89=1)(^87^111)(^9B^94)(^8F^10C)(^BF=0)(^9D^10F)(^C2^110)
+    (^9E^112)(^8C=b5)(^C0=)(^C3=27)(^C6=)(^8A=0)]
+<(114=1656933218)>[1:^9F(^B0^114)]
+@$$}4E}@
+
+@$${4F{@
+[8:m(^94=0)]
+[-375D2:^80(^88=81)(^BB^8C)(^82^8D)(^85^8E)(^81^8F)(^83^109)(^BE^10A)
+    (^86^10A)(^89=1)(^87^111)(^9B^94)(^8F^10C)(^BF=0)(^9D^10F)(^C2^110)
+    (^9E^112)(^8C=b5)(^C0=)(^C3=27)(^C6=)(^8A=0)(^C8^9C)(^C4=1)]
+[1:^9F(^A2=0)]
+@$$}4F}@
+
+@$${50{@
+@$$}50}@
+
+@$${51{@
+@$$}51}@
+
+@$${52{@
+[375D2:^80(^C4=0)]
+@$$}52}@
+
+@$${53{@
+@$$}53}@
+
+@$${54{@
+<(11A=3762d)(118=62c2cdbd)>[-9:m(^9C^11A)(^90^11A)(^92^118)(^91=0)
+    (^93=1)(^94=1)]
+
+<(115=GitHub <noreply@github.com>)(116
+    =BilehalHarikrishna <hari.bilehal@mantragroup.com>)(117
+    =62c2cdbdc392a_148fd7786153f@github-highworker-ae8a4c9.ash1-iad.github.net\
+.mail)(119=7eda)>
+{1:^80 {(k^97:c)(s=9)} 
+  [-3762D(^88=0)(^82^115)(^85^116)(^81=)(^83^117)(^BE^118)(^86^118)
+    (^89=1)(^87^119)(^9B^94)(^8F^11A)(^BF=0)]}
+{-3762D:^80 {(k^98:c)(s=9)9:m } 3762D }
+{FFFFFFFD:^9A {(k^99:c)(s=9)} [-3762D(^95=)]}
+<(11C=1656933846)(11B=9)>[-1:^9F(^AC=1)(^AD=0)(^AE=1)(^AF^82)(^88^8B)
+    (^A7^82)(^B0^11C)(^B1=12)(^B2=1)(^B3=0)(^B4=0)(^B5=)(^B6^9B)(^B7^88)
+    (^B8=11)(^B9^89)(^A8^8A)(^BA^10C)(^A1=9)(^A2=1)(^A6^11A)(^D4=1)]
+@$$}54}@
+
+@$${55{@
+<(11F=7ef7)(11D=25a22)(11E=154146)(120=7f4a)(121=119)>
+[-3762D:^80(^88=80)(^82^115)(^85^116)(^81=)(^83^117)(^BE^118)(^86^118)
+    (^89=1)(^87^11F)(^9B^94)(^8F^11A)(^BF=0)(^9D^11D)(^C2^11E)(^9E^120)
+    (^8C=119)(^C0=)]
+[1:^9F(^BA^11A)]
+@$$}55}@
+
+@$${56{@
+@$$}56}@
+
+@$${57{@
+<(122=1656933848)>[1:^9F(^B0^122)]
+@$$}57}@
+
+@$${58{@
+[9:m(^94=0)]
+<(123=0|GitHub)>[-3762D:^80(^88=81)(^82^115)(^85^116)(^81=)(^83^117)
+    (^BE^118)(^86^118)(^89=1)(^87^11F)(^9B^94)(^8F^11A)(^BF=0)(^9D^11D)
+    (^C2^11E)(^9E^120)(^8C=119)(^C0=)(^C8^123)(^C6=)(^8A=0)(^C4=1)]
+[1:^9F(^A2=0)]
+@$$}58}@
+
+@$${59{@
+[3762D:^80(^D7=1)]
+@$$}59}@
+
+@$${5A{@
+@$$}5A}@
+
+@$${5B{@
+<(124=28)>[-3762D:^80(^88=81)(^82^115)(^85^116)(^81=)(^83^117)(^BE^118)
+    (^86^118)(^89=1)(^87^11F)(^9B^94)(^8F^11A)(^BF=0)(^9D^11D)(^C2^11E)
+    (^9E^120)(^8C=119)(^C0=)(^C8^123)(^C6=)(^8A=0)(^C4=0)(^D7=1)(^C3=28)]
+@$$}5B}@

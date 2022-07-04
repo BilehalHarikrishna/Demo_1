@@ -1,0 +1,57 @@
+2022/07/01-11:50:56.344 3 Reusing MANIFEST /home/agile/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2022/07/01-11:50:56.345 3 Recovering log #3
+2022/07/01-11:50:56.346 3 Reusing old log /home/agile/.config/google-chrome/Default/Local Storage/leveldb/000003.log 
+2022/07/01-13:04:57.171 7 Level-0 table #5: started
+2022/07/01-13:04:57.180 7 Level-0 table #5: 53613 bytes OK
+2022/07/01-13:04:57.190 7 Delete type=0 #3
+2022/07/01-15:41:11.715 2d Level-0 table #7: started
+2022/07/01-15:41:11.724 2d Level-0 table #7: 41027 bytes OK
+2022/07/01-15:41:11.738 2d Delete type=0 #4
+2022/07/01-16:22:50.938 38 Level-0 table #9: started
+2022/07/01-16:22:50.946 38 Level-0 table #9: 23572 bytes OK
+2022/07/01-16:22:50.955 38 Delete type=0 #6
+2022/07/01-18:05:35.490 51 Level-0 table #11: started
+2022/07/01-18:05:35.498 51 Level-0 table #11: 17758 bytes OK
+2022/07/01-18:05:35.508 51 Delete type=0 #8
+2022/07/02-00:10:03.123 6c Level-0 table #13: started
+2022/07/02-00:10:03.131 6c Level-0 table #13: 15663 bytes OK
+2022/07/02-00:10:03.140 6c Delete type=0 #10
+2022/07/04-09:37:31.950 97 Level-0 table #15: started
+2022/07/04-09:37:31.957 97 Level-0 table #15: 14898 bytes OK
+2022/07/04-09:37:31.966 97 Delete type=0 #12
+2022/07/04-09:37:31.966 97 Compacting 4@0 + 1@1 files
+2022/07/04-09:37:31.973 97 Generated table #16@0: 94 keys, 8334 bytes
+2022/07/04-09:37:31.973 97 Compacted 4@0 + 1@1 files => 8334 bytes
+2022/07/04-09:37:31.981 97 compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/07/04-09:37:31.982 97 Delete type=2 #13
+2022/07/04-09:37:31.982 97 Delete type=2 #7
+2022/07/04-09:37:31.982 97 Delete type=2 #9
+2022/07/04-09:37:31.982 97 Delete type=2 #15
+2022/07/04-09:37:31.982 97 Delete type=2 #11
+2022/07/04-12:43:36.031 b5 Level-0 table #18: started
+2022/07/04-12:43:36.039 b5 Level-0 table #18: 22709 bytes OK
+2022/07/04-12:43:36.048 b5 Delete type=0 #14
+2022/07/04-14:25:22.806 d2 Level-0 table #20: started
+2022/07/04-14:25:22.813 d2 Level-0 table #20: 32404 bytes OK
+2022/07/04-14:25:22.822 d2 Delete type=0 #17
+2022/07/04-15:33:40.194 ea Level-0 table #22: started
+2022/07/04-15:33:40.202 ea Level-0 table #22: 15353 bytes OK
+2022/07/04-15:33:40.212 ea Delete type=0 #19
+2022/07/04-15:51:24.140 f2 Level-0 table #24: started
+2022/07/04-15:51:24.149 f2 Level-0 table #24: 14163 bytes OK
+2022/07/04-15:51:24.158 f2 Delete type=0 #21
+2022/07/04-15:51:24.159 f2 Compacting 4@0 + 1@1 files
+2022/07/04-15:51:24.167 f2 Generated table #25@0: 261 keys, 31002 bytes
+2022/07/04-15:51:24.167 f2 Compacted 4@0 + 1@1 files => 31002 bytes
+2022/07/04-15:51:24.176 f2 compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/07/04-15:51:24.177 f2 Delete type=2 #16
+2022/07/04-15:51:24.177 f2 Delete type=2 #24
+2022/07/04-15:51:24.177 f2 Delete type=2 #18
+2022/07/04-15:51:24.177 f2 Delete type=2 #20
+2022/07/04-15:51:24.177 f2 Delete type=2 #22
+2022/07/04-16:47:26.621 103 Level-0 table #27: started
+2022/07/04-16:47:26.634 103 Level-0 table #27: 16267 bytes OK
+2022/07/04-16:47:26.643 103 Delete type=0 #23
+2022/07/04-17:12:08.117 110 Level-0 table #29: started
+2022/07/04-17:12:08.125 110 Level-0 table #29: 19665 bytes OK
+2022/07/04-17:12:08.134 110 Delete type=0 #26

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="org.gnome.Evince.desktop" score="178.5" last-seen="1656671513"/>
+    <application id="org.gnome.Nautilus.desktop" score="2.5" last-seen="1656920528"/>
+    <application id="org.gnome.FileRoller.desktop" score="2" last-seen="1656669567"/>
+    <application id="firefox.desktop" score="369.5" last-seen="1656656458"/>
+    <application id="gnome-network-panel.desktop" score="0" last-seen="0"/>
+    <application id="org.gnome.Terminal.desktop" score="18158.5" last-seen="1656937158"/>
+    <application id="google-chrome.desktop" score="2979.5" last-seen="1656937364"/>
+    <application id="gnome-control-center.desktop" score="23" last-seen="1656670310"/>
+    <application id="thunderbird.desktop" score="93" last-seen="1656936753"/>
+    <application id="update-manager.desktop" score="0" last-seen="1656509709"/>
+  </context>
+</application-state>

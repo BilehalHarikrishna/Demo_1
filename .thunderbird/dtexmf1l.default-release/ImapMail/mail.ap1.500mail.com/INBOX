@@ -1,0 +1,3015 @@
+From - Fri Jul  1 11:50:35 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from mail-pg1-f198.google.com (mail-pg1-f198.google.com [209.85.215.198])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id 9CC4A41EAD
+	for <hari.bilehal@mantragroup.com>; Fri,  1 Jul 2022 06:07:45 +0000 (UTC)
+Received: by mail-pg1-f198.google.com with SMTP
+	id g34-20020a635662000000b0040d1da6ada4sf815340pgm.1
+	for <hari.bilehal@mantragroup.com>; Thu, 30 Jun 2022 23:07:45 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1656655663; cv=pass;        d=google.com;
+ s=arc-20160816;       
+ b=y5MWb++4jlcAfci6y+5QBiYMYYC4/twRgzhySVHFlw9Ho15tzuk96VIQK9lVhCqgzm        
+ YMnVGMKyObc5Y9hiofbdWizxDK6rtszk9/0zLPed6jVboNy9aOR2Z+j0v5IdLC7R4MEQ        
+ Mk7MPPkwk9gxpMqY6CmtaV76SY5Owh48ZNNlENwrb0Fn741bjA9EJ8eUQhcZ8cB8zd3K        
+ uRCGGMn8gMDWvNCBYczCQFGOLY9b7Mq8+OAyHOe1qu/zFrh1taGjXA2R+MyX0yIvJbly        
+ idFt2bl+dao/F7IJiy9/pulODGd+bh4LZXxPmXJZCIgxjBKCDzy0mhrah32i91yi2yJh        
+ amLw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=list-unsubscribe:list-archive:list-help:list-post:list-id        
+ :mailing-list:precedence:feedback-id:tenant-id:mime-version:subject        
+ :message-id:to:reply-to:from:date:dkim-signature;       
+ bh=eFHsUsap68IqdKnhQivQROtFeEhxJF4AIwHFfu3nUPw=;       
+ b=Ji4wXqvcD5lgGzw6frNlBdgB1lWDW83UB3FXdt8kEffGigCFDbhqJeEOiCsUUN35J0        
+ mkKiCpz1hUKcIgqgWlZrwKDOnhUNpmgVa2+Imao+rLOh+rfovJ13c7QnCGjALt3f+7ce        
+ 0UPCJBhmkp8KqI2gN7L437AA8bKJw8McIAWK35B0Vk7Y48OZf/KhBBuHFtkR3Ynm264X        
+ 3eHt7RDeF9djIthPeKwJFt0cSnoWbBvqJ0rfUfoaIy5nfpAaf6blM5hI7Fr2/Iz1pUKw        
+ ttajrWV7bXa//PnBwTQ7U6xvjOHurJWvZ9QXIQmneO2tRm/tKvtYup/BOqoEk3m48KJh        
+ Rvww==
+ARC-Authentication-Results: i=2; mx.google.com;       dkim=pass
+ header.i=@greythr.com header.s=7o7yktfkcmxuto2rfa26sf5dqr2hjkds
+ header.b=MHktOx5c;       dkim=pass header.i=@amazonses.com
+ header.s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h header.b=ZZU3P6ge;       spf=pass
+ (google.com: domain of
+ 01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap-south-1.amazo
+	nses.com designates 76.223.190.43 as permitted sender)
+ smtp.mailfrom=01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap
+	-south-1.amazonses.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE
+ dis=NONE) header.from=greythr.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=500apps.com;
+ s=google;       
+ h=date:from:reply-to:to:message-id:subject:mime-version:tenant-id        
+ :feedback-id:x-original-sender:x-original-authentication-results        
+ :precedence:mailing-list:list-id:list-post:list-help:list-archive        
+ :list-unsubscribe;        bh=eFHsUsap68IqdKnhQivQROtFeEhxJF4AIwHFfu3nUPw=;       
+ b=CGRSOS4iShOUcMuki0Eq0B2B1GHpolHQbyaKVvll+g3yRmGDt3GamfChiXEk/VQ6Ba        
+ tl1C1qO3Ven7HMB1lOlprLh1HZnKhdT2EnE2fXJEkaLugZIdAjslhAMoork+NLh5vXS9        
+ SQFT1LmAogFRZEWTEQpV0aoW8pjBuOwcLGX0M=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20210112;       
+ h=x-gm-message-state:date:from:reply-to:to:message-id:subject        
+ :mime-version:tenant-id:feedback-id:x-original-sender        
+ :x-original-authentication-results:precedence:mailing-list:list-id        
+ :x-spam-checked-in-group:list-post:list-help:list-archive        
+ :list-unsubscribe;        bh=eFHsUsap68IqdKnhQivQROtFeEhxJF4AIwHFfu3nUPw=;       
+ b=svtNNG0x454yYSNvQvxvGYWS5mXy/2KJKmwxJVLLOmBTDVsFETh0/B3hzWkewRl5tb        
+ xkam14xjYR9WSXJEGu2c4tEjA7IHqZPgk0dwAScmiSa7yQaZiTcb1T4uKJs9TwzbGflU        
+ 8RCMJ8F9iWv0oaWOxEqEn1gwntlFRi7fAQgpBRbRjyCbc50jzoq6L9DO58nP4+xoiJhR        
+ vz6vhdcgVS60hTrchICWb88N6Ng+f7I16SAHju1PuJD20Dqiiw0MTJ0MAwIYla0559eY        
+ NXMd9MZ7Nf1CyZLfihSC2KpsN8PaQz5Fc31zOuZJDmcs/2hN8/RaB6G7A1EJ/bJ5UkzR        
+ OVvg==
+X-Gm-Message-State: AJIora98gssRSvApcpPxo4vWU/skVBv8N5UGt4uCvASrege8qmnxVZRo
+	DZWHGPMMNyH2qkxt3CXpru6QuXuQ
+X-Google-Smtp-Source: 
+ AGRyM1s2jTwMpM4OreYgmZQLoO6upOxppqiavEuTRFYV1UD/NAgR63gsJzf/2XHgM6eTSrcsiyX7c
+	g==
+X-Received: by 2002:a17:902:c115:b0:16a:1848:89e0 with SMTP id
+ 21-20020a170902c11500b0016a184889e0mr19645660pli.44.1656655663162;       
+ Thu, 30 Jun 2022 23:07:43 -0700 (PDT)
+X-BeenThere: hari.bilehal@500apps.com
+Received: by 2002:a05:6a00:1684:b0:528:3ec:5436 with SMTP
+	id k4-20020a056a00168400b0052803ec5436ls2449248pfc.6.gmail; Thu, 30 Jun 2022 23:07:42 -0700 (PDT)
+X-Received: by 2002:a63:1014:0:b0:40d:2117:b0d with SMTP id
+ f20-20020a631014000000b0040d21170b0dmr11274797pgl.56.1656655662241;       
+ Thu, 30 Jun 2022 23:07:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1656655662; cv=none;        d=google.com;
+ s=arc-20160816;       
+ b=ODmU6vyCA37ijPHM1REZSbJJbF+3OZc0Q/Sge2NoZwfJxwfseW5fgYXAl+m7D3RJKA        
+ UHZp21/V5HP/28BeZWfE/PZnAlMzN3BqbJGfw5wVzM1614R8tUBuUjpo1TV9qdU6KHic        
+ WAiPbhzZqlLeWbWpt0NSPsH+S09896Y/0tGNigGVZl/ei6A/QHoGkoump2k9lTXrnfFM        
+ CdysoPTLkN6lVK7VfmqmKIJgVPvXAdSmayUD6/ueiWquntWokIUkB3yRh/hfg+nzn9sn        
+ VNv+3NGYdSGfygfbTPTok3GULrVELwCr06/ueb+O23frvAG8alqG3g8U3rNOXq5bf4H/        
+ JtMQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=feedback-id:tenant-id:mime-version:subject:message-id:to:reply-to        
+ :from:date:dkim-signature:dkim-signature;       
+ bh=eFHsUsap68IqdKnhQivQROtFeEhxJF4AIwHFfu3nUPw=;       
+ b=klyv9VYxSKU0E1ldKZ/Sy7gW9DJ3JREZEdpgxZjQWS6R3DCjLDJ0+l9b17nbm/Z4K+        
+ 2SOc3kl1OLC+c6/H8LIuB0VOjkJerqbp9IcDR4Nkvxf59m3jwOHfJqvCzhcs3z2E4z/B        
+ 1hbStdLBr2hXIYSou0rmrY4zxtFuuC1vANu9ypxdTVPOK1XJ4S7AK/7JNfaVPQ6BtjON        
+ 356N/N4yVMJVu7HAHEOIBWHd9Pth/kvJ1NgxucYscl6ez6AtOStHpCjqWxj2JbM97lGf        
+ BxfOk85ZQlY2qQ+wk67VUNo0n67MVOsrQ0cmMfB8Y236VQri0kA9936X+fy+bbVmx52O        
+ RsbA==
+ARC-Authentication-Results: i=1; mx.google.com;       dkim=pass
+ header.i=@greythr.com header.s=7o7yktfkcmxuto2rfa26sf5dqr2hjkds
+ header.b=MHktOx5c;       dkim=pass header.i=@amazonses.com
+ header.s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h header.b=ZZU3P6ge;       spf=pass
+ (google.com: domain of
+ 01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap-south-1.amazo
+	nses.com designates 76.223.190.43 as permitted sender)
+ smtp.mailfrom=01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap
+	-south-1.amazonses.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE
+ dis=NONE) header.from=greythr.com
+Received: from c190-43.smtp-out.ap-south-1.amazonses.com (c190-43.smtp-out.ap-south-1.amazonses.com. [76.223.190.43])
+	by mx.google.com with ESMTPS
+	id h13-20020a170902f54d00b0016a797a2b7dsi27715137plf.275.2022.06.30.23.07.41
+	for <hari.bilehal@500apps.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);        Thu, 30 Jun 2022 23:07:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of
+ 01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap-south-1.amazo
+	nses.com designates 76.223.190.43 as permitted sender)
+ client-ip=76.223.190.43;
+Date: Fri, 1 Jul 2022 06:07:40 +0000
+From: 'HR Portal' via Bilehal Hari Krishna <hari.bilehal@500apps.com>
+Reply-To: hr@agilecrm.com
+To: hari.bilehal@500apps.com
+Message-ID: <01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap-south-1.amazonses.com>
+Subject: Welcome to greytHR
+MIME-Version: 1.0
+Tenant-Id: 32irR.0R.aMrssR2HhySThAYNW9ia
+Feedback-ID: 
+ 1.ap-south-1./EK5bNmWTOu/r+mL29FwxpD7HMyvGrHwpw5gbtl8ynk=:AmazonSES
+X-SES-Outgoing: 2022.07.01-76.223.190.43
+X-Original-Sender: no-reply@greythr.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@greythr.com header.s=7o7yktfkcmxuto2rfa26sf5dqr2hjkds
+ header.b=MHktOx5c;       dkim=pass header.i=@amazonses.com
+ header.s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h header.b=ZZU3P6ge;       spf=pass
+ (google.com: domain of
+ 01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap-south-1.amazo
+	nses.com designates 76.223.190.43 as permitted sender)
+ smtp.mailfrom=01090181b85f44c7-43e0d06d-4a08-470b-baa6-0fd3fb27dd20-000000@ap
+	-south-1.amazonses.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE
+ dis=NONE) header.from=greythr.com
+X-Original-From: HR Portal <no-reply@greythr.com>
+Precedence: list
+Mailing-list: list hari.bilehal@500apps.com; contact
+ hari.bilehal+owners@500apps.com
+List-ID: <hari.bilehal.500apps.com>
+X-Spam-Checked-In-Group: hari.bilehal@500apps.com
+X-Google-Group-Id: 342163588535
+List-Post: <https://groups.google.com/a/500apps.com/group/hari.bilehal/post>,
+ <mailto:hari.bilehal@500apps.com>
+List-Help: 
+ <https://support.google.com/a/500apps.com/bin/topic.py?topic=25838>,
+ <mailto:hari.bilehal+help@500apps.com>
+List-Archive: <https://groups.google.com/a/500apps.com/group/hari.bilehal/>
+List-Unsubscribe: 
+ <mailto:googlegroups-manage+342163588535+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/500apps.com/group/hari.bilehal/subscribe>
+Return-Path: hari.bilehal+bncBCOK5ZHVSEKBBL467KKQMGQELB4ETGA@500apps.com
+Content-Type: multipart/mixed;
+	boundary="----=_Part_965626_903487841.1656655660220"
+
+
+------=_Part_965626_903487841.1656655660220
+Content-Type: multipart/related; 
+	boundary="----=_Part_965627_1473184312.1656655660220"
+
+
+------=_Part_965627_1473184312.1656655660220
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear Tangudu Saishankar,<br><br>
+
+Welcome to greytHR! greytHR provides you access to your Payslips, Reimbursements, Tax Calculations and other compensation-related information right from your desk.<br><br>
+
+Your username is <b>&lt;1290&gt;</b><br><br>
+
+To generate your greytHR password, click <a href="https://clickdesk.greythr.com/uas/portal/auth/reset?domain=Y2xpY2tkZXNrLmdyZXl0aHIuY29t&guid=ad796f89-ce98-4449-9b83-010379bbb654">here</a> or paste the following link into your browser:<br> https://clickdesk.greythr.com/uas/portal/auth/reset?domain=Y2xpY2tkZXNrLmdyZXl0aHIuY29t&guid=ad796f89-ce98-4449-9b83-010379bbb654<br><br>
+
+After changing the password,  you can login using this link:&nbsp;https://clickdesk.greythr.com/<br><br>
+
+Note that the link will expire in 4 days.<br><br>
+
+If you have any trouble logging in or using the application, write to us at hr@agilecrm.com. We will revert to you and help you with your queries.<br><br>
+
+Regards
+
+------=_Part_965627_1473184312.1656655660220--
+
+------=_Part_965626_903487841.1656655660220--
+From - Fri Jul  1 11:53:00 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from mail-qk1-f200.google.com (mail-qk1-f200.google.com [209.85.222.200])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id CE72640F0A
+	for <hari.bilehal@mantragroup.com>; Fri,  1 Jul 2022 06:22:58 +0000 (UTC)
+Received: by mail-qk1-f200.google.com with SMTP
+	id bl27-20020a05620a1a9b00b0069994eeb30csf1373956qkb.11
+	for <hari.bilehal@mantragroup.com>; Thu, 30 Jun 2022 23:22:58 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1656656576; cv=pass;        d=google.com;
+ s=arc-20160816;       
+ b=Jo0nMoOxetmNYAWFm/BxpBH92egUPO4/AfEf5t/xEHEH1Xp4FALjMSlW6OU4pu41+l        
+ XDpv3XSVWJ8/v/P47dFunxgtz1E3zz2/iSMDwkKwQEymFOrVaRDiI+7k4aiF0kAyqht8        
+ BUW262HYR1urN0Um31hcKdsfk1JXlODh602be2qvSLR1/vZ+D4wSo+SLSE/5Hnb/uLJu        
+ CDwuIIrcorhNyrrF7oR5TOnUJQ/uzFUCwdLjE3x9e2BUGWQeQIjaojkmUDEIYONP2MsS        
+ 5BwcCs9ltJz/HOncxZ0on7edpyzEKOEGglCH6iUOIGt1106rx9Xw0QmWp+SYXOaHo+VL        
+ tUWQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=list-unsubscribe:list-archive:list-help:list-post:list-id        
+ :mailing-list:precedence:reply-to:to:subject:message-id:mime-version        
+ :from:date:content-transfer-encoding:dkim-signature;       
+ bh=HuseMIiXcnRrkOr2r+hcjQpGO8IVDPmIy/cWPwzME2I=;       
+ b=jk8NtF2Sd0sOvV/UN2tYUfgksFsUVZS5OpAE23p7gdZWyY3tk5Bdm7jVLlhksfQI98        
+ YCbRh7ccY2YFHJtibkDEUS8uIjwg+/QQMrymmKB5akyoqPovkrlWHbcbscgbpIgw1c0v        
+ sYyWvZz9fC2pG24CqyeG9enAdYWraRGkzyjhLrV6leACcCM0UXHjYiXuQft/Vcmu9W75        
+ IEvo7niYHCBBXvcjekwgV6gWqI1ue6x/PuqWZcFkLuoXbYtoLeeQTaUJ2BLuVHWMQUZJ        
+ RnQhItihk6ml0Sci4VyQ5NJnwjn1aZ05TwOPoN1DLsEKWYQA/Q8O93hk+qqa8+aXJXjm        
+ yJOg==
+ARC-Authentication-Results: i=2; mx.google.com;       dkim=pass
+ header.i=@500apps-campaigns.com header.s=s1 header.b=HAayYUGe;       spf=pass
+ (google.com: domain of
+ bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-campaigns.com
+ designates 149.72.114.4 as permitted sender)
+ smtp.mailfrom="bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-
+	campaigns.com";       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps-campaigns.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=500apps.com;
+ s=google;       
+ h=content-transfer-encoding:date:from:mime-version:message-id:subject        
+ :to:x-original-sender:x-original-authentication-results:reply-to        
+ :precedence:mailing-list:list-id:list-post:list-help:list-archive        
+ :list-unsubscribe;        bh=HuseMIiXcnRrkOr2r+hcjQpGO8IVDPmIy/cWPwzME2I=;       
+ b=AtI8c6tcn4HBQFImjDYegJ2Zm6qyI2CElTZz2YFJENco7w2huf2voAUVIii1BIDF8e        
+ 0AewCxyAzFgvlTT8MpO2oyF2gFLDVhpbbjo83PeSpCb0r70ryEOhAVgXMzEWG1uU1rJK        
+ fJuoCdTCo1q7dFpjVQXvs+gnDTKoM5cd3kydw=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20210112;       
+ h=x-gm-message-state:content-transfer-encoding:date:from:mime-version        
+ :message-id:subject:to:x-original-sender        
+ :x-original-authentication-results:reply-to:precedence:mailing-list        
+ :list-id:x-spam-checked-in-group:list-post:list-help:list-archive        
+ :list-unsubscribe;        bh=HuseMIiXcnRrkOr2r+hcjQpGO8IVDPmIy/cWPwzME2I=;       
+ b=VlIy9lLwMfE8EOohZ/mprkyyk9C1EY54eXgXpbvqV1IVnT+nEKpIIHxniDdfwN73SP        
+ 9aYJuhrqYiN8j9QkTjeIKkK2q4RMZTMdGgHl05hQh+DtlSXLxjHpzCCcZSCiAi4WQjJ9        
+ 6pEGye9hqxlutBXcx+55z3eTDYN2DiVvqOL/qZO4fHhitL7fVUnNwoDmDLbqNF1ZQskL        
+ Yi3nzbdmczs6ABzd1uzpSttGYLdFuKfrNJCrBfqBgKqQd/zHJCgaznBOdMgk6tR9+Ool        
+ LEyFjKlbQnklOsBQsyGj+XxIya0HL1kVxA7pw9WqvPhwIvguIN4qjnbsAY8yXdk72RcD        
+ e7aA==
+X-Gm-Message-State: AJIora9zlh4iGPJ/WUR+d9X3dF8FZpslVRpW2Qml3E8/LTRKEAOrNxIg
+	l4uSBcdL0WgOU4RUWUVbZm62Msd7
+X-Google-Smtp-Source: 
+ AGRyM1vnPkCZudl7nldK7MWosOV0e9L6O2N5cT4HsVrigM5CcYq40vqhotprwdoeIJG2+suWb+6I7
+	Q==
+X-Received: by 2002:a0c:d606:0:b0:46e:7d91:15e2 with SMTP id
+ c6-20020a0cd606000000b0046e7d9115e2mr14476208qvj.45.1656656576642;       
+ Thu, 30 Jun 2022 23:22:56 -0700 (PDT)
+X-BeenThere: hari.bilehal@500apps.com
+Received: by 2002:a05:620a:4628:b0:6af:25b8:a305 with SMTP
+	id br40-20020a05620a462800b006af25b8a305ls8341358qkb.5.gmail; Thu, 30 Jun 2022 23:22:56 -0700 (PDT)
+X-Received: by 2002:a05:620a:46aa:b0:6af:225e:5c7d with SMTP id
+ bq42-20020a05620a46aa00b006af225e5c7dmr9450295qkb.621.1656656576113;       
+ Thu, 30 Jun 2022 23:22:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1656656576; cv=none;        d=google.com;
+ s=arc-20160816;       
+ b=Ey7d0amc+PoJMi4VQbSrA+vS1WrY2WCudkJLGXiFHDmGeGRHJ/Q97EI2D9S9hSxFT9        
+ wIwZ4Koj/ZCCw4RZ4CRcRwh95EBCqztCcJcRohcGgZZOUkKSCj4BbehgGJAC7PwUTiqq        
+ 0jktBK4//Cs/kK5ALRXF8fiCAtoDBOcpFgU/mytJD4ehC9O9f6NkTBNUXa44HQu+AJ8s        
+ YxEx+12U3jBb+22gzeNwrH7EBxco4l/ZVZhjDHzCYX6ZGyaSeUCKPGA7bCKNDJ+Yul8+        
+ NHKwt9PeRJzI1Lls4jNgWuVAzG+eo5g/0qmFUkc6HuM39j3aaQvASS4+ldwiMUpnKcnG        
+ DoVQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;        h=to:subject:message-id:mime-version:from:date        
+ :content-transfer-encoding:dkim-signature;       
+ bh=HuseMIiXcnRrkOr2r+hcjQpGO8IVDPmIy/cWPwzME2I=;       
+ b=sYMk6vl2VET/9bCIaPUfLfbXETFo5ZjZsSIahoCGwz1O8k+La70kMoXiXKujobEKAO        
+ mUoGK7Qy9XjgSTalyCAO6HBf2Zx8nNf+bnHRN+P3qICGW4sPP69h5R8WwW+cy8qNIZwP        
+ 1OBICbiyMPKE9t3KrBDMY9RhWHKVLRQpO5qnIh/2oOI5uREeS3VElFGKmuZjXMq4VB2Y        
+ lSwGTwDONd0nN8fAcHiqZYZlhiblBylC1aHEoVU9NNOCdajlCWvjpE+Q6s7CDb6c7Rba        
+ IJpeS5uYGL8Bvj2fpc83as7sGz9sSEBQvb0nVCYCUi8LekvAJBxWmhthS1qLh7yiALTO        
+ OEMA==
+ARC-Authentication-Results: i=1; mx.google.com;       dkim=pass
+ header.i=@500apps-campaigns.com header.s=s1 header.b=HAayYUGe;       spf=pass
+ (google.com: domain of
+ bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-campaigns.com
+ designates 149.72.114.4 as permitted sender)
+ smtp.mailfrom="bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-
+	campaigns.com";       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps-campaigns.com
+Received: from o3.em1.500apps.com (o3.em1.500apps.com. [149.72.114.4])
+	by mx.google.com with ESMTPS
+	id jk11-20020ad45d4b000000b00470289bf0f2si13825960qvb.398.2022.06.30.23.22.55
+	for <hari.bilehal@500apps.com>        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);        Thu, 30 Jun 2022 23:22:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of
+ bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-campaigns.com
+ designates 149.72.114.4 as permitted sender) client-ip=149.72.114.4;
+Received: by filterdrecv-5b8cd7cb77-jfzcd with SMTP
+	id filterdrecv-5b8cd7cb77-jfzcd-1-62BE92BF-1C        2022-07-01 06:22:55.539827884 +0000 UTC m=+1947532.433713190
+Received: from MjM0NzIyMTM (unknown)	by geopod-ismtpd-1-1 (SG) with HTTP
+	id 4u-fO-nRT5qGZBcTrmYn9Q	Fri, 01 Jul 2022 06:22:55.458 +0000 (UTC)
+Date: Fri, 01 Jul 2022 06:22:55 +0000 (UTC)
+From: '500apps' via Bilehal Hari Krishna <hari.bilehal@500apps.com>
+Mime-Version: 1.0
+Message-ID: <4u-fO-nRT5qGZBcTrmYn9Q@geopod-ismtpd-1-1>
+Subject: Verification Code 9123 to Login into 500apps
+X-infinity-mail-user: 500apps
+X-infinity-mail-region: us1
+X-infinity-mail-ip: 182.18.177.4
+X-infinity-mail-url: 
+ http:||api.500apps.com|auth|v1|verify|hari.bilehal%40500apps.com?rs=y
+X-infinity-mail-template-name: Verificati
+X-SG-EID: 
+ =?us-ascii?Q?WGSsYOtdp4bX3o9=2F7UPAOTI1qdKpZMLplPFa6TB8aulke3agDYBM+4Tf9LmF22?=
+ =?us-ascii?Q?YCvNKYTRJmeNqHGpgIjVl9IWMRsw=2F=2FaiFAf5IIT?=
+ =?us-ascii?Q?JKyvj2kuoKfjM1uOTT1Lcm4W7JvYi723SzDuL0X?=
+ =?us-ascii?Q?OSSLIQzJozMC4ulbFgrCseIMaZvsTd4IZoUF9a=2F?=
+ =?us-ascii?Q?e6L5NwfniUJDf07=2FtfQQlIKOzbx19Vvx+CHbgLf?=
+ =?us-ascii?Q?VLFo02fLdkMm3jtuoqzvpcRo1BVJABQd2eGeJa1?=
+ =?us-ascii?Q?psJJqmTc6akGlJtjbQ=2F6w=3D=3D?=
+To: Hari <hari.bilehal@500apps.com>
+X-Entity-ID: DUfc9d0a39x6GmHiDeHJDw==
+X-Original-Sender: noreply@500apps-campaigns.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@500apps-campaigns.com header.s=s1 header.b=HAayYUGe;       spf=pass
+ (google.com: domain of
+ bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-campaigns.com
+ designates 149.72.114.4 as permitted sender)
+ smtp.mailfrom="bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-
+	campaigns.com";       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps-campaigns.com
+X-Original-From: 500apps <noreply@500apps-campaigns.com>
+Reply-To: 500apps <noreply@500apps-campaigns.com>
+Precedence: list
+Mailing-list: list hari.bilehal@500apps.com; contact
+ hari.bilehal+owners@500apps.com
+List-ID: <hari.bilehal.500apps.com>
+X-Spam-Checked-In-Group: hari.bilehal@500apps.com
+X-Google-Group-Id: 342163588535
+List-Post: <https://groups.google.com/a/500apps.com/group/hari.bilehal/post>,
+ <mailto:hari.bilehal@500apps.com>
+List-Help: 
+ <https://support.google.com/a/500apps.com/bin/topic.py?topic=25838>,
+ <mailto:hari.bilehal+help@500apps.com>
+List-Archive: <https://groups.google.com/a/500apps.com/group/hari.bilehal/>
+List-Unsubscribe: 
+ <mailto:googlegroups-manage+342163588535+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/500apps.com/group/hari.bilehal/subscribe>
+Return-Path: hari.bilehal+bncBAABBQFF7KKQMGQE2YKU3II@500apps.com
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+
+Hey,
+
+We have received a login request from hari.bilehal@500apps.com
+
+Please authenticate your account by using the 4 digit code below:=20
+
+9123
+
+-
+500apps
+From - Fri Jul  1 11:58:31 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from mail-qv1-f71.google.com (mail-qv1-f71.google.com [209.85.219.71])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id 4E6F54004F
+	for <hari.bilehal@mantragroup.com>; Fri,  1 Jul 2022 06:28:15 +0000 (UTC)
+Received: by mail-qv1-f71.google.com with SMTP
+	id e10-20020a0ce3ca000000b004702b8819besf1880372qvl.4
+	for <hari.bilehal@mantragroup.com>; Thu, 30 Jun 2022 23:28:15 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1656656893; cv=pass;        d=google.com;
+ s=arc-20160816;       
+ b=xuUVglm+nhJXU/HidzDkWyackTADhCSg7ntAmnWMrEI9GU/8ySSLTct3K5GQE0+O9M        
+ j1YB51a9NRVV7Kr+CnpmMP/ARGou/e562hP5wlSONY0vYRd47E7mAFJzrqcbrwJYlWZd        
+ d+bvbC6RQd/XLfrxu+58Jn5ndrtBACUYoiJMMUvTXB3dWh41vjdHxCnRffQdknm7/jNA        
+ QKBGK43K9apSUsu7keiMJlteHZdJc6zYjY5MMPGa0C7jiiz4pDxppJH629VogL/qnVi8        
+ 5PdTZrYv47OeVd8LhvObrmuU9X9KkjNGZAufXjCTkJsWMbb0ldQmaJ/fzWmQjdEfwsBn        
+ q7Rg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=list-unsubscribe:list-archive:list-help:list-post:list-id        
+ :mailing-list:precedence:feedback-id:date:message-id        
+ :content-transfer-encoding:mime-version:subject:to:from        
+ :dkim-signature;        bh=zO8uWoFWPvSurED+OIh/mzvuxurJ7OzWMO9DJqRggHc=;       
+ b=CtbbpkT+EupETiikCdwxp4GLP2FtAQQ3XIdbwyZEaaDzBNTwWk2oReMlBcIJEZNu3B        
+ fYhU4A/yLyJ8lJMSYIvdz8k5xVCyOsvxQFxtthOvJSPM1TH2vg4REDX9xFKDDTJ0TLJp        
+ 9S3q/otG85KWDjKoR0dlwjx57MUncpzAgRAQdgNl5FWcGynQSVYHaauQFwFLVdbXu98R        
+ CDwB2H16AX0vnJ6kutMe5FtxwPZsfsXDZ3nG7wS30/QgBfnzNZL+6aYE2QspC+SHD850        
+ yTZxFSNsiUHDcOSj0VZWlwiHYIkngeNx9/UOFOPcdQYa4bMCO0+CStuxkhE39ZKyYScq        
+ YpLg==
+ARC-Authentication-Results: i=2; mx.google.com;       dkim=pass
+ header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=krKC2bqu;       spf=pass (google.com: domain of
+ 01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@email.500apps.co
+	m designates 54.240.48.116 as permitted sender)
+ smtp.mailfrom=01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@em
+	ail.500apps.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=500apps.com;
+ s=google;       
+ h=from:to:subject:mime-version:content-transfer-encoding:message-id        
+ :date:feedback-id:x-original-sender        
+ :x-original-authentication-results:precedence:mailing-list:list-id        
+ :list-post:list-help:list-archive:list-unsubscribe;       
+ bh=zO8uWoFWPvSurED+OIh/mzvuxurJ7OzWMO9DJqRggHc=;       
+ b=PMZPTPM7RtwDHCVkaxoRmiwrI7pFB55KyqoHQAJMXMGqb/l/bC126guIZCLX5ka7Dt        
+ 3mE/CdDzwMECFVznsjUh5mHDBjkzrrbQs1jDxtKf8pv4KSBaM6xkyFkwi06C2+1PYSLq        
+ Va1T5qlJjWqIi0gRH0L99BWlzIpZevCXyGC7Q=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20210112;       
+ h=x-gm-message-state:from:to:subject:mime-version        
+ :content-transfer-encoding:message-id:date:feedback-id        
+ :x-original-sender:x-original-authentication-results:precedence        
+ :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help        
+ :list-archive:list-unsubscribe;       
+ bh=zO8uWoFWPvSurED+OIh/mzvuxurJ7OzWMO9DJqRggHc=;       
+ b=1hatQxX16hfJCDh9YyVeFqS3yoPqulfI62s+GyU8VM+15Oght+phndXmbXivW/XPm8        
+ 3seg1bApVp4aQjKfBPCpGi8i0ZMHDc7BnWbLfMmt0SVLAg8TBYedJcfcx0mBDAHponZ2        
+ dYMSONrx9+dVKGps7mk5dogUSKvkDh6LgqcYZTLqOlIy4zeh5xDDJZrzIa5dtUmshCXb        
+ GzPgzkQQez3sL+fPU6XMfvi/2kDf8rM1QMYVpzjhMzMPP2mzwFdQp/4uj1KOcyxw7BwQ        
+ i5paJNSUhHZqTM66KZ/53YrgP59EvXHcMk0DOKjtc+oSV2NnkdYWnLBJletaHJjjz16c        
+ Jhuw==
+X-Gm-Message-State: AJIora8t5v+RQ46YjjUJi6RI6w4cgKFVx83CVWCI3lJwh7a+QxqH2J6Q
+	SkIZfAq3q4rJkSkdOPq9Evq7lv7j
+X-Google-Smtp-Source: 
+ AGRyM1uIUbrnZscSCba+7bCMIGqLgS98jJQMUKsDZxn5E9VKSpX2tQJzg2FVbSo9oI2cT9L5fWHsw
+	A==
+X-Received: by 2002:a05:6214:509a:b0:470:4c7f:99d with SMTP id
+ kk26-20020a056214509a00b004704c7f099dmr15838482qvb.36.1656656493220;       
+ Thu, 30 Jun 2022 23:21:33 -0700 (PDT)
+X-BeenThere: hari.bilehal@500apps.com
+Received: by 2002:a0c:b21a:0:b0:470:597b:bdaa with SMTP
+	id x26-20020a0cb21a000000b00470597bbdaals12227371qvd.10.gmail; Thu, 30 Jun 2022 23:21:32 -0700 (PDT)
+X-Received: by 2002:a05:6214:260c:b0:470:4ef5:7148 with SMTP id
+ gu12-20020a056214260c00b004704ef57148mr16060719qvb.64.1656656492717;       
+ Thu, 30 Jun 2022 23:21:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1656656492; cv=none;        d=google.com;
+ s=arc-20160816;       
+ b=SXOWklEUYqQMmNR9Vog2E+9e9myU801h7W87EPOTXkCUNJuoMN4gF3K05lb6/exdYK        
+ hAfeQLQoQyKjAmQf2nm09Ols4EX/rfToetFs3EsSvHvbijq8C6dqUO+KlX1YaeWoQ49w        
+ oOZ1D1N1JQAlCESBO3rVGwmxw9zJ9dYIcnX38AVae2xqCTogpMvUJp+S1OkJOIXqA+QJ        
+ wdG0A3GIZqgrnkmmeaNyvoUcwWopOrIUwOZFO5W7ivifLP7LHwgVHBfUHww6DKUjrsti        
+ XD5jnvBhx4SupdpPZgLHlaWJYr2GsnK913JjOT7hhDY3tb0H5TMSPMySRjJQEi77+Q7x        
+ 6oPw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=feedback-id:date:message-id:content-transfer-encoding:mime-version        
+ :subject:to:from:dkim-signature;       
+ bh=zO8uWoFWPvSurED+OIh/mzvuxurJ7OzWMO9DJqRggHc=;       
+ b=C4vDXPqn5z1kQ+fLl73VuMTAeftd1zdnfp5srny9GXCrcvvqmJv+369qjdd3OqAfkv        
+ PRNn/M+Tp/gKUPDgQS2KeAjMwWY6JfK7jCQhKMZa9OyvPjhySnsL/i6lkXgh+HFvHUPJ        
+ un4fqDpa32GLCH5OKpFHa7Y1L42IPpDmaIIUf1ztiUzdfzVb6VfoOVOUm63xG/dTe964        
+ q53ohZbG97Wd1kUMOdkD6y/8XYErO975hHHYoiLp2DZSdu+hB26VIIWRK1IcHByTdnse        
+ lZTruxH4ho5SxKPkEXvJNspduia7qlUuyvFGiCitv+QJcNFWvu6Ojmo34xNEiV0SMzf0        
+ wTVw==
+ARC-Authentication-Results: i=1; mx.google.com;       dkim=pass
+ header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=krKC2bqu;       spf=pass (google.com: domain of
+ 01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@email.500apps.co
+	m designates 54.240.48.116 as permitted sender)
+ smtp.mailfrom=01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@em
+	ail.500apps.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps.com
+Received: from a48-116.smtp-out.amazonses.com (a48-116.smtp-out.amazonses.com. [54.240.48.116])
+	by mx.google.com with ESMTPS
+	id d20-20020a05620a241400b006b1e0443fa3si4580216qkn.341.2022.06.30.23.21.32
+	for <hari.bilehal@500apps.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);        Thu, 30 Jun 2022 23:21:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of
+ 01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@email.500apps.co
+	m designates 54.240.48.116 as permitted sender) client-ip=54.240.48.116;
+From: 500apps <noreply@500apps.com>
+To: hari.bilehal@500apps.com
+Subject: Verification Code 8902 to Login into 500apps
+MIME-Version: 1.0
+Message-ID: <01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@email.amazonses.com>
+Date: Fri, 1 Jul 2022 06:21:32 +0000
+Feedback-ID: 
+ 1.us-east-1.ZPWuupaccevtzlT433q/h0xoHGZWCQs/jVtoJt02TeA=:AmazonSES
+X-SES-Outgoing: 2022.07.01-54.240.48.116
+X-Original-Sender: noreply@500apps.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=krKC2bqu;       spf=pass (google.com: domain of
+ 01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@email.500apps.co
+	m designates 54.240.48.116 as permitted sender)
+ smtp.mailfrom=01000181b86bf696-aa4c0c23-dc38-4bcf-ba21-e17761634503-000000@em
+	ail.500apps.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps.com
+Precedence: list
+Mailing-list: list hari.bilehal@500apps.com; contact
+ hari.bilehal+owners@500apps.com
+List-ID: <hari.bilehal.500apps.com>
+X-Spam-Checked-In-Group: hari.bilehal@500apps.com
+X-Google-Group-Id: 342163588535
+List-Post: <https://groups.google.com/a/500apps.com/group/hari.bilehal/post>,
+ <mailto:hari.bilehal@500apps.com>
+List-Help: 
+ <https://support.google.com/a/500apps.com/bin/topic.py?topic=25838>,
+ <mailto:hari.bilehal+help@500apps.com>
+List-Archive: <https://groups.google.com/a/500apps.com/group/hari.bilehal/>
+List-Unsubscribe: 
+ <mailto:googlegroups-manage+342163588535+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/500apps.com/group/hari.bilehal/subscribe>
+Return-Path: hari.bilehal+bncBCT5REUS2QBBB3NE7KKQMGQE7RFEW3A@500apps.com
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hey,
+
+We have received a login request from hari.bilehal@500apps.com
+
+Please authenticate your account by using the 4 digit code below: 
+
+8902
+
+-
+500apps
+From - Fri Jul  1 12:17:43 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from mail-qv1-f71.google.com (mail-qv1-f71.google.com [209.85.219.71])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id 8D7AE40117
+	for <hari.bilehal@mantragroup.com>; Fri,  1 Jul 2022 06:47:27 +0000 (UTC)
+Received: by mail-qv1-f71.google.com with SMTP
+	id x18-20020a0ce252000000b004703cbb92ebsf1882744qvl.21
+	for <hari.bilehal@mantragroup.com>; Thu, 30 Jun 2022 23:47:27 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1656658045; cv=pass;        d=google.com;
+ s=arc-20160816;       
+ b=pYTW2KdRviCZxgtkplZY64r9w9QEBMYk5ytgOp+glYOyEkbR3SGld1Tl6RgMNhjrbY        
+ 03EY62RwBRxZ4mNDz3zqzGY/ypnM1By9RR4YS7M3x8YOVAxbsZaEyKMIYWksQKZ8xZjX        
+ jApb91qUpqAYj+NwhNKJTQ3OgRGknzopwHj22jkUL8ukoHMQ1noW8UgAb88NmfQFSpSo        
+ TpiAEOi0wbaLkcSgScpekGltNKUAZtijZsxOJ1l5UKKWwkt2lFWb9nT4bJrQtaMbPEQS        
+ s7HqSUTXJbyQrTUuFOIrbWtCdyiY1wSPrMSi47uNQkZQcqk4X6OXc7ogHNyHwpy3yIw1        
+ /7CA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=list-unsubscribe:list-archive:list-help:list-post:list-id        
+ :mailing-list:precedence:feedback-id:date:message-id        
+ :content-transfer-encoding:mime-version:subject:to:from        
+ :dkim-signature;        bh=ofXOkr69BT3j7M8MmWTnLE9HxesVArIzICc4KqydMtM=;       
+ b=0aXqGQqU/7Q2w0ikG7T4x6fPPaqs0EencY5O1VpSmna++jM42Cu8Yjo9YZP5BDldWx        
+ YYXwpVSJXwowEeFmSlEDs8+e3Ag/hWSZgoo5f+5F5dyQdzfcebdk/OfhasR6lOCwkYRm        
+ G5a/uKCtoQ8DCbQJRWEYmpzZnTyH/nUFuWBRKzFFRBO59kviJpRIkP3Ry2N/uE5+vTpr        
+ GgTa1K5Ro3/1DRmfl6CcVZ6Qkza9j4zDadE4lLwc9bmHq1VRvji9i5C5ZvaXAQrxD5Il        
+ kpAx/8dLa+Vlkv0nBFTNVxwIbCGCWMAtgp3U4Zz/w7NteAi2UN1uY38regZSAMKx9J2Z        
+ mskQ==
+ARC-Authentication-Results: i=2; mx.google.com;       dkim=pass
+ header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=GrHR0LQr;       spf=pass (google.com: domain of
+ 01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@email.500apps.co
+	m designates 54.240.8.84 as permitted sender)
+ smtp.mailfrom=01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@em
+	ail.500apps.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=500apps.com;
+ s=google;       
+ h=from:to:subject:mime-version:content-transfer-encoding:message-id        
+ :date:feedback-id:x-original-sender        
+ :x-original-authentication-results:precedence:mailing-list:list-id        
+ :list-post:list-help:list-archive:list-unsubscribe;       
+ bh=ofXOkr69BT3j7M8MmWTnLE9HxesVArIzICc4KqydMtM=;       
+ b=XWjbqG4CMa/rc8UKXd6aaPROWNr6959Suu4fLK3nIP2AiavqSfWPeeJp1n3UIDe9b0        
+ pkNeJvSHmulETgGJRAi/EvkVvgJCfTTCNpeTUmvULpT8QyiKCWIXMhX2BQu+Fn2DH8UT        
+ CBzopH5xJuYqmNa7ePhuhKJdXnJw8EwIgVyuU=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20210112;       
+ h=x-gm-message-state:from:to:subject:mime-version        
+ :content-transfer-encoding:message-id:date:feedback-id        
+ :x-original-sender:x-original-authentication-results:precedence        
+ :mailing-list:list-id:x-spam-checked-in-group:list-post:list-help        
+ :list-archive:list-unsubscribe;       
+ bh=ofXOkr69BT3j7M8MmWTnLE9HxesVArIzICc4KqydMtM=;       
+ b=HRdA86Jsz1evZIJNifbDdqA+oKbnUqKIuf2+Dlz2tujc5dDY+3GbYA57I4jSbjWr/o        
+ aNdRNh0ZVXUdrjZRV9sy7O61ZMPqrAu9YsUvkaRVif8XeGfAZ3vndLX56apDu45neljT        
+ gcvamuIytamk9P+MNOF/feVVRfLkq1qgGxwn6Qch9/gIEUZKZ9EDaYYy45eWJMbsTY9A        
+ MtktbkjTMMYqbby2KLw1Py03+DgdLgzvI5e66XS40f1t5+yiXXo2FUJgHxs9uOENMqRJ        
+ fflxcgP8zXanLXkw/4fQkHONhKSi3EL1Aeqpd8YgmwkdreiLAg/MFWjsyvDJEmilEYY7        
+ aa7A==
+X-Gm-Message-State: AJIora9/L5WRl38JNZBJgS8DjPeGLYNL9dZFykma+26yZYpq5GO5Jiy7
+	Fhy/WVKHoh72ImTBzDeaN2Xu7Hf+
+X-Google-Smtp-Source: 
+ AGRyM1t9iIXb4cRo04KFGTnT/Bkk3aRDUU1kDT4g0egiwi+PJMOcxLGN1U24Vf+ODSDxeOeMbQZXY
+	g==
+X-Received: by 2002:a05:620a:790:b0:6af:6859:ff9f with SMTP id
+ 16-20020a05620a079000b006af6859ff9fmr8985396qka.252.1656656504422;       
+ Thu, 30 Jun 2022 23:21:44 -0700 (PDT)
+X-BeenThere: hari.bilehal@500apps.com
+Received: by 2002:a05:620a:1a9d:b0:69f:a410:57b4 with SMTP
+	id bl29-20020a05620a1a9d00b0069fa41057b4ls24749688qkb.11.gmail; Thu, 30 Jun 2022 23:21:44 -0700 (PDT)
+X-Received: by 2002:a37:792:0:b0:6ae:e704:cb1a with SMTP id
+ 140-20020a370792000000b006aee704cb1amr8967393qkh.597.1656656503908;       
+ Thu, 30 Jun 2022 23:21:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1656656503; cv=none;        d=google.com;
+ s=arc-20160816;       
+ b=gs7icqvxId+ojEtujde5LkJlASFlNn5+u5vZ4RIoXGSDQF59grH/eB2QaouwyzPqan        
+ FPQKoCVIAm3MpDDG2WgO15FW1twKlrR8L7hGtl7cnvt/fXXqdVOmiDXmYM9xsJW0QTno        
+ 6yOz6DWCK4KdWscPmtpAD3Ik05Qvs83X3sYOBoyDjPgB1Ty2V8dEGT30gDT1cBs02QpV        
+ PoVrSNOApTHjH8xN7XSDJwrKiDRypOak++kyzaf1aX2zXgfp+9UYyzLfmmoH3NESmRaa        
+ Apmz5Snnw4CGPNumCiQ7tFYSvLkrys6webR+kmgHyt86KqY2Xg54PqgApTccFswzlSh4        
+ bLyQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=feedback-id:date:message-id:content-transfer-encoding:mime-version        
+ :subject:to:from:dkim-signature;       
+ bh=ofXOkr69BT3j7M8MmWTnLE9HxesVArIzICc4KqydMtM=;       
+ b=pN/+s3STTDEby4294yzLN8cHsu/bIUntKF601H9aPwmHOPO9IKYEH/ImHV0bDDp+n8        
+ YXSSSgkhTGRK5PbGHbb+mb/zT3Z3qC0esN0P/V4Hv30s6GPH+svRDaQdcP8huJofHWm+        
+ Z1zOdZYqsnIxnDLY/dJ9ax7dysYlS4GLFBAz7CR0fBs9eQAJIgK58DfUMy8y9zXWd2yj        
+ hQ+yYbdMdnJQzO7Eo64PMq84IzRnImkg9abk0y9vPKCagahYZ0SbjVdDTJe20EC8X8xE        
+ ++Gy/Q0sNh6vZqRRw6z28jHwEZy5XWaac/LA7IPHn7UnmYjgmKEVe7FtoGAG9v6IrkFR        
+ 1Bng==
+ARC-Authentication-Results: i=1; mx.google.com;       dkim=pass
+ header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=GrHR0LQr;       spf=pass (google.com: domain of
+ 01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@email.500apps.co
+	m designates 54.240.8.84 as permitted sender)
+ smtp.mailfrom=01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@em
+	ail.500apps.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps.com
+Received: from a8-84.smtp-out.amazonses.com (a8-84.smtp-out.amazonses.com. [54.240.8.84])
+	by mx.google.com with ESMTPS
+	id o2-20020a05622a008200b0031715149794si12491393qtw.370.2022.06.30.23.21.43
+	for <hari.bilehal@500apps.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);        Thu, 30 Jun 2022 23:21:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of
+ 01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@email.500apps.co
+	m designates 54.240.8.84 as permitted sender) client-ip=54.240.8.84;
+From: 500apps <noreply@500apps.com>
+To: hari.bilehal@500apps.com
+Subject: Verification Code 9637 to Login into 500apps
+MIME-Version: 1.0
+Message-ID: <01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@email.amazonses.com>
+Date: Fri, 1 Jul 2022 06:21:43 +0000
+Feedback-ID: 
+ 1.us-east-1.ZPWuupaccevtzlT433q/h0xoHGZWCQs/jVtoJt02TeA=:AmazonSES
+X-SES-Outgoing: 2022.07.01-54.240.8.84
+X-Original-Sender: noreply@500apps.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=GrHR0LQr;       spf=pass (google.com: domain of
+ 01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@email.500apps.co
+	m designates 54.240.8.84 as permitted sender)
+ smtp.mailfrom=01000181b86c2245-9cb55d9f-e688-4d9a-b84c-382eb222545d-000000@em
+	ail.500apps.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps.com
+Precedence: list
+Mailing-list: list hari.bilehal@500apps.com; contact
+ hari.bilehal+owners@500apps.com
+List-ID: <hari.bilehal.500apps.com>
+X-Spam-Checked-In-Group: hari.bilehal@500apps.com
+X-Google-Group-Id: 342163588535
+List-Post: <https://groups.google.com/a/500apps.com/group/hari.bilehal/post>,
+ <mailto:hari.bilehal@500apps.com>
+List-Help: 
+ <https://support.google.com/a/500apps.com/bin/topic.py?topic=25838>,
+ <mailto:hari.bilehal+help@500apps.com>
+List-Archive: <https://groups.google.com/a/500apps.com/group/hari.bilehal/>
+List-Unsubscribe: 
+ <mailto:googlegroups-manage+342163588535+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/500apps.com/group/hari.bilehal/subscribe>
+Return-Path: hari.bilehal+bncBCT5REUS2QBBB6FE7KKQMGQEW6HTODI@500apps.com
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hey,
+
+We have received a login request from hari.bilehal@500apps.com
+
+Please authenticate your account by using the 4 digit code below: 
+
+9637
+
+-
+500apps
+From - Fri Jul  1 15:39:22 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from mail-oo1-f73.google.com (mail-oo1-f73.google.com [209.85.161.73])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id 8A2914280F
+	for <hari.bilehal@mantragroup.com>; Fri,  1 Jul 2022 10:09:07 +0000 (UTC)
+Received: by mail-oo1-f73.google.com with SMTP
+	id w17-20020a4a9d11000000b004284d7e1298so116569ooj.6
+	for <hari.bilehal@mantragroup.com>; Fri, 01 Jul 2022 03:09:07 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=google.com;
+ s=20210112;       
+ h=mime-version:reply-to:sender:message-id:date:subject:from:to:cc;       
+ bh=DnUytOXqV5NfVtbbK6xkh7M8B9INzVn+XF2aloSnnxI=;       
+ b=DfWUpDnaeeKjnmCjlqcx4P5Rz9dACn4Erlq6+dRi6OAziqzVjbFXqX8oxgn9yxIez7        
+ uK4IQ3teEC8xa2yDJ1WlOKrHc34SbnDW3fzFk7xLkKeGczayuOCwj1gvv3eGVj65zRsQ        
+ 9DO6yTTsPCWlhmtw4712fHvVVRiyuLS02VdOojyltuCwhvhJe+crlJ5HfDeqiwT15gP/        
+ nYAmwd73Hu1CwqTnTvFkfv8sZ1tou/txQYN+a+1dlW+l9fpXLs3Th1isg9fZEJsQv0eL        
+ RT/ufZ6Kz0rTrlPFlqombUK2gfk2K7eSqrBjxSI+MxqlXbSiIH2c65/BvmRiPOiQw/If        
+ +01g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=500apps.com;
+ s=google;       
+ h=mime-version:reply-to:sender:message-id:date:subject:from:to:cc;       
+ bh=DnUytOXqV5NfVtbbK6xkh7M8B9INzVn+XF2aloSnnxI=;       
+ b=gjj+CBmvG/3PLL9g8v0EOF27PKH4WxZzenT/dgGXRXTdHHjXw+Sef2yTvhQewGCGHC        
+ R7Wm6F3AM+Wi0s/u7hDtdPhBYGXMPNpZ7XWdmPgWhfGH6Y5aXfycWHm7lx55YjDiRnNY        
+ gprdTURgbyu3WM8uYwoK4Ea+5/riwHT/VR76Q=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20210112;       
+ h=x-gm-message-state:mime-version:reply-to:sender:message-id:date        
+ :subject:from:to:cc;        bh=DnUytOXqV5NfVtbbK6xkh7M8B9INzVn+XF2aloSnnxI=;       
+ b=zQVRgz6MZqecVXcLJCdYRU7Pn7Y6SIQ9wsJR1bw24X1LbeLEPO/I5xJog6XHx5Ro4i        
+ zGOvmXNTp0rSHJrB+0ch7+8PnuGQ++M2ABDgsJq9qVcC0YwuuUqn+XFMs6xNLRDfB0Y4        
+ qS8YkgW8HVYqOYUg17iMStVsmIjRJXifaSYv9IdYoTJ4RuCu3idng/QaPpwO3aCgudTP        
+ AKHIpVX7dp1RuAUdNa4d8QrKUJ36uKrA1v8cyoXpLjwxG5BTWXtV+QZk1jZIgBZsJxJY        
+ PlwKpouJnsiCe6INaOBUOq7IzMaBOHPwFvxaEcAEQT/npGfMi3tKDVl9Q+CvxOe7XWRp        
+ tdBw==
+X-Gm-Message-State: AJIora+hcc1dk5g8lF83srhS9lpA9b4ukAwyhILAteclDdLzVEnMfPnv
+	hGrILkGAFpxY+vM8FYnDIPaRPvXnorq6n4YXAxGx/JrCUw==
+X-Google-Smtp-Source: 
+ AGRyM1uoGqjs/aPLACTlxnyofaM21iP7jE/bnWF0ZePJq7eFriiIwAl5nybYnxyC/o6fifzl2KwyO
+	ZYi5BsTL+3trHDg
+MIME-Version: 1.0
+X-Received: by 2002:a05:6808:f90:b0:32f:3f73:a951 with SMTP id
+ o16-20020a0568080f9000b0032f3f73a951mr8348242oiw.68.1656670145139; Fri, 01
+ Jul 2022 03:09:05 -0700 (PDT)
+Reply-To: muthukumar.jegadeesan@500apps.com
+Sender: Google Calendar <calendar-notification@google.com>
+Message-ID: <00000000000082f05a05e2bb939b@google.com>
+Date: Fri, 01 Jul 2022 10:09:05 +0000
+Subject: Invitation: Dev Ops Training @ Weekly from 2pm to 3pm on weekdays
+ (IST) (hari.bilehal@mantragroup.com)
+From: muthukumar.jegadeesan@500apps.com
+To: hari.bilehal@mantragroup.com, Amarlapudi Pradeep
+	<pradeep.amarlapudi@500apps.com>, Shoaib Akthar Mohammed
+	<shoaib.mohammed@500apps.com>, Mogili Anil Kumar <anil.mogili@500apps.com>,
+	Bilehal Hari Krishna <hari.bilehal@500apps.com>, Saishankar Tangudu
+	<saishankar.tangudu@500apps.com>, Sumit Patel <sumit.patel@500apps.com>
+Cc: subramaniyam.kolluri@500apps.com
+Return-Path: muthukumar.jegadeesan@500apps.com
+Content-Type: multipart/mixed; boundary=00000000000082f03a05e2bb939a
+
+
+--00000000000082f03a05e2bb939a
+Content-Type: multipart/alternative; boundary="00000000000082f03805e2bb9398"
+
+
+--00000000000082f03805e2bb9398
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+WW91IGhhdmUgYmVlbiBpbnZpdGVkIHRvIHRoZSBmb2xsb3dpbmcgZXZlbnQuDQoNClRpdGxlOiBE
+ZXYgT3BzIFRyYWluaW5nDQpEZWFyIEFsbCwNCg0KUGxlYXNlIGpvaW4gdGhlIERldm9wcyB0cmFp
+bmluZyBzZXNzaW9uIGFzIHBlciB0aGUgc2NoZWR1bGUuDQoNClRoYW5rIHlvdQ0KDQpCZXN0IFJl
+Z2FyZHMsDQpNdXRodWt1bWFyDQpXaGVuOiBXZWVrbHkgZnJvbSAycG0gdG8gM3BtIG9uIHdlZWtk
+YXlzIEluZGlhIFN0YW5kYXJkIFRpbWUgLSBLb2xrYXRhDQpDYWxlbmRhcjogaGFyaS5iaWxlaGFs
+QG1hbnRyYWdyb3VwLmNvbQ0KV2hvOg0KICAgICAqIG11dGh1a3VtYXIuamVnYWRlZXNhbkA1MDBh
+cHBzLmNvbSAtIG9yZ2FuaXplcg0KICAgICAqIEFtYXJsYXB1ZGkgUHJhZGVlcA0KICAgICAqIFNo
+b2FpYiBBa3RoYXIgTW9oYW1tZWQNCiAgICAgKiBNb2dpbGkgQW5pbCBLdW1hcg0KICAgICAqIEJp
+bGVoYWwgSGFyaSBLcmlzaG5hDQogICAgICogaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ0K
+ICAgICAqIFNhaXNoYW5rYXIgVGFuZ3VkdQ0KICAgICAqIFN1bWl0IFBhdGVsDQogICAgICogc3Vi
+cmFtYW5peWFtLmtvbGx1cmlANTAwYXBwcy5jb20gLSBvcHRpb25hbA0KDQpFdmVudCBkZXRhaWxz
+OiAgDQpodHRwczovL2NhbGVuZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvZXZlbnQ/YWN0aW9uPVZJ
+RVcmZWlkPU5UWnNOSEZyYVc5bWJteGtNamh6Y1hWb05XTnJhRFIxWldRZ2FHRnlhUzVpYVd4bGFH
+RnNRRzFoYm5SeVlXZHliM1Z3TG1OdmJRJnRvaz1Nek1qYlhWMGFIVnJkVzFoY2k1cVpXZGhaR1Zs
+YzJGdVFEVXdNR0Z3Y0hNdVkyOXRaR001TlRVMFpUa3hOMlJpWkdWaFpESXlOVFZsTWprd056VmlN
+VEEzWmpobU4ySXpPVEpoTkEmY3R6PUFzaWElMkZLb2xrYXRhJmhsPWVuJmVzPTANCg0KSW52aXRh
+dGlvbiBmcm9tIEdvb2dsZSBDYWxlbmRhcjogaHR0cHM6Ly9jYWxlbmRhci5nb29nbGUuY29tL2Nh
+bGVuZGFyLw0KDQpZb3UgYXJlIHJlY2VpdmluZyB0aGlzIGNvdXJ0ZXN5IGVtYWlsIGF0IHRoZSBh
+Y2NvdW50ICANCmhhcmkuYmlsZWhhbEBtYW50cmFncm91cC5jb20gYmVjYXVzZSB5b3UgYXJlIGFu
+IGF0dGVuZGVlIG9mIHRoaXMgZXZlbnQuDQoNClRvIHN0b3AgcmVjZWl2aW5nIGZ1dHVyZSB1cGRh
+dGVzIGZvciB0aGlzIGV2ZW50LCBkZWNsaW5lIHRoaXMgZXZlbnQuICANCkFsdGVybmF0aXZlbHkg
+eW91IGNhbiBzaWduIHVwIGZvciBhIEdvb2dsZSBhY2NvdW50IGF0ICANCmh0dHBzOi8vY2FsZW5k
+YXIuZ29vZ2xlLmNvbS9jYWxlbmRhci8gYW5kIGNvbnRyb2wgeW91ciBub3RpZmljYXRpb24gIA0K
+c2V0dGluZ3MgZm9yIHlvdXIgZW50aXJlIGNhbGVuZGFyLg0KDQpGb3J3YXJkaW5nIHRoaXMgaW52
+aXRhdGlvbiBjb3VsZCBhbGxvdyBhbnkgcmVjaXBpZW50IHRvIHNlbmQgYSByZXNwb25zZSB0byAg
+DQp0aGUgb3JnYW5pemVyIGFuZCBiZSBhZGRlZCB0byB0aGUgZ3Vlc3QgbGlzdCwgb3IgaW52aXRl
+IG90aGVycyByZWdhcmRsZXNzICANCm9mIHRoZWlyIG93biBpbnZpdGF0aW9uIHN0YXR1cywgb3Ig
+dG8gbW9kaWZ5IHlvdXIgUlNWUC4gTGVhcm4gbW9yZSBhdCAgDQpodHRwczovL3N1cHBvcnQuZ29v
+Z2xlLmNvbS9jYWxlbmRhci9hbnN3ZXIvMzcxMzUjZm9yd2FyZGluZw0K
+--00000000000082f03805e2bb9398
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<span itemscope itemtype=3D"http://schema.org/InformAction"><span style=3D"=
+display:none" itemprop=3D"about" itemscope itemtype=3D"http://schema.org/Pe=
+rson"><meta itemprop=3D"description" content=3D"Invitation from muthukumar.=
+jegadeesan@500apps.com"/></span><span itemprop=3D"object" itemscope itemtyp=
+e=3D"http://schema.org/Event"><div style=3D""><table cellspacing=3D"0" cell=
+padding=3D"8" border=3D"0" summary=3D"" style=3D"width:100%;font-family:Ari=
+al,Sans-serif;border:1px Solid #ccc;border-width:1px 2px 2px 1px;background=
+-color:#fff;"><tr><td><meta itemprop=3D"eventStatus" content=3D"http://sche=
+ma.org/EventScheduled"/><h4 style=3D"padding:6px 0;margin:0 0 4px 0;font-fa=
+mily:Arial,Sans-serif;font-size:13px;line-height:1.4;border:1px Solid #fff;=
+background:#fff;color:#090;font-weight:normal"><strong>You have been invite=
+d to the following event.</strong></h4><div style=3D"padding:2px"><span ite=
+mprop=3D"publisher" itemscope itemtype=3D"http://schema.org/Organization"><=
+meta itemprop=3D"name" content=3D"Google Calendar"/></span><meta itemprop=
+=3D"eventId/googleCalendar" content=3D"56l4qkiofnld28squh5ckh4ued"/><h3 sty=
+le=3D"padding:0 0 6px 0;margin:0;font-family:Arial,Sans-serif;font-size:16p=
+x;font-weight:bold;color:#222"><span itemprop=3D"name">Dev Ops Training</sp=
+an></h3><table style=3D"display:inline-table" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" summary=3D"Event details"><tr><td style=3D"padding:0 1e=
+m 10px 0;font-family:Arial,Sans-serif;font-size:13px;color:#888;white-space=
+:nowrap;width:90px" valign=3D"top"><div><i style=3D"font-style:normal">When=
+</i></div></td><td style=3D"padding-bottom:10px;font-family:Arial,Sans-seri=
+f;font-size:13px;color:#222" valign=3D"top"><div style=3D"text-indent:-1px"=
+><time itemprop=3D"startDate" datetime=3D"20220704T083000Z"></time><time it=
+emprop=3D"endDate" datetime=3D"20220704T093000Z"></time>Weekly from 2pm to =
+3pm on weekdays <span style=3D"color:#888">India Standard Time - Kolkata</s=
+pan></div></td></tr><tr><td style=3D"padding:0 1em 10px 0;font-family:Arial=
+,Sans-serif;font-size:13px;color:#888;white-space:nowrap;width:90px" valign=
+=3D"top"><div><i style=3D"font-style:normal">Calendar</i></div></td><td sty=
+le=3D"padding-bottom:10px;font-family:Arial,Sans-serif;font-size:13px;color=
+:#222" valign=3D"top"><div style=3D"text-indent:-1px">hari.bilehal@mantragr=
+oup.com</div></td></tr><tr><td style=3D"padding:0 1em 10px 0;font-family:Ar=
+ial,Sans-serif;font-size:13px;color:#888;white-space:nowrap;width:90px" val=
+ign=3D"top"><div><i style=3D"font-style:normal">Who</i></div></td><td style=
+=3D"padding-bottom:10px;font-family:Arial,Sans-serif;font-size:13px;color:#=
+222" valign=3D"top"><table cellspacing=3D"0" cellpadding=3D"0"><tr><td styl=
+e=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#=
+222;width:10px"><div style=3D"text-indent:-1px"><span style=3D"font-family:=
+Courier New,monospace">&#x2022;</span></div></td><td style=3D"padding-right=
+:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><div style=3D=
+"text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D=
+"attendee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=
+=3D"name" class=3D"notranslate">muthukumar.jegadeesan@500apps.com</span><me=
+ta itemprop=3D"email" content=3D"muthukumar.jegadeesan@500apps.com"/></span=
+><span itemprop=3D"organizer" itemscope itemtype=3D"http://schema.org/Perso=
+n"><meta itemprop=3D"name" content=3D"muthukumar.jegadeesan@500apps.com"/><=
+meta itemprop=3D"email" content=3D"muthukumar.jegadeesan@500apps.com"/></sp=
+an><span style=3D"font-size:11px;color:#888"> - organizer</span></div></div=
+></div></td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans=
+-serif;font-size:13px;color:#222;width:10px"><div style=3D"text-indent:-1px=
+"><span style=3D"font-family:Courier New,monospace">&#x2022;</span></div></=
+td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:1=
+3px;color:#222"><div style=3D"text-indent:-1px"><div><div style=3D"margin:0=
+ 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype=3D"http://schema=
+.org/Person"><span itemprop=3D"name" class=3D"notranslate">Amarlapudi Prade=
+ep</span><meta itemprop=3D"email" content=3D"pradeep.amarlapudi@500apps.com=
+"/></span></div></div></div></td></tr><tr><td style=3D"padding-right:10px;f=
+ont-family:Arial,Sans-serif;font-size:13px;color:#222;width:10px"><div styl=
+e=3D"text-indent:-1px"><span style=3D"font-family:Courier New,monospace">&#=
+x2022;</span></div></td><td style=3D"padding-right:10px;font-family:Arial,S=
+ans-serif;font-size:13px;color:#222"><div style=3D"text-indent:-1px"><div><=
+div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope item=
+type=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notransl=
+ate">Shoaib Akthar Mohammed</span><meta itemprop=3D"email" content=3D"shoai=
+b.mohammed@500apps.com"/></span></div></div></div></td></tr><tr><td style=
+=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#2=
+22;width:10px"><div style=3D"text-indent:-1px"><span style=3D"font-family:C=
+ourier New,monospace">&#x2022;</span></div></td><td style=3D"padding-right:=
+10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><div style=3D"=
+text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"=
+attendee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D=
+"name" class=3D"notranslate">Mogili Anil Kumar</span><meta itemprop=3D"emai=
+l" content=3D"anil.mogili@500apps.com"/></span></div></div></div></td></tr>=
+<tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:=
+13px;color:#222;width:10px"><div style=3D"text-indent:-1px"><span style=3D"=
+font-family:Courier New,monospace">&#x2022;</span></div></td><td style=3D"p=
+adding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><=
+div style=3D"text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span=
+ itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><spa=
+n itemprop=3D"name" class=3D"notranslate">Bilehal Hari Krishna</span><meta =
+itemprop=3D"email" content=3D"hari.bilehal@500apps.com"/></span></div></div=
+></div></td></tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans=
+-serif;font-size:13px;color:#222;width:10px"><div style=3D"text-indent:-1px=
+"><span style=3D"font-family:Courier New,monospace">&#x2022;</span></div></=
+td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:1=
+3px;color:#222"><div style=3D"text-indent:-1px"><div><div style=3D"margin:0=
+ 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype=3D"http://schema=
+.org/Person"><span itemprop=3D"name" class=3D"notranslate">hari.bilehal@man=
+tragroup.com</span><meta itemprop=3D"email" content=3D"hari.bilehal@mantrag=
+roup.com"/></span></div></div></div></td></tr><tr><td style=3D"padding-righ=
+t:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222;width:10px"><=
+div style=3D"text-indent:-1px"><span style=3D"font-family:Courier New,monos=
+pace">&#x2022;</span></div></td><td style=3D"padding-right:10px;font-family=
+:Arial,Sans-serif;font-size:13px;color:#222"><div style=3D"text-indent:-1px=
+"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee" itemsc=
+ope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"=
+notranslate">Saishankar Tangudu</span><meta itemprop=3D"email" content=3D"s=
+aishankar.tangudu@500apps.com"/></span></div></div></div></td></tr><tr><td =
+style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;col=
+or:#222;width:10px"><div style=3D"text-indent:-1px"><span style=3D"font-fam=
+ily:Courier New,monospace">&#x2022;</span></div></td><td style=3D"padding-r=
+ight:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><div styl=
+e=3D"text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span itempro=
+p=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span itempr=
+op=3D"name" class=3D"notranslate">Sumit Patel</span><meta itemprop=3D"email=
+" content=3D"sumit.patel@500apps.com"/></span></div></div></div></td></tr><=
+tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:1=
+3px;color:#222;width:10px"><div style=3D"text-indent:-1px"><span style=3D"f=
+ont-family:Courier New,monospace">&#x2022;</span></div></td><td style=3D"pa=
+dding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><d=
+iv style=3D"text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span =
+itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span=
+ itemprop=3D"name" class=3D"notranslate">subramaniyam.kolluri@500apps.com</=
+span><meta itemprop=3D"email" content=3D"subramaniyam.kolluri@500apps.com"/=
+></span><span style=3D"font-size:11px;color:#888"> - optional</span></div><=
+/div></div></td></tr></table></td></tr></table><div style=3D"float:right;fo=
+nt-weight:bold;font-size:13px"> <a href=3D"https://calendar.google.com/cale=
+ndar/event?action=3DVIEW&amp;eid=3DNTZsNHFraW9mbmxkMjhzcXVoNWNraDR1ZWQgaGFy=
+aS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&amp;tok=3DMzMjbXV0aHVrdW1hci5qZWdhZGVlc2=
+FuQDUwMGFwcHMuY29tZGM5NTU0ZTkxN2RiZGVhZDIyNTVlMjkwNzViMTA3ZjhmN2IzOTJhNA&am=
+p;ctz=3DAsia%2FKolkata&amp;hl=3Den&amp;es=3D0" style=3D"color:#20c;white-sp=
+ace:nowrap" itemprop=3D"url">more details &raquo;</a><br></div><div style=
+=3D"padding-bottom:15px;font-family:Arial,Sans-serif;font-size:13px;color:#=
+222;white-space:pre-wrap!important;white-space:-moz-pre-wrap!important;whit=
+e-space:-pre-wrap!important;white-space:-o-pre-wrap!important;white-space:p=
+re;word-wrap:break-word"><span>Dear All,<p>Please join the Devops training =
+session as per the schedule.</p><p>Thank you</p><p>Best Regards,<br>Muthuku=
+mar</p></span><meta itemprop=3D"description" content=3D"Dear All,
+
+Please join the Devops training session as per the schedule.
+
+Thank you
+
+Best Regards,
+Muthukumar"/></div></div><p style=3D"color:#222;font-size:13px;margin:0"><s=
+pan style=3D"color:#888">Going (hari.bilehal@mantragroup.com)?&nbsp;&nbsp;&=
+nbsp;</span><wbr>All events in this series:&nbsp;&nbsp;&nbsp;<strong><span =
+itemprop=3D"potentialaction" itemscope itemtype=3D"http://schema.org/RsvpAc=
+tion"><meta itemprop=3D"attendance" content=3D"http://schema.org/RsvpAttend=
+ance/Yes"/><span itemprop=3D"handler" itemscope itemtype=3D"http://schema.o=
+rg/HttpActionHandler"><link itemprop=3D"method" href=3D"http://schema.org/H=
+ttpRequestMethod/GET"/><a href=3D"https://calendar.google.com/calendar/even=
+t?action=3DRESPOND&amp;eid=3DNTZsNHFraW9mbmxkMjhzcXVoNWNraDR1ZWQgaGFyaS5iaW=
+xlaGFsQG1hbnRyYWdyb3VwLmNvbQ&amp;rst=3D1&amp;tok=3DMzMjbXV0aHVrdW1hci5qZWdh=
+ZGVlc2FuQDUwMGFwcHMuY29tZGM5NTU0ZTkxN2RiZGVhZDIyNTVlMjkwNzViMTA3ZjhmN2IzOTJ=
+hNA&amp;ctz=3DAsia%2FKolkata&amp;hl=3Den&amp;es=3D0" style=3D"color:#20c;wh=
+ite-space:nowrap" itemprop=3D"url">Yes</a></span></span><span style=3D"marg=
+in:0 0.4em;font-weight:normal"> - </span><span itemprop=3D"potentialaction"=
+ itemscope itemtype=3D"http://schema.org/RsvpAction"><meta itemprop=3D"atte=
+ndance" content=3D"http://schema.org/RsvpAttendance/Maybe"/><span itemprop=
+=3D"handler" itemscope itemtype=3D"http://schema.org/HttpActionHandler"><li=
+nk itemprop=3D"method" href=3D"http://schema.org/HttpRequestMethod/GET"/><a=
+ href=3D"https://calendar.google.com/calendar/event?action=3DRESPOND&amp;ei=
+d=3DNTZsNHFraW9mbmxkMjhzcXVoNWNraDR1ZWQgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmN=
+vbQ&amp;rst=3D3&amp;tok=3DMzMjbXV0aHVrdW1hci5qZWdhZGVlc2FuQDUwMGFwcHMuY29tZ=
+GM5NTU0ZTkxN2RiZGVhZDIyNTVlMjkwNzViMTA3ZjhmN2IzOTJhNA&amp;ctz=3DAsia%2FKolk=
+ata&amp;hl=3Den&amp;es=3D0" style=3D"color:#20c;white-space:nowrap" itempro=
+p=3D"url">Maybe</a></span></span><span style=3D"margin:0 0.4em;font-weight:=
+normal"> - </span><span itemprop=3D"potentialaction" itemscope itemtype=3D"=
+http://schema.org/RsvpAction"><meta itemprop=3D"attendance" content=3D"http=
+://schema.org/RsvpAttendance/No"/><span itemprop=3D"handler" itemscope item=
+type=3D"http://schema.org/HttpActionHandler"><link itemprop=3D"method" href=
+=3D"http://schema.org/HttpRequestMethod/GET"/><a href=3D"https://calendar.g=
+oogle.com/calendar/event?action=3DRESPOND&amp;eid=3DNTZsNHFraW9mbmxkMjhzcXV=
+oNWNraDR1ZWQgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&amp;rst=3D2&amp;tok=3DM=
+zMjbXV0aHVrdW1hci5qZWdhZGVlc2FuQDUwMGFwcHMuY29tZGM5NTU0ZTkxN2RiZGVhZDIyNTVl=
+MjkwNzViMTA3ZjhmN2IzOTJhNA&amp;ctz=3DAsia%2FKolkata&amp;hl=3Den&amp;es=3D0"=
+ style=3D"color:#20c;white-space:nowrap" itemprop=3D"url">No</a></span></sp=
+an></strong>&nbsp;&nbsp;&nbsp;&nbsp;<wbr><a href=3D"https://calendar.google=
+.com/calendar/event?action=3DVIEW&amp;eid=3DNTZsNHFraW9mbmxkMjhzcXVoNWNraDR=
+1ZWQgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&amp;tok=3DMzMjbXV0aHVrdW1hci5qZ=
+WdhZGVlc2FuQDUwMGFwcHMuY29tZGM5NTU0ZTkxN2RiZGVhZDIyNTVlMjkwNzViMTA3ZjhmN2Iz=
+OTJhNA&amp;ctz=3DAsia%2FKolkata&amp;hl=3Den&amp;es=3D0" style=3D"color:#20c=
+;white-space:nowrap" itemprop=3D"url">more options &raquo;</a></p></td></tr=
+><tr><td style=3D"background-color:#f6f6f6;color:#888;border-top:1px Solid =
+#ccc;font-family:Arial,Sans-serif;font-size:11px"><p>Invitation from <a hre=
+f=3D"https://calendar.google.com/calendar/" target=3D"_blank" style=3D"">Go=
+ogle Calendar</a></p><p>You are receiving this courtesy email at the accoun=
+t hari.bilehal@mantragroup.com because you are an attendee of this event.</=
+p><p>To stop receiving future updates for this event, decline this event. A=
+lternatively you can sign up for a Google account at https://calendar.googl=
+e.com/calendar/ and control your notification settings for your entire cale=
+ndar.</p><p>Forwarding this invitation could allow any recipient to send a =
+response to the organizer and be added to the guest list, or invite others =
+regardless of their own invitation status, or to modify your RSVP. <a href=
+=3D"https://support.google.com/calendar/answer/37135#forwarding">Learn More=
+</a>.</p></td></tr></table></div></span></span>
+--00000000000082f03805e2bb9398
+Content-Type: text/calendar; charset="UTF-8"; method=REQUEST
+Content-Transfer-Encoding: 7bit
+
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+BEGIN:STANDARD
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+TZNAME:IST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Kolkata:20220704T140000
+DTEND;TZID=Asia/Kolkata:20220704T150000
+RRULE:FREQ=WEEKLY;WKST=SU;BYDAY=FR,MO,TH,TU,WE
+DTSTAMP:20220701T100905Z
+ORGANIZER;CN=muthukumar.jegadeesan@500apps.com:mailto:muthukumar.jegadeesan
+ @500apps.com
+UID:56l4qkiofnld28squh5ckh4ued@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Amarlapudi Pradeep;X-NUM-GUESTS=0:mailto:pradeep.amarlapudi@500apps
+ .com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=muthukumar.jegadeesan@500apps.com;X-NUM-GUESTS=0:mailto:muthukumar.jega
+ deesan@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Shoaib Akthar Mohammed;X-NUM-GUESTS=0:mailto:shoaib.mohammed@500app
+ s.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Mogili Anil Kumar;X-NUM-GUESTS=0:mailto:anil.mogili@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Bilehal Hari Krishna;X-NUM-GUESTS=0:mailto:hari.bilehal@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Saishankar Tangudu;X-NUM-GUESTS=0:mailto:saishankar.tangudu@500apps
+ .com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Sumit Patel;X-NUM-GUESTS=0:mailto:sumit.patel@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=subramaniyam.kolluri@500apps.com;X-NUM-GUESTS=0:mailto:subramaniyam
+ .kolluri@500apps.com
+X-MICROSOFT-CDO-OWNERAPPTID:5307187
+CREATED:20220701T100902Z
+DESCRIPTION:Dear All\,\n\nPlease join the Devops training session as per th
+ e schedule.\n\nThank you\n\nBest Regards\,\nMuthukumar\n\n-::~:~::~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nDo 
+ not edit this section of the description.\n\nView your event at https://cal
+ endar.google.com/calendar/event?action=VIEW&eid=NTZsNHFraW9mbmxkMjhzcXVoNWN
+ raDR1ZWQgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&tok=MzMjbXV0aHVrdW1hci5qZWd
+ hZGVlc2FuQDUwMGFwcHMuY29tZGM5NTU0ZTkxN2RiZGVhZDIyNTVlMjkwNzViMTA3ZjhmN2IzOT
+ JhNA&ctz=Asia%2FKolkata&hl=en&es=1.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220701T100903Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Dev Ops Training
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
+
+--00000000000082f03805e2bb9398--
+
+--00000000000082f03a05e2bb939a
+Content-Type: application/ics; name="invite.ics"
+Content-Disposition: attachment; filename="invite.ics"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UkVRVUVT
+VA0KQkVHSU46VlRJTUVaT05FDQpUWklEOkFzaWEvS29sa2F0YQ0KWC1MSUMtTE9DQVRJT046QXNp
+YS9Lb2xrYXRhDQpCRUdJTjpTVEFOREFSRA0KVFpPRkZTRVRGUk9NOiswNTMwDQpUWk9GRlNFVFRP
+OiswNTMwDQpUWk5BTUU6SVNUDQpEVFNUQVJUOjE5NzAwMTAxVDAwMDAwMA0KRU5EOlNUQU5EQVJE
+DQpFTkQ6VlRJTUVaT05FDQpCRUdJTjpWRVZFTlQNCkRUU1RBUlQ7VFpJRD1Bc2lhL0tvbGthdGE6
+MjAyMjA3MDRUMTQwMDAwDQpEVEVORDtUWklEPUFzaWEvS29sa2F0YToyMDIyMDcwNFQxNTAwMDAN
+ClJSVUxFOkZSRVE9V0VFS0xZO1dLU1Q9U1U7QllEQVk9RlIsTU8sVEgsVFUsV0UNCkRUU1RBTVA6
+MjAyMjA3MDFUMTAwOTA1Wg0KT1JHQU5JWkVSO0NOPW11dGh1a3VtYXIuamVnYWRlZXNhbkA1MDBh
+cHBzLmNvbTptYWlsdG86bXV0aHVrdW1hci5qZWdhZGVlc2FuDQogQDUwMGFwcHMuY29tDQpVSUQ6
+NTZsNHFraW9mbmxkMjhzcXVoNWNraDR1ZWRAZ29vZ2xlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlO
+RElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9
+DQogVFJVRTtDTj1BbWFybGFwdWRpIFByYWRlZXA7WC1OVU0tR1VFU1RTPTA6bWFpbHRvOnByYWRl
+ZXAuYW1hcmxhcHVkaUA1MDBhcHBzDQogLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7
+Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9QUNDRVBURUQ7UlNWUD1UUlVFDQogO0NOPW11
+dGh1a3VtYXIuamVnYWRlZXNhbkA1MDBhcHBzLmNvbTtYLU5VTS1HVUVTVFM9MDptYWlsdG86bXV0
+aHVrdW1hci5qZWdhDQogZGVlc2FuQDUwMGFwcHMuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJ
+RFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBU
+UlVFO0NOPVNob2FpYiBBa3RoYXIgTW9oYW1tZWQ7WC1OVU0tR1VFU1RTPTA6bWFpbHRvOnNob2Fp
+Yi5tb2hhbW1lZEA1MDBhcHANCiBzLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9M
+RT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1N
+b2dpbGkgQW5pbCBLdW1hcjtYLU5VTS1HVUVTVFM9MDptYWlsdG86YW5pbC5tb2dpbGlANTAwYXBw
+cy5jb20NCkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BB
+UlRTVEFUPU5FRURTLUFDVElPTjtSU1ZQPQ0KIFRSVUU7Q049QmlsZWhhbCBIYXJpIEtyaXNobmE7
+WC1OVU0tR1VFU1RTPTA6bWFpbHRvOmhhcmkuYmlsZWhhbEA1MDBhcHBzLmNvbQ0KQVRURU5ERUU7
+Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNU
+SU9OO1JTVlA9DQogVFJVRTtDTj1TYWlzaGFua2FyIFRhbmd1ZHU7WC1OVU0tR1VFU1RTPTA6bWFp
+bHRvOnNhaXNoYW5rYXIudGFuZ3VkdUA1MDBhcHBzDQogLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlO
+RElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9
+DQogVFJVRTtDTj1TdW1pdCBQYXRlbDtYLU5VTS1HVUVTVFM9MDptYWlsdG86c3VtaXQucGF0ZWxA
+NTAwYXBwcy5jb20NCkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9T1BULVBBUlRJQ0lQ
+QU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtSU1ZQPQ0KIFRSVUU7Q049c3VicmFtYW5peWFtLmtv
+bGx1cmlANTAwYXBwcy5jb207WC1OVU0tR1VFU1RTPTA6bWFpbHRvOnN1YnJhbWFuaXlhbQ0KIC5r
+b2xsdXJpQDUwMGFwcHMuY29tDQpYLU1JQ1JPU09GVC1DRE8tT1dORVJBUFBUSUQ6NTMwNzE4Nw0K
+Q1JFQVRFRDoyMDIyMDcwMVQxMDA5MDJaDQpERVNDUklQVElPTjpEZWFyIEFsbFwsXG5cblBsZWFz
+ZSBqb2luIHRoZSBEZXZvcHMgdHJhaW5pbmcgc2Vzc2lvbiBhcyBwZXIgdGgNCiBlIHNjaGVkdWxl
+LlxuXG5UaGFuayB5b3VcblxuQmVzdCBSZWdhcmRzXCxcbk11dGh1a3VtYXJcblxuLTo6fjp+Ojp+
+On46fjp+On4NCiA6fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+
+On46fjp+On46fjp+On46fjo6fjp+OjotXG5EbyANCiBub3QgZWRpdCB0aGlzIHNlY3Rpb24gb2Yg
+dGhlIGRlc2NyaXB0aW9uLlxuXG5WaWV3IHlvdXIgZXZlbnQgYXQgaHR0cHM6Ly9jYWwNCiBlbmRh
+ci5nb29nbGUuY29tL2NhbGVuZGFyL2V2ZW50P2FjdGlvbj1WSUVXJmVpZD1OVFpzTkhGcmFXOW1i
+bXhrTWpoemNYVm9OV04NCiByYURSMVpXUWdhR0Z5YVM1aWFXeGxhR0ZzUUcxaGJuUnlZV2R5YjNW
+d0xtTnZiUSZ0b2s9TXpNamJYVjBhSFZyZFcxaGNpNXFaV2QNCiBoWkdWbGMyRnVRRFV3TUdGd2NI
+TXVZMjl0WkdNNU5UVTBaVGt4TjJSaVpHVmhaREl5TlRWbE1qa3dOelZpTVRBM1pqaG1OMkl6T1QN
+CiBKaE5BJmN0ej1Bc2lhJTJGS29sa2F0YSZobD1lbiZlcz0xLlxuLTo6fjp+Ojp+On46fjp+On46
+fjp+On46fjp+On46fjp+On46fjoNCiB+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46
+fjp+On46fjo6fjp+OjotDQpMQVNULU1PRElGSUVEOjIwMjIwNzAxVDEwMDkwM1oNCkxPQ0FUSU9O
+Og0KU0VRVUVOQ0U6MA0KU1RBVFVTOkNPTkZJUk1FRA0KU1VNTUFSWTpEZXYgT3BzIFRyYWluaW5n
+DQpUUkFOU1A6T1BBUVVFDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVOREFSDQo=
+--00000000000082f03a05e2bb939a--
+From - Fri Jul  1 20:36:03 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from mail-io1-f74.google.com (mail-io1-f74.google.com [209.85.166.74])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id 0A3C54280F
+	for <hari.bilehal@mantragroup.com>; Fri,  1 Jul 2022 15:05:31 +0000 (UTC)
+Received: by mail-io1-f74.google.com with SMTP
+	id q75-20020a6b8e4e000000b0067275f1e6c4so1354047iod.14
+	for <hari.bilehal@mantragroup.com>; Fri, 01 Jul 2022 08:05:30 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=google.com;
+ s=20210112;       
+ h=mime-version:reply-to:sender:message-id:date:subject:from:to;       
+ bh=VbYjlgNHM5+D4A45wGlFVsjs8MMRJddnzag8TFNnBcA=;       
+ b=iZha0FF1t9eXXBxpyE9x0hcAD8+S7+vkW+mD+3X0/tFE8wXPM1CgqWpYSqfLDCCpQQ        
+ qGLcMFyRBrxJ78iz4m+zYse6zIKJ66Qh4PSGTbBCPQ8VAPMa2oSIyJbcnwQmrkdOExWU        
+ RKmIhsT3RFZ9nIq5eH0h8x+jtbL1N2dnhSZ8HlQMdYefKNEosaZ04YtmeS7ajnk1Uq8Y        
+ 7QUtPbggWjPR8xStZvTaK3bV7aWXGGOqkCyzZ4u8YNhEmQYWOaR1QAKP/768LdZ3Ctrq        
+ ux0gXMCFlEf/aHN92sh6U2r2OJTTGzlGVYcYJ9m2p8jphS4fHSv+/iF5TPTqV9w/Ho8n        
+ thGA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=500apps.com;
+ s=google;       
+ h=mime-version:reply-to:sender:message-id:date:subject:from:to;       
+ bh=VbYjlgNHM5+D4A45wGlFVsjs8MMRJddnzag8TFNnBcA=;       
+ b=DNm9FsmDsX/jze5SCq48lK53EfypU0JuR0HT2SPQxdCAfQfI8CEIgMzPAkPEPZ7Xvq        
+ JzN1YZhfZu7N3VgpESEySIflVLmupjrelj+qF+KMxafTqec+Wr5LNTC/bvOsiRzSVE74        
+ 9tZDYXB/zH5NYYfCiHsQAiVW+rlhrQAnU8bWQ=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20210112;       
+ h=x-gm-message-state:mime-version:reply-to:sender:message-id:date        
+ :subject:from:to;        bh=VbYjlgNHM5+D4A45wGlFVsjs8MMRJddnzag8TFNnBcA=;       
+ b=dsrzcJZ254o24fqAdtkzvaYD1n/aIiqRld5rBfr5azpH23TTnPI8RljExAD8HVC/Eg        
+ mse17ooNxpVvlpwO8x4wyDWrbZJ4q42IYMYKibdUjN+RbEJVsORnqh0C7wpVUvQym+O/        
+ JBUEfmNjrbE1OwS/X5xS2rwmT4jIWlu9RPpF2pOHJuMk6dTJ2ewxLWk7azUBl15mD2Co        
+ 7tgLoo+nbYXmbM1Rn42WmKIBIG6qp9TEtVWpgTjq9Dl6T2Mwo2QpGQ238IMbtefpHYhx        
+ w4A0gNA//DjxTqe0I06vU/oyGzsbN3VOCaGUVttmXljhyne2YBYCt/TP6KG76Re0G2Kf        
+ mo9g==
+X-Gm-Message-State: AJIora+g/rq6wtVemzKfeGcPSUt1WCSkvsqvNx9N7VNBxKU96nER+Qxm
+	YCjMxwWPczQ2BugJOOWo6LiuoeARtFFRUXRV52WIzswOHg==
+X-Google-Smtp-Source: 
+ AGRyM1vMi6IsXsrDBj9rZH3D1Kcpop00srDV+zFW+27VuhL0PXBhTqBUp0ljbz8ly2ltrgd/FVP11
+	OAr2jATFxxf1Jr6
+MIME-Version: 1.0
+X-Received: by 2002:a05:6638:dc6:b0:332:3565:397a with SMTP id
+ m6-20020a0566380dc600b003323565397amr8711418jaj.312.1656687928595; Fri, 01
+ Jul 2022 08:05:28 -0700 (PDT)
+Reply-To: satya.chinta@500apps.com
+Sender: Google Calendar <calendar-notification@google.com>
+Message-ID: <0000000000007cf5b705e2bfb70c@google.com>
+Date: Fri, 01 Jul 2022 15:05:28 +0000
+Subject: Invitation: M'Gauge with Abhijit @ Mon Jul 4, 2022 11am - 12pm (IST)
+ (hari.bilehal@mantragroup.com)
+From: satya.chinta@500apps.com
+To: hari.bilehal@mantragroup.com, Gollapothu Leela Naresh
+	<naresh.gollapothu@500apps.com>, Siripothu Prathyusha
+	<prathyusha.siripothu@500apps.com>, Sudathi Swetha
+	<swetha.sudathi@500apps.com>, Reddi Kota satya Manikanta
+	<manikanta.reddi@500apps.com>, Shoaib Akthar Mohammed
+	<shoaib.mohammed@500apps.com>, Amarlapudi Pradeep
+	<pradeep.amarlapudi@500apps.com>, Saishankar Tangudu
+	<saishankar.tangudu@500apps.com>, Mogili Anil Kumar
+	<anil.mogili@500apps.com>, Bilehal Hari Krishna <hari.bilehal@500apps.com>,
+	Vinod Dodda <vinod.dodda@500apps.com>, manoj.kumar@500apps.com,
+	hasan.syed@500apps.com, sireesha.kosaraju@500apps.com,
+	robert.smith@500apps.com, hidayath.mohammed@500apps.com,
+	arun.muppina@500apps.com, pavani.puchakayala@500apps.com,
+	chandrasekhar.bandaru@500apps.com, chakradhar.kalapureddy@500apps.com,
+	abhijit.das@500apps.com
+Return-Path: satya.chinta@500apps.com
+Content-Type: multipart/mixed; boundary=0000000000007cf59305e2bfb70b
+
+
+--0000000000007cf59305e2bfb70b
+Content-Type: multipart/alternative; boundary="0000000000007cf59205e2bfb709"
+
+
+--0000000000007cf59205e2bfb709
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+TSdHYXVnZSB3aXRoIEFiaGlqaXQNCk1vbmRheSBKdWwgNCwgMjAyMiDii4UgMTFhbSDigJMgMTJw
+bQ0KSW5kaWEgU3RhbmRhcmQgVGltZSAtIEtvbGthdGENCg0KDQoNCkF0dGFjaG1lbnRzDQpNJ0dh
+dWdlIHdpdGggQWJoaWppdC5wbmcgIA0KaHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL29wZW4/aWQ9
+MUpFOW9BMkgtVzdyb1lDZ0puTXVCYU1DcDJhbXQxYUhzJmF1dGh1c2VyPTANCg0KRGVhciBBbGws
+TGV0J3MgZ2F0aGVyIGluIHRoZSAybmQtZmxvb3IgbWVldGluZyByb29tIGZvciZuYnNwO00nZ2F1
+Z2Ugd2l0aCAgDQpBYmhpaml0Jm5ic3A7KE5ldyBqb2luZXJzIGludGVyYWN0aXZlIHNlc3Npb24p
+IG9uIDA0LjA3LjIyIChNb25kYXkpIEAgMTEuMDAgIA0KYW0uJm5ic3A7UmVnYXJkc1ByYXNhbnRo
+IENoSFIgT3BzTTogOTQ5NDk0MDk4N01hbnRyYSBUZWNobm9sb2dpZXMgUHZ0ICANCkx0ZGh0dHBz
+Oi8vbWFudHJhZ3JvdXAuY29tLw0KDQpPcmdhbml6ZXINCnNhdHlhLmNoaW50YUA1MDBhcHBzLmNv
+bQ0Kc2F0eWEuY2hpbnRhQDUwMGFwcHMuY29tDQoNCkd1ZXN0cw0Kc2F0eWEuY2hpbnRhQDUwMGFw
+cHMuY29tIC0gb3JnYW5pemVyDQpHb2xsYXBvdGh1IExlZWxhIE5hcmVzaA0KU2lyaXBvdGh1IFBy
+YXRoeXVzaGENClN1ZGF0aGkgU3dldGhhDQpSZWRkaSBLb3RhIHNhdHlhIE1hbmlrYW50YQ0KU2hv
+YWliIEFrdGhhciBNb2hhbW1lZA0KQW1hcmxhcHVkaSBQcmFkZWVwDQpTYWlzaGFua2FyIFRhbmd1
+ZHUNCk1vZ2lsaSBBbmlsIEt1bWFyDQpCaWxlaGFsIEhhcmkgS3Jpc2huYQ0KaGFyaS5iaWxlaGFs
+QG1hbnRyYWdyb3VwLmNvbQ0KVmlub2QgRG9kZGENCm1hbm9qLmt1bWFyQDUwMGFwcHMuY29tDQpo
+YXNhbi5zeWVkQDUwMGFwcHMuY29tDQpzaXJlZXNoYS5rb3NhcmFqdUA1MDBhcHBzLmNvbQ0Kcm9i
+ZXJ0LnNtaXRoQDUwMGFwcHMuY29tDQpoaWRheWF0aC5tb2hhbW1lZEA1MDBhcHBzLmNvbQ0KYXJ1
+bi5tdXBwaW5hQDUwMGFwcHMuY29tDQpwYXZhbmkucHVjaGFrYXlhbGFANTAwYXBwcy5jb20NCmNo
+YW5kcmFzZWtoYXIuYmFuZGFydUA1MDBhcHBzLmNvbQ0KY2hha3JhZGhhci5rYWxhcHVyZWRkeUA1
+MDBhcHBzLmNvbQ0KYWJoaWppdC5kYXNANTAwYXBwcy5jb20NClZpZXcgYWxsIGd1ZXN0IGluZm8g
+IA0KaHR0cHM6Ly9jYWxlbmRhci5nb29nbGUuY29tL2NhbGVuZGFyL2V2ZW50P2FjdGlvbj1WSUVX
+JmVpZD1ObXR6YjJvellqVXpZblV5WVhCcFkyWjFaVFZ6TlRGcU9IRWdhR0Z5YVM1aWFXeGxhR0Zz
+UUcxaGJuUnlZV2R5YjNWd0xtTnZiUSZ0b2s9TWpRamMyRjBlV0V1WTJocGJuUmhRRFV3TUdGd2NI
+TXVZMjl0WmpWaU5XSTRObVExTURnMVlXTmhOalJqWkdObVlUVTFNVFkyWldVM01qVXhOR1V4WWpB
+d05nJmN0ej1Bc2lhJTJGS29sa2F0YSZobD1lbiZlcz0wDQoNClJlcGx5IGZvciBoYXJpLmJpbGVo
+YWxAbWFudHJhZ3JvdXAuY29tIGFuZCB2aWV3IG1vcmUgZGV0YWlscyAgDQpodHRwczovL2NhbGVu
+ZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvZXZlbnQ/YWN0aW9uPVZJRVcmZWlkPU5tdHpiMm96WWpV
+elluVXlZWEJwWTJaMVpUVnpOVEZxT0hFZ2FHRnlhUzVpYVd4bGFHRnNRRzFoYm5SeVlXZHliM1Z3
+TG1OdmJRJnRvaz1NalFqYzJGMGVXRXVZMmhwYm5SaFFEVXdNR0Z3Y0hNdVkyOXRaalZpTldJNE5t
+UTFNRGcxWVdOaE5qUmpaR05tWVRVMU1UWTJaV1UzTWpVeE5HVXhZakF3TmcmY3R6PUFzaWElMkZL
+b2xrYXRhJmhsPWVuJmVzPTANCllvdXIgYXR0ZW5kYW5jZSBpcyBvcHRpb25hbC4NCg0Kfn4vL35+
+DQpJbnZpdGF0aW9uIGZyb20gR29vZ2xlIENhbGVuZGFyOiBodHRwczovL2NhbGVuZGFyLmdvb2ds
+ZS5jb20vY2FsZW5kYXIvDQoNCllvdSBhcmUgcmVjZWl2aW5nIHRoaXMgZW1haWwgYmVjYXVzZSB5
+b3UgYXJlIGFuIGF0dGVuZGVlIG9uIHRoZSBldmVudC4gVG8gIA0Kc3RvcCByZWNlaXZpbmcgZnV0
+dXJlIHVwZGF0ZXMgZm9yIHRoaXMgZXZlbnQsIGRlY2xpbmUgdGhpcyBldmVudC4NCg0KRm9yd2Fy
+ZGluZyB0aGlzIGludml0YXRpb24gY291bGQgYWxsb3cgYW55IHJlY2lwaWVudCB0byBzZW5kIGEg
+cmVzcG9uc2UgdG8gIA0KdGhlIG9yZ2FuaXplciwgYmUgYWRkZWQgdG8gdGhlIGd1ZXN0IGxpc3Qs
+IGludml0ZSBvdGhlcnMgcmVnYXJkbGVzcyBvZiAgDQp0aGVpciBvd24gaW52aXRhdGlvbiBzdGF0
+dXMsIG9yIG1vZGlmeSB5b3VyIFJTVlAuDQoNCkxlYXJuIG1vcmUgaHR0cHM6Ly9zdXBwb3J0Lmdv
+b2dsZS5jb20vY2FsZW5kYXIvYW5zd2VyLzM3MTM1I2ZvcndhcmRpbmcNCg==
+--0000000000007cf59205e2bfb709
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce"><head><title></title><!--[if !mso]><meta http-equiv=3D"X-UA-Compatible"=
+ content=3D"IE=3Dedge"><![endif]--><meta http-equiv=3D"Content-Type" conten=
+t=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"width=
+=3Ddevice-width,initial-scale=3D1"><meta name=3D"color-scheme" content=3D"l=
+ight dark"><meta name=3D"supported-color-schemes" content=3D"light dark">
+    <style>
+      body, html {
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      #outlook a {
+        padding: 0;
+      }
+
+      .ReadMsgBody {
+        width: 100%;
+      }
+
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ExternalClass * {
+        line-height: 100%;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+
+      p {
+        display: block;
+        margin: 13px 0;
+      }
+    </style>
+    <!--[if !mso]><!-->
+    <style>
+      @media only screen and (max-width:580px) {
+        @-ms-viewport {
+          width: 320px;
+        }
+
+        @viewport {
+          width: 320px;
+        }
+      }
+    </style>
+    <!--<![endif]-->
+    <!--[if mso]>
+          <xml>
+          <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+          </xml>
+          <![endif]-->
+    <!--[if lte mso 11]>
+          <style>
+            .outlook-group-fix { width:100% !important; }
+          </style>
+    <![endif]-->
+
+    <!--[if !mso]><!-- -->
+  <style>body, html {font-family:Roboto,Helvetica,Arial,sans-serif;}@font-f=
+ace {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxP.ttf) forma=
+t('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) f=
+ormat('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) f=
+ormat('truetype');
+}
+@font-face {
+  font-family: 'Material Icons Extended';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/materialiconsextended/v139/kJEjBvgX7BgnkSr=
+UwT8UnLVc38YydejYY-oE_LvM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owps=
+.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLU94Yt=
+zCwM.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/googlesans/v14/4UabrENHsxJlGDuGo1OIlLV154t=
+zCwM.ttf) format('truetype');
+}
+</style><!--<![endif]-->
+      <style>
+        .body-container {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      </style>
+ =20
+      <style>
+        u+.body .body-container,
+        body[data-outlook-cycle] .body-container,
+        #MessageViewBody .body-container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      </style>
+ =20
+    <style>
+      @media only screen and (min-width:580px) {
+        .column-per-37 {
+          width: 37% !important;
+          max-width: 37%;
+        }
+
+        .column-per-63 {
+          width: 63% !important;
+          max-width: 63%;
+        }
+      }
+    </style>
+ =20
+    <style>
+      .appointment-buttons th {
+        display: block;
+        clear: both;
+        float: left;
+        margin-top: 12px;
+      }
+
+      .appointment-buttons th a {
+        float: left;
+      }
+
+      #MessageViewBody .appointment-buttons th {
+       margin-top: 24px;
+      }
+    </style>
+ =20
+    <style>
+      @media only screen and (max-width:580px) {
+        table.full-width-mobile {
+          width: 100% !important;
+        }
+
+        td.full-width-mobile {
+          width: auto !important;
+        }
+      }
+    </style>
+    <style>
+      .main-container-inner,
+      .info-bar-inner {
+        padding: 12px 16px !important;
+      }
+
+      .main-column-table-ltr {
+        padding-right: 0 !important;
+      }
+
+      .main-column-table-rtl {
+        padding-left: 0 !important;
+      }
+
+      @media only screen and (min-width:580px) {
+        .main-container-inner {
+          padding: 24px 32px !important;
+        }
+
+        .info-bar-inner {
+          padding: 12px 32px !important;
+        }
+
+        .main-column-table-ltr {
+          padding-right: 32px !important;
+        }
+
+        .main-column-table-rtl {
+          padding-left: 32px !important;
+        }
+
+        .appointment-buttons th {
+          display: table-cell;
+          clear: none;
+        }
+      }
+
+      .primary-text {
+        color: #3c4043 !important;
+      }
+
+      .secondary-text,
+      .phone-number a {
+        color: #70757a !important;
+      }
+
+      .accent-text {
+        color: #1a73e8 !important;
+      }
+
+      .accent-text-dark {
+        color: #185abc !important;
+      }
+
+      .grey-button-text,
+      .attachment-chip a {
+        color: #5f6368 !important;
+      }
+
+      .primary-button {
+        background-color: #1a73e8 !important;
+      }
+
+      .primary-button-text {
+        color: #fff !important;
+      }
+
+      .underline-on-hover:hover {
+        text-decoration: underline !important;
+      }
+
+      .grey-infobar-text {
+        color: #202124 !important;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .primary-text:not([class^=3D"x_"]) {
+          color: #e8eaed !important;
+        }
+
+        .secondary-text:not([class^=3D"x_"]),
+        .phone-number:not([class^=3D"x_"]) a {
+          color: #9aa0a6 !important;
+        }
+
+        .grey-button-text:not([class^=3D"x_"]),
+        .attachment-chip:not([class^=3D"x_"]) a {
+          color: #bdc1c6 !important;
+        }
+
+        .accent-text:not([class^=3D"x_"]),
+        .hairline-button-text:not([class^=3D"x_"]) {
+          color: #8ab4f8 !important;
+        }
+
+        .primary-button:not([class^=3D"x_"]) {
+          background-color: #8ab4f8 !important;
+        }
+
+        .primary-button-text:not([class^=3D"x_"]) {
+          color: #202124 !important;
+        }
+      }
+    </style>
+    <style>
+      @media (prefers-color-scheme: dark) {
+        .cse-banner:not([class^=3D"x_"]) {
+          background-color: #3c4043 !important; /* Google Grey 800 */
+        }
+
+        .encryption-icon:not([class^=3D"x_"]) {
+          /* WARNING: This causes the whole style tag to get stripped in Gm=
+ail. */
+          background-image: url('https://fonts.gstatic.com/s/i/googlemateri=
+aliconsfilled/encrypted/v3/gm_grey200-24dp/2x/gm_filled_encrypted_gm_grey20=
+0_24dp.png') !important;
+        }
+      }
+    </style>
+    <!--[if !mso]><!-->
+    <style>
+      .prevent-link a {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+    </style>
+    <!--<![endif]-->
+
+    <!--[if mso | IE]>
+      <style>
+        .main-container-inner {
+          padding: 24px 32px !important;
+        }
+
+        .info-bar-inner {
+          padding: 12px 32px !important;
+        }
+
+        .cse-banner .encryption-icon {
+          /* We use the IE workaround instead. */
+          background-image: none !important;
+        }
+
+        .cse-banner .encryption-icon .ms-fallback {
+          display: block !important;
+        }
+
+        /* NB: Some MS clients ignore dark-scheme styling and apply their o=
+wn, so there's nothing we can do to help there. */
+        @media (prefers-color-scheme: dark) {
+          .cse-banner:not([class^=3D"x_"]) .encryption-icon .ms-fallback {
+            display: none !important;
+          }
+
+          .cse-banner:not([class^=3D"x_"]) .encryption-icon .ms-fallback-da=
+rk {
+            display: block !important;
+          }
+        }
+      </style>
+    <![endif]-->
+  </head><body class=3D"body"><span itemscope itemtype=3D"http://schema.org=
+/InformAction"><span style=3D"display:none" itemprop=3D"about" itemscope it=
+emtype=3D"http://schema.org/Person"><meta itemprop=3D"description" content=
+=3D"Invitation from satya.chinta@500apps.com"/></span><span itemprop=3D"obj=
+ect" itemscope itemtype=3D"http://schema.org/Event"><meta itemprop=3D"event=
+Status" content=3D"http://schema.org/EventScheduled"/><span itemprop=3D"pub=
+lisher" itemscope itemtype=3D"http://schema.org/Organization"><meta itempro=
+p=3D"name" content=3D"Google Calendar"/></span><meta itemprop=3D"eventId/go=
+ogleCalendar" content=3D"6ksoj3b53bu2apicfue5s51j8q"/><span style=3D"displa=
+y: none; font-size: 1px; color: #fff; line-height: 1px; height: 0; max-heig=
+ht: 0; width: 0; max-width: 0; opacity: 0; overflow: hidden;" itemprop=3D"n=
+ame">M&#39;Gauge with Abhijit</span><meta itemprop=3D"url" content=3D"https=
+://calendar.google.com/calendar/event?action=3DVIEW&amp;eid=3DNmtzb2ozYjUzY=
+nUyYXBpY2Z1ZTVzNTFqOHEgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&amp;tok=3DMjQ=
+jc2F0eWEuY2hpbnRhQDUwMGFwcHMuY29tZjViNWI4NmQ1MDg1YWNhNjRjZGNmYTU1MTY2ZWU3Mj=
+UxNGUxYjAwNg&amp;ctz=3DAsia%2FKolkata&amp;hl=3Den&amp;es=3D0"/><span aria-h=
+idden=3D"true"><time itemprop=3D"startDate" datetime=3D"20220704T053000Z"><=
+/time><time itemprop=3D"endDate" datetime=3D"20220704T063000Z"></time></spa=
+n><div style=3D"display: none; font-size: 1px; color: #fff; line-height: 1p=
+x; height: 0; max-height: 0; width: 0; max-width: 0; opacity: 0; overflow: =
+hidden;">Dear All,Let&#39;s gather in the 2nd-floor meeting room for&amp;nb=
+sp;M&#39;gauge with Abhijit&amp;nbsp;(New joiners interactive session) on 0=
+4.07.22 (Monday) @ 11.00 am.&amp;nbsp;RegardsPrasanth ChHR OpsM: 9494940987=
+Mant</div><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" align=3D"center" style=3D"width:100%;" class=3D"body-container=
+"><tbody><tr><td style=3D"" class=3D"" align=3D"left"><!--[if mso | IE]><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation">=
+<tr><td height=3D"16" style=3D"height:16px;"><![endif]--><div style=3D"heig=
+ht:16px;" aria-hidden=3D"true"> &nbsp; </div><!--[if mso | IE]></td></tr></=
+table><![endif]--><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" align=3D"center" style=3D"width:100%;" class=3D""><tbo=
+dy><tr><td style=3D"border: solid 1px #dadce0; border-radius: 8px; directio=
+n: rtl; font-size: 0; padding: 24px 32px; text-align: left; vertical-align:=
+ top;" class=3D"main-container-inner"><!--[if mso | IE]><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"><tr><![endif]-->=
+<!--[if mso | IE]><td class=3D"" style=3D"vertical-align:top;width:37%;" ><=
+![endif]--><div class=3D"column-per-37 outlook-group-fix" style=3D"font-siz=
+e: 13px; text-align: left; direction: ltr; display: inline-block; vertical-=
+align: top; width: 100%;overflow: hidden; word-wrap: break-word;"><table bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+=3D"100%"><tbody><tr><td style=3D"vertical-align:top;padding:0;"><table bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+=3D"100%"><tr><td style=3D"font-size: 0; padding: 0; text-align: left; word=
+-break: break-word;;padding-bottom:0px;"><div style=3D"font-family: Roboto,=
+ sans-serif;font-size: 14px; line-height: 20px; mso-line-height-rule: exact=
+ly; text-align: left;" class=3D"primary-text" role=3D"presentation"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"padding-bottom: 4px;"><tr><td><h2 class=3D"primary-text" style=3D"font=
+-size: 14px;color: #3c4043; text-decoration: none;font-weight: 700;-webkit-=
+font-smoothing: antialiased;margin: 0; padding: 0;">Attachments</h2></td></=
+tr></table></div></td></tr><tr><td style=3D"font-size: 0; padding: 0; text-=
+align: left; word-break: break-word;;padding-bottom:24px;padding-left: 1px;=
+ padding-right: 1px;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"presentation" class=3D"attachment-chip" style=3D"border: solid 1=
+px #dadce0; border-radius: 16px; border-collapse: separate; padding: 4px 0 =
+4px 0;"><tr><td style=3D"padding: 3px 10px; height: 14px; width: 14px;"><im=
+g src=3D"https://drive-thirdparty.googleusercontent.com/16/type/image/png" =
+width=3D"14" height=3D"14" alt=3D"" style=3D"display: inline-block; vertica=
+l-align: middle;"></td><td align=3D"left" style=3D"padding: 0; padding-left=
+: 0; padding-right: 10px; max-width: 160px; overflow: hidden; text-overflow=
+: ellipsis; white-space: nowrap;"><div style=3D"overflow: hidden; height: 2=
+0px;"><a href=3D"https://drive.google.com/open?id=3D1JE9oA2H-W7roYCgJnMuBaM=
+Cp2amt1aHs&amp;authuser=3D0" target=3D"_blank" style=3D"font-weight: 400;fo=
+nt-family: &#39;Google Sans&#39;, Roboto, sans-serif;color: #5f6368; font-s=
+ize: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; tex=
+t-decoration: none; text-transform: none;;font-family: Roboto, sans-serif;;=
+ display: inline-block; height: 20px; max-width: 160px; line-height: 20px; =
+overflow: hidden; text-overflow: ellipsis; vertical-align: middle; white-sp=
+ace: normal;" class=3D"grey-button-text" title=3D"M&#39;Gauge with Abhijit.=
+png">M&#39;Gauge with Abhijit.png</a></div></td></tr></table></td></tr></ta=
+ble></td></tr></tbody></table></div><!--[if mso | IE]></td><![endif]--><!--=
+[if mso | IE]><td class=3D"" style=3D"vertical-align:top;width:63%;padding-=
+right:32px;" ><![endif]--><div class=3D"column-per-63 outlook-group-fix" st=
+yle=3D"font-size: 13px; text-align: left; direction: ltr; display: inline-b=
+lock; vertical-align: top; width: 100%;overflow: hidden; word-wrap: break-w=
+ord;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%" class=3D"main-column-table-ltr" style=3D"padding-ri=
+ght: 32px; padding-left: 0;;table-layout: fixed;"><tbody><tr><td class=3D"m=
+ain-column-td" style=3D"padding:0; vertical-align:top;"><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" s=
+tyle=3D"table-layout: fixed;"><tr><td style=3D"font-size: 0; padding: 0; te=
+xt-align: left; word-break: break-word;;padding-bottom:24px;"><div style=3D=
+"font-family: Roboto, sans-serif;font-style: normal; font-weight: 400; font=
+-size: 14px; line-height: 20px; letter-spacing: 0.2px;color: #3c4043; text-=
+decoration: none;" class=3D"primary-text" role=3D"presentation"><span>Dear =
+All,<br><br>Let&#39;s gather in the 2nd-floor meeting room for=C2=A0<b>M&#3=
+9;gauge with Abhijit=C2=A0</b>(New joiners interactive session) on <b>04.07=
+.22 (Monday) @ 11.00 am.</b>=C2=A0<br><br><br>Regards<br>Prasanth Ch<br>HR =
+Ops<br>M: 9494940987<br>Mantra Technologies Pvt Ltd<b><br></b><br><a href=
+=3D"https://www.google.com/url?q=3Dhttps%3A%2F%2Fmantragroup.com%2F&amp;sa=
+=3DD&amp;source=3Dcalendar&amp;usd=3D2&amp;usg=3DAOvVaw3qlTbFPAAEaorzWIppME=
+Cd" target=3D"_blank">https://mantragroup.com/</a></span><meta itemprop=3D"=
+description" content=3D"Dear All,Let&#39;s gather in the 2nd-floor meeting =
+room for&amp;nbsp;M&#39;gauge with Abhijit&amp;nbsp;(New joiners interactiv=
+e session) on 04.07.22 (Monday) @ 11.00 am.&amp;nbsp;RegardsPrasanth ChHR O=
+psM: 9494940987Mantra Technologies Pvt Ltdhttps://mantragroup.com/"/></div>=
+</td></tr><tr><td style=3D"font-size: 0; padding: 0; text-align: left; word=
+-break: break-word;;padding-bottom:24px;"><div style=3D"font-family: Roboto=
+, sans-serif;font-style: normal; font-weight: 400; font-size: 14px; line-he=
+ight: 20px; letter-spacing: 0.2px;color: #3c4043; text-decoration: none;" c=
+lass=3D"primary-text" role=3D"presentation"><span aria-hidden=3D"true"><tim=
+e itemprop=3D"startDate" datetime=3D"20220704T053000Z"></time><time itempro=
+p=3D"endDate" datetime=3D"20220704T063000Z"></time></span><table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"paddi=
+ng-bottom: 4px;"><tr><td><h2 class=3D"primary-text" style=3D"font-size: 14p=
+x;color: #3c4043; text-decoration: none;font-weight: 700;-webkit-font-smoot=
+hing: antialiased;margin: 0; padding: 0;">When</h2></td></tr></table><span>=
+Monday Jul 4, 2022 =E2=8B=85 11am =E2=80=93 12pm (India Standard Time - Kol=
+kata)</span></div></td></tr><tr><td style=3D"font-size: 0; padding: 0; text=
+-align: left; word-break: break-word;;padding-bottom:24px;"><div style=3D"f=
+ont-family: Roboto, sans-serif;font-style: normal; font-weight: 400; font-s=
+ize: 14px; line-height: 20px; letter-spacing: 0.2px;color: #3c4043; text-de=
+coration: none;" class=3D"primary-text" role=3D"presentation"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"p=
+adding-bottom: 4px;"><tr><td><h2 class=3D"primary-text" style=3D"font-size:=
+ 14px;color: #3c4043; text-decoration: none;font-weight: 700;-webkit-font-s=
+moothing: antialiased;margin: 0; padding: 0;">Guests</h2></td></tr></table>=
+<div style=3D"padding-bottom: 4px; text-align: left;;color: #3c4042;"><div>=
+<span itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"=
+><span itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text und=
+erline-on-hover" style=3D"display: inline-block;;color: #3c4043; text-decor=
+ation: none;" href=3D"mailto:satya.chinta@500apps.com">satya.chinta@500apps=
+.com</a></span><meta itemprop=3D"email" content=3D"satya.chinta@500apps.com=
+"/></span><span itemprop=3D"organizer" itemscope itemtype=3D"http://schema.=
+org/Person"><meta itemprop=3D"name" content=3D"satya.chinta@500apps.com"/><=
+meta itemprop=3D"email" content=3D"satya.chinta@500apps.com"/></span><span =
+class=3D"secondary-text" style=3D"color: #70757a; text-decoration: none;"> =
+- organizer</span></div><div><span itemprop=3D"attendee" itemscope itemtype=
+=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notranslate"=
+><a class=3D"primary-text underline-on-hover" style=3D"display: inline-bloc=
+k;;color: #3c4043; text-decoration: none;" href=3D"mailto:naresh.gollapothu=
+@500apps.com">Gollapothu Leela Naresh</a></span><meta itemprop=3D"email" co=
+ntent=3D"naresh.gollapothu@500apps.com"/></span><span class=3D"secondary-te=
+xt" style=3D"color: #70757a; text-decoration: none;"></span></div><div><spa=
+n itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><sp=
+an itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text underli=
+ne-on-hover" style=3D"display: inline-block;;color: #3c4043; text-decoratio=
+n: none;" href=3D"mailto:prathyusha.siripothu@500apps.com">Siripothu Prathy=
+usha</a></span><meta itemprop=3D"email" content=3D"prathyusha.siripothu@500=
+apps.com"/></span><span class=3D"secondary-text" style=3D"color: #70757a; t=
+ext-decoration: none;"></span></div><div><span itemprop=3D"attendee" itemsc=
+ope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"=
+notranslate"><a class=3D"primary-text underline-on-hover" style=3D"display:=
+ inline-block;;color: #3c4043; text-decoration: none;" href=3D"mailto:sweth=
+a.sudathi@500apps.com">Sudathi Swetha</a></span><meta itemprop=3D"email" co=
+ntent=3D"swetha.sudathi@500apps.com"/></span><span class=3D"secondary-text"=
+ style=3D"color: #70757a; text-decoration: none;"></span></div><div><span i=
+temprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span =
+itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text underline-=
+on-hover" style=3D"display: inline-block;;color: #3c4043; text-decoration: =
+none;" href=3D"mailto:manikanta.reddi@500apps.com">Reddi Kota satya Manikan=
+ta</a></span><meta itemprop=3D"email" content=3D"manikanta.reddi@500apps.co=
+m"/></span><span class=3D"secondary-text" style=3D"color: #70757a; text-dec=
+oration: none;"></span></div><div><span itemprop=3D"attendee" itemscope ite=
+mtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notrans=
+late"><a class=3D"primary-text underline-on-hover" style=3D"display: inline=
+-block;;color: #3c4043; text-decoration: none;" href=3D"mailto:shoaib.moham=
+med@500apps.com">Shoaib Akthar Mohammed</a></span><meta itemprop=3D"email" =
+content=3D"shoaib.mohammed@500apps.com"/></span><span class=3D"secondary-te=
+xt" style=3D"color: #70757a; text-decoration: none;"></span></div><div><spa=
+n itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><sp=
+an itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text underli=
+ne-on-hover" style=3D"display: inline-block;;color: #3c4043; text-decoratio=
+n: none;" href=3D"mailto:pradeep.amarlapudi@500apps.com">Amarlapudi Pradeep=
+</a></span><meta itemprop=3D"email" content=3D"pradeep.amarlapudi@500apps.c=
+om"/></span><span class=3D"secondary-text" style=3D"color: #70757a; text-de=
+coration: none;"></span></div><div><span itemprop=3D"attendee" itemscope it=
+emtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notran=
+slate"><a class=3D"primary-text underline-on-hover" style=3D"display: inlin=
+e-block;;color: #3c4043; text-decoration: none;" href=3D"mailto:saishankar.=
+tangudu@500apps.com">Saishankar Tangudu</a></span><meta itemprop=3D"email" =
+content=3D"saishankar.tangudu@500apps.com"/></span><span class=3D"secondary=
+-text" style=3D"color: #70757a; text-decoration: none;"></span></div><div><=
+span itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person">=
+<span itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text unde=
+rline-on-hover" style=3D"display: inline-block;;color: #3c4043; text-decora=
+tion: none;" href=3D"mailto:anil.mogili@500apps.com">Mogili Anil Kumar</a><=
+/span><meta itemprop=3D"email" content=3D"anil.mogili@500apps.com"/></span>=
+<span class=3D"secondary-text" style=3D"color: #70757a; text-decoration: no=
+ne;"></span></div><div><span itemprop=3D"attendee" itemscope itemtype=3D"ht=
+tp://schema.org/Person"><span itemprop=3D"name" class=3D"notranslate"><a cl=
+ass=3D"primary-text underline-on-hover" style=3D"display: inline-block;;col=
+or: #3c4043; text-decoration: none;" href=3D"mailto:hari.bilehal@500apps.co=
+m">Bilehal Hari Krishna</a></span><meta itemprop=3D"email" content=3D"hari.=
+bilehal@500apps.com"/></span><span class=3D"secondary-text" style=3D"color:=
+ #70757a; text-decoration: none;"></span></div><div><span itemprop=3D"atten=
+dee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name=
+" class=3D"notranslate"><a class=3D"primary-text underline-on-hover" style=
+=3D"display: inline-block;;color: #3c4043; text-decoration: none;" href=3D"=
+mailto:hari.bilehal@mantragroup.com">hari.bilehal@mantragroup.com</a></span=
+><meta itemprop=3D"email" content=3D"hari.bilehal@mantragroup.com"/></span>=
+<span class=3D"secondary-text" style=3D"color: #70757a; text-decoration: no=
+ne;"></span></div><div><span itemprop=3D"attendee" itemscope itemtype=3D"ht=
+tp://schema.org/Person"><span itemprop=3D"name" class=3D"notranslate"><a cl=
+ass=3D"primary-text underline-on-hover" style=3D"display: inline-block;;col=
+or: #3c4043; text-decoration: none;" href=3D"mailto:vinod.dodda@500apps.com=
+">Vinod Dodda</a></span><meta itemprop=3D"email" content=3D"vinod.dodda@500=
+apps.com"/></span><span class=3D"secondary-text" style=3D"color: #70757a; t=
+ext-decoration: none;"></span></div><div><span itemprop=3D"attendee" itemsc=
+ope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"=
+notranslate"><a class=3D"primary-text underline-on-hover" style=3D"display:=
+ inline-block;;color: #3c4043; text-decoration: none;" href=3D"mailto:manoj=
+.kumar@500apps.com">manoj.kumar@500apps.com</a></span><meta itemprop=3D"ema=
+il" content=3D"manoj.kumar@500apps.com"/></span><span class=3D"secondary-te=
+xt" style=3D"color: #70757a; text-decoration: none;"></span></div><div><spa=
+n itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><sp=
+an itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text underli=
+ne-on-hover" style=3D"display: inline-block;;color: #3c4043; text-decoratio=
+n: none;" href=3D"mailto:hasan.syed@500apps.com">hasan.syed@500apps.com</a>=
+</span><meta itemprop=3D"email" content=3D"hasan.syed@500apps.com"/></span>=
+<span class=3D"secondary-text" style=3D"color: #70757a; text-decoration: no=
+ne;"></span></div><div><span itemprop=3D"attendee" itemscope itemtype=3D"ht=
+tp://schema.org/Person"><span itemprop=3D"name" class=3D"notranslate"><a cl=
+ass=3D"primary-text underline-on-hover" style=3D"display: inline-block;;col=
+or: #3c4043; text-decoration: none;" href=3D"mailto:sireesha.kosaraju@500ap=
+ps.com">sireesha.kosaraju@500apps.com</a></span><meta itemprop=3D"email" co=
+ntent=3D"sireesha.kosaraju@500apps.com"/></span><span class=3D"secondary-te=
+xt" style=3D"color: #70757a; text-decoration: none;"></span></div><div><spa=
+n itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><sp=
+an itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text underli=
+ne-on-hover" style=3D"display: inline-block;;color: #3c4043; text-decoratio=
+n: none;" href=3D"mailto:robert.smith@500apps.com">robert.smith@500apps.com=
+</a></span><meta itemprop=3D"email" content=3D"robert.smith@500apps.com"/><=
+/span><span class=3D"secondary-text" style=3D"color: #70757a; text-decorati=
+on: none;"></span></div><div><span itemprop=3D"attendee" itemscope itemtype=
+=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notranslate"=
+><a class=3D"primary-text underline-on-hover" style=3D"display: inline-bloc=
+k;;color: #3c4043; text-decoration: none;" href=3D"mailto:hidayath.mohammed=
+@500apps.com">hidayath.mohammed@500apps.com</a></span><meta itemprop=3D"ema=
+il" content=3D"hidayath.mohammed@500apps.com"/></span><span class=3D"second=
+ary-text" style=3D"color: #70757a; text-decoration: none;"></span></div><di=
+v><span itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Perso=
+n"><span itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text u=
+nderline-on-hover" style=3D"display: inline-block;;color: #3c4043; text-dec=
+oration: none;" href=3D"mailto:arun.muppina@500apps.com">arun.muppina@500ap=
+ps.com</a></span><meta itemprop=3D"email" content=3D"arun.muppina@500apps.c=
+om"/></span><span class=3D"secondary-text" style=3D"color: #70757a; text-de=
+coration: none;"></span></div><div><span itemprop=3D"attendee" itemscope it=
+emtype=3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notran=
+slate"><a class=3D"primary-text underline-on-hover" style=3D"display: inlin=
+e-block;;color: #3c4043; text-decoration: none;" href=3D"mailto:pavani.puch=
+akayala@500apps.com">pavani.puchakayala@500apps.com</a></span><meta itempro=
+p=3D"email" content=3D"pavani.puchakayala@500apps.com"/></span><span class=
+=3D"secondary-text" style=3D"color: #70757a; text-decoration: none;"></span=
+></div><div><span itemprop=3D"attendee" itemscope itemtype=3D"http://schema=
+.org/Person"><span itemprop=3D"name" class=3D"notranslate"><a class=3D"prim=
+ary-text underline-on-hover" style=3D"display: inline-block;;color: #3c4043=
+; text-decoration: none;" href=3D"mailto:chandrasekhar.bandaru@500apps.com"=
+>chandrasekhar.bandaru@500apps.com</a></span><meta itemprop=3D"email" conte=
+nt=3D"chandrasekhar.bandaru@500apps.com"/></span><span class=3D"secondary-t=
+ext" style=3D"color: #70757a; text-decoration: none;"></span></div><div><sp=
+an itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><s=
+pan itemprop=3D"name" class=3D"notranslate"><a class=3D"primary-text underl=
+ine-on-hover" style=3D"display: inline-block;;color: #3c4043; text-decorati=
+on: none;" href=3D"mailto:chakradhar.kalapureddy@500apps.com">chakradhar.ka=
+lapureddy@500apps.com</a></span><meta itemprop=3D"email" content=3D"chakrad=
+har.kalapureddy@500apps.com"/></span><span class=3D"secondary-text" style=
+=3D"color: #70757a; text-decoration: none;"></span></div><div><span itempro=
+p=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span itempr=
+op=3D"name" class=3D"notranslate"><a class=3D"primary-text underline-on-hov=
+er" style=3D"display: inline-block;;color: #3c4043; text-decoration: none;"=
+ href=3D"mailto:abhijit.das@500apps.com">abhijit.das@500apps.com</a></span>=
+<meta itemprop=3D"email" content=3D"abhijit.das@500apps.com"/></span><span =
+class=3D"secondary-text" style=3D"color: #70757a; text-decoration: none;"><=
+/span></div></div><a href=3D"https://calendar.google.com/calendar/event?act=
+ion=3DVIEW&amp;eid=3DNmtzb2ozYjUzYnUyYXBpY2Z1ZTVzNTFqOHEgaGFyaS5iaWxlaGFsQG=
+1hbnRyYWdyb3VwLmNvbQ&amp;tok=3DMjQjc2F0eWEuY2hpbnRhQDUwMGFwcHMuY29tZjViNWI4=
+NmQ1MDg1YWNhNjRjZGNmYTU1MTY2ZWU3MjUxNGUxYjAwNg&amp;ctz=3DAsia%2FKolkata&amp=
+;hl=3Den&amp;es=3D0" style=3D"display: inline-block;;color: #1a73e8; text-d=
+ecoration: none;font-weight: 700;" target=3D"_blank" class=3D"accent-text u=
+nderline-on-hover">View all guest info</a></div></td></tr><tr><td style=3D"=
+font-size: 0; padding: 0; text-align: left; word-break: break-word;;padding=
+-bottom:0px;"><div style=3D"color: #3c4043; text-decoration: none;;font-fam=
+ily: Roboto, sans-serif;font-size: 14px; line-height: 20px; mso-line-height=
+-rule: exactly; text-align: left;" class=3D"primary-text"><div><span style=
+=3D"font-weight: 700;-webkit-font-smoothing: antialiased;">Reply</span><spa=
+n class=3D"secondary-text" style=3D"color: #70757a; text-decoration: none;"=
+> for <a class=3D"secondary-text underline-on-hover" style=3D"display: inli=
+ne-block;;color: #70757a; text-decoration: none;" href=3D"mailto:hari.bileh=
+al@mantragroup.com">hari.bilehal@mantragroup.com</a></span></div></div></td=
+></tr><tr><td style=3D"font-size: 0; padding: 0; text-align: left; word-bre=
+ak: break-word;;padding-bottom:16px;"><div style=3D"font-family: Roboto, sa=
+ns-serif;font-size: 14px; line-height: 20px; mso-line-height-rule: exactly;=
+ text-align: left;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"border-collapse: separate;"><tr><td style=
+=3D"padding-top: 8px; padding-left: 0; padding-right: 12px;"><!-- RSVP butt=
+ons --><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pres=
+entation" style=3D"border: solid 1px #dadce0; border-radius: 16px; border-c=
+ollapse: separate;font-family: &#39;Google Sans&#39;, Roboto, sans-serif;;d=
+isplay: inline-block;;margin-right: 12px; margin-left: 0;"><tr><td align=3D=
+"center" vertical-align=3D"middle" role=3D"presentation"><span itemprop=3D"=
+potentialaction" itemscope itemtype=3D"http://schema.org/RsvpAction"><meta =
+itemprop=3D"attendance" content=3D"http://schema.org/RsvpAttendance/Yes"/><=
+span itemprop=3D"handler" itemscope itemtype=3D"http://schema.org/HttpActio=
+nHandler"><link itemprop=3D"method" href=3D"http://schema.org/HttpRequestMe=
+thod/GET"/><span style=3D"color: #5f6367;"><a href=3D"https://calendar.goog=
+le.com/calendar/event?action=3DRESPOND&amp;eid=3DNmtzb2ozYjUzYnUyYXBpY2Z1ZT=
+VzNTFqOHEgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&amp;rst=3D1&amp;tok=3DMjQj=
+c2F0eWEuY2hpbnRhQDUwMGFwcHMuY29tZjViNWI4NmQ1MDg1YWNhNjRjZGNmYTU1MTY2ZWU3MjU=
+xNGUxYjAwNg&amp;ctz=3DAsia%2FKolkata&amp;hl=3Den&amp;es=3D0" style=3D"font-=
+weight: 400;font-family: &#39;Google Sans&#39;, Roboto, sans-serif;color: #=
+5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; =
+margin: 0; text-decoration: none; text-transform: none;" class=3D"grey-butt=
+on-text" itemprop=3D"url" target=3D"_blank"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation"><tr><td align=3D"center" rol=
+e=3D"presentation" valign=3D"middle" style=3D"padding: 6px 0; padding-left:=
+ 16px; padding-right: 12px; white-space: nowrap;"><span class=3D"grey-butto=
+n-text" style=3D"font-weight: 400;font-family: &#39;Google Sans&#39;, Robot=
+o, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-=
+height-rule: exactly; margin: 0; text-decoration: none; text-transform: non=
+e;">Yes</span></td></tr></table></a></span></span></span></td><td align=3D"=
+center" vertical-align=3D"middle" role=3D"presentation" style=3D"border-lef=
+t: solid 1px #dadce0; border-right: solid 1px #dadce0;"><span itemprop=3D"p=
+otentialaction" itemscope itemtype=3D"http://schema.org/RsvpAction"><meta i=
+temprop=3D"attendance" content=3D"http://schema.org/RsvpAttendance/No"/><sp=
+an itemprop=3D"handler" itemscope itemtype=3D"http://schema.org/HttpActionH=
+andler"><link itemprop=3D"method" href=3D"http://schema.org/HttpRequestMeth=
+od/GET"/><span style=3D"color: #5f6367;"><a href=3D"https://calendar.google=
+.com/calendar/event?action=3DRESPOND&amp;eid=3DNmtzb2ozYjUzYnUyYXBpY2Z1ZTVz=
+NTFqOHEgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&amp;rst=3D2&amp;tok=3DMjQjc2=
+F0eWEuY2hpbnRhQDUwMGFwcHMuY29tZjViNWI4NmQ1MDg1YWNhNjRjZGNmYTU1MTY2ZWU3MjUxN=
+GUxYjAwNg&amp;ctz=3DAsia%2FKolkata&amp;hl=3Den&amp;es=3D0" style=3D"font-we=
+ight: 400;font-family: &#39;Google Sans&#39;, Roboto, sans-serif;color: #5f=
+6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; ma=
+rgin: 0; text-decoration: none; text-transform: none;" class=3D"grey-button=
+-text" itemprop=3D"url" target=3D"_blank"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation"><tr><td align=3D"center" rol=
+e=3D"presentation" valign=3D"middle" style=3D"padding: 6px 12px; white-spac=
+e: nowrap;"><span class=3D"grey-button-text" style=3D"font-weight: 400;font=
+-family: &#39;Google Sans&#39;, Roboto, sans-serif;color: #5f6368; font-siz=
+e: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-=
+decoration: none; text-transform: none;">No</span></td></tr></table></a></s=
+pan></span></span></td><td align=3D"center" vertical-align=3D"middle" role=
+=3D"presentation"><span itemprop=3D"potentialaction" itemscope itemtype=3D"=
+http://schema.org/RsvpAction"><meta itemprop=3D"attendance" content=3D"http=
+://schema.org/RsvpAttendance/Maybe"/><span itemprop=3D"handler" itemscope i=
+temtype=3D"http://schema.org/HttpActionHandler"><link itemprop=3D"method" h=
+ref=3D"http://schema.org/HttpRequestMethod/GET"/><span style=3D"color: #5f6=
+367;"><a href=3D"https://calendar.google.com/calendar/event?action=3DRESPON=
+D&amp;eid=3DNmtzb2ozYjUzYnUyYXBpY2Z1ZTVzNTFqOHEgaGFyaS5iaWxlaGFsQG1hbnRyYWd=
+yb3VwLmNvbQ&amp;rst=3D3&amp;tok=3DMjQjc2F0eWEuY2hpbnRhQDUwMGFwcHMuY29tZjViN=
+WI4NmQ1MDg1YWNhNjRjZGNmYTU1MTY2ZWU3MjUxNGUxYjAwNg&amp;ctz=3DAsia%2FKolkata&=
+amp;hl=3Den&amp;es=3D0" style=3D"font-weight: 400;font-family: &#39;Google =
+Sans&#39;, Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height:=
+ 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; tex=
+t-transform: none;" class=3D"grey-button-text" itemprop=3D"url" target=3D"_=
+blank"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pres=
+entation"><tr><td align=3D"center" role=3D"presentation" valign=3D"middle" =
+style=3D"padding: 6px 0; padding-left: 12px; padding-right: 16px; white-spa=
+ce: nowrap;"><span class=3D"grey-button-text" style=3D"font-weight: 400;fon=
+t-family: &#39;Google Sans&#39;, Roboto, sans-serif;color: #5f6368; font-si=
+ze: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text=
+-decoration: none; text-transform: none;">Maybe</span></td></tr></table></a=
+></span></span></span></td></tr></table><!-- More options --><a href=3D"htt=
+ps://calendar.google.com/calendar/event?action=3DVIEW&amp;eid=3DNmtzb2ozYjU=
+zYnUyYXBpY2Z1ZTVzNTFqOHEgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&amp;tok=3DM=
+jQjc2F0eWEuY2hpbnRhQDUwMGFwcHMuY29tZjViNWI4NmQ1MDg1YWNhNjRjZGNmYTU1MTY2ZWU3=
+MjUxNGUxYjAwNg&amp;ctz=3DAsia%2FKolkata&amp;hl=3Den&amp;es=3D0" style=3D"di=
+splay: inline-block;;font-weight: 400;font-family: &#39;Google Sans&#39;, R=
+oboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-l=
+ine-height-rule: exactly; margin: 0; text-decoration: none; text-transform:=
+ none;" class=3D"grey-button-text" target=3D"_blank"><table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border: so=
+lid 1px #dadce0; border-radius: 16px; border-collapse: separate;font-family=
+: &#39;Google Sans&#39;, Roboto, sans-serif;"><tr><td align=3D"center" vert=
+ical-align=3D"middle" role=3D"presentation" style=3D"padding: 6px 0; paddin=
+g-left: 16px; padding-right: 12px; white-space: nowrap;;color: #5f6367;"><s=
+pan class=3D"grey-button-text" style=3D"font-weight: 400;font-family: &#39;=
+Google Sans&#39;, Roboto, sans-serif;color: #5f6368; font-size: 14px; line-=
+height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: no=
+ne; text-transform: none;">More options</span></td></tr></table></a></td></=
+tr></table></div></td></tr></table></td></tr></tbody></table></div><!--[if =
+mso | IE]></td><![endif]--><!--[if mso | IE]></tr></table><![endif]--></td>=
+</tr></tbody></table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" align=3D"center" style=3D"width:100%;" class=3D""><=
+tbody><tr><td style=3D"font-size: 0; padding: 0; text-align: left; word-bre=
+ak: break-word;;padding:4px 12px;" class=3D"" align=3D"left"><div class=3D"=
+secondary-text" style=3D"color: #70757a; text-decoration: none;font-family:=
+ Roboto, sans-serif;font-size: 12px; line-height: 16px; mso-line-height-rul=
+e: exactly; text-align: left;"><p>Invitation from <a href=3D"https://calend=
+ar.google.com/calendar/" class=3D"accent-text underline-on-hover" style=3D"=
+font-family: Roboto, sans-serif;font-size: 12px; line-height: 16px; mso-lin=
+e-height-rule: exactly;;color: #1a73e8; text-decoration: none;" target=3D"_=
+blank">Google Calendar</a></p><p>You are receiving this email because you a=
+re an attendee on the event. To stop receiving future updates for this even=
+t, decline this event.</p><p>Forwarding this invitation could allow any rec=
+ipient to send a response to the organizer, be added to the guest list, inv=
+ite others regardless of their own invitation status, or modify your RSVP. =
+<a class=3D"accent-text underline-on-hover" style=3D"font-family: Roboto, s=
+ans-serif;font-size: 12px; line-height: 16px; mso-line-height-rule: exactly=
+;;color: #1a73e8; text-decoration: none;" href=3D"https://support.google.co=
+m/calendar/answer/37135#forwarding">Learn more</a></p></div></td></tr></tbo=
+dy></table></td></tr></tbody></table></span></span></body></html>
+--0000000000007cf59205e2bfb709
+Content-Type: text/calendar; charset="UTF-8"; method=REQUEST
+Content-Transfer-Encoding: 7bit
+
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20220704T053000Z
+DTEND:20220704T063000Z
+DTSTAMP:20220701T150528Z
+ORGANIZER;CN=satya.chinta@500apps.com:mailto:satya.chinta@500apps.com
+UID:6ksoj3b53bu2apicfue5s51j8q@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Gollapothu Leela Naresh;X-NUM-GUESTS=0:mailto:naresh.gollapothu@500
+ apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=satya.chinta@500apps.com;X-NUM-GUESTS=0:mailto:satya.chinta@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Siripothu Prathyusha;X-NUM-GUESTS=0:mailto:prathyusha.siripothu@500
+ apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Sudathi Swetha;X-NUM-GUESTS=0:mailto:swetha.sudathi@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Reddi Kota satya Manikanta;X-NUM-GUESTS=0:mailto:manikanta.reddi@50
+ 0apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Shoaib Akthar Mohammed;X-NUM-GUESTS=0:mailto:shoaib.mohammed@500app
+ s.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Amarlapudi Pradeep;X-NUM-GUESTS=0:mailto:pradeep.amarlapudi@500apps
+ .com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Saishankar Tangudu;X-NUM-GUESTS=0:mailto:saishankar.tangudu@500apps
+ .com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Mogili Anil Kumar;X-NUM-GUESTS=0:mailto:anil.mogili@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Bilehal Hari Krishna;X-NUM-GUESTS=0:mailto:hari.bilehal@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Vinod Dodda;X-NUM-GUESTS=0:mailto:vinod.dodda@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=manoj.kumar@500apps.com;X-NUM-GUESTS=0:mailto:manoj.kumar@500apps.c
+ om
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=hasan.syed@500apps.com;X-NUM-GUESTS=0:mailto:hasan.syed@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=sireesha.kosaraju@500apps.com;X-NUM-GUESTS=0:mailto:sireesha.kosara
+ ju@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=robert.smith@500apps.com;X-NUM-GUESTS=0:mailto:robert.smith@500apps
+ .com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=hidayath.mohammed@500apps.com;X-NUM-GUESTS=0:mailto:hidayath.mohamm
+ ed@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=arun.muppina@500apps.com;X-NUM-GUESTS=0:mailto:arun.muppina@500apps
+ .com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=pavani.puchakayala@500apps.com;X-NUM-GUESTS=0:mailto:pavani.puchaka
+ yala@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=chandrasekhar.bandaru@500apps.com;X-NUM-GUESTS=0:mailto:chandrasekh
+ ar.bandaru@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=chakradhar.kalapureddy@500apps.com;X-NUM-GUESTS=0:mailto:chakradhar
+ .kalapureddy@500apps.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=abhijit.das@500apps.com;X-NUM-GUESTS=0:mailto:abhijit.das@500apps.c
+ om
+X-MICROSOFT-CDO-OWNERAPPTID:-1645264134
+CREATED:20220701T150525Z
+DESCRIPTION:Dear All\,<br><br>Let's gather in the 2nd-floor meeting room fo
+ r&nbsp\;<b>M'gauge with Abhijit&nbsp\;</b>(New joiners interactive session)
+  on <b>04.07.22 (Monday) @ 11.00 am.</b>&nbsp\;<br><br><br>Regards<br>Prasa
+ nth Ch<br>HR Ops<br>M: 9494940987<br>Mantra Technologies Pvt Ltd<b><br></b>
+ <br><a href="https://mantragroup.com/">https://mantragroup.com/</a>\n\n-::~
+ :~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ ::~:~::-\nDo not edit this section of the description.\n\nView your event a
+ t https://calendar.google.com/calendar/event?action=VIEW&eid=Nmtzb2ozYjUzYn
+ UyYXBpY2Z1ZTVzNTFqOHEgaGFyaS5iaWxlaGFsQG1hbnRyYWdyb3VwLmNvbQ&tok=MjQjc2F0eW
+ EuY2hpbnRhQDUwMGFwcHMuY29tZjViNWI4NmQ1MDg1YWNhNjRjZGNmYTU1MTY2ZWU3MjUxNGUxY
+ jAwNg&ctz=Asia%2FKolkata&hl=en&es=1.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20220701T150527Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:M'Gauge with Abhijit
+TRANSP:OPAQUE
+ATTACH;FILENAME=M'Gauge with Abhijit.png;FMTTYPE=image/png:https://drive.go
+ ogle.com/open?id=1JE9oA2H-W7roYCgJnMuBaMCp2amt1aHs&authuser=0
+END:VEVENT
+END:VCALENDAR
+
+--0000000000007cf59205e2bfb709--
+
+--0000000000007cf59305e2bfb70b
+Content-Type: application/ics; name="invite.ics"
+Content-Disposition: attachment; filename="invite.ics"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UkVRVUVT
+VA0KQkVHSU46VkVWRU5UDQpEVFNUQVJUOjIwMjIwNzA0VDA1MzAwMFoNCkRURU5EOjIwMjIwNzA0
+VDA2MzAwMFoNCkRUU1RBTVA6MjAyMjA3MDFUMTUwNTI4Wg0KT1JHQU5JWkVSO0NOPXNhdHlhLmNo
+aW50YUA1MDBhcHBzLmNvbTptYWlsdG86c2F0eWEuY2hpbnRhQDUwMGFwcHMuY29tDQpVSUQ6Nmtz
+b2ozYjUzYnUyYXBpY2Z1ZTVzNTFqOHFAZ29vZ2xlLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElW
+SURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQog
+VFJVRTtDTj1Hb2xsYXBvdGh1IExlZWxhIE5hcmVzaDtYLU5VTS1HVUVTVFM9MDptYWlsdG86bmFy
+ZXNoLmdvbGxhcG90aHVANTAwDQogYXBwcy5jb20NCkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFM
+O1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPUFDQ0VQVEVEO1JTVlA9VFJVRQ0KIDtDTj1z
+YXR5YS5jaGludGFANTAwYXBwcy5jb207WC1OVU0tR1VFU1RTPTA6bWFpbHRvOnNhdHlhLmNoaW50
+YUA1MDBhcHBzLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElD
+SVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1TaXJpcG90aHUgUHJh
+dGh5dXNoYTtYLU5VTS1HVUVTVFM9MDptYWlsdG86cHJhdGh5dXNoYS5zaXJpcG90aHVANTAwDQog
+YXBwcy5jb20NCkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5U
+O1BBUlRTVEFUPU5FRURTLUFDVElPTjtSU1ZQPQ0KIFRSVUU7Q049U3VkYXRoaSBTd2V0aGE7WC1O
+VU0tR1VFU1RTPTA6bWFpbHRvOnN3ZXRoYS5zdWRhdGhpQDUwMGFwcHMuY29tDQpBVFRFTkRFRTtD
+VVRZUEU9SU5ESVZJRFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJ
+T047UlNWUD0NCiBUUlVFO0NOPVJlZGRpIEtvdGEgc2F0eWEgTWFuaWthbnRhO1gtTlVNLUdVRVNU
+Uz0wOm1haWx0bzptYW5pa2FudGEucmVkZGlANTANCiAwYXBwcy5jb20NCkFUVEVOREVFO0NVVFlQ
+RT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtS
+U1ZQPQ0KIFRSVUU7Q049U2hvYWliIEFrdGhhciBNb2hhbW1lZDtYLU5VTS1HVUVTVFM9MDptYWls
+dG86c2hvYWliLm1vaGFtbWVkQDUwMGFwcA0KIHMuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJ
+RFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBU
+UlVFO0NOPUFtYXJsYXB1ZGkgUHJhZGVlcDtYLU5VTS1HVUVTVFM9MDptYWlsdG86cHJhZGVlcC5h
+bWFybGFwdWRpQDUwMGFwcHMNCiAuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVBTDtST0xF
+PVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBUUlVFO0NOPVNh
+aXNoYW5rYXIgVGFuZ3VkdTtYLU5VTS1HVUVTVFM9MDptYWlsdG86c2Fpc2hhbmthci50YW5ndWR1
+QDUwMGFwcHMNCiAuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVBTDtST0xFPVJFUS1QQVJU
+SUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBUUlVFO0NOPU1vZ2lsaSBBbmls
+IEt1bWFyO1gtTlVNLUdVRVNUUz0wOm1haWx0bzphbmlsLm1vZ2lsaUA1MDBhcHBzLmNvbQ0KQVRU
+RU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVF
+RFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1CaWxlaGFsIEhhcmkgS3Jpc2huYTtYLU5VTS1HVUVT
+VFM9MDptYWlsdG86aGFyaS5iaWxlaGFsQDUwMGFwcHMuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5E
+SVZJRFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0N
+CiBUUlVFO0NOPVZpbm9kIERvZGRhO1gtTlVNLUdVRVNUUz0wOm1haWx0bzp2aW5vZC5kb2RkYUA1
+MDBhcHBzLmNvbQ0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBB
+TlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1tYW5vai5rdW1hckA1MDBh
+cHBzLmNvbTtYLU5VTS1HVUVTVFM9MDptYWlsdG86bWFub2oua3VtYXJANTAwYXBwcy5jDQogb20N
+CkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFU
+PU5FRURTLUFDVElPTjtSU1ZQPQ0KIFRSVUU7Q049aGFzYW4uc3llZEA1MDBhcHBzLmNvbTtYLU5V
+TS1HVUVTVFM9MDptYWlsdG86aGFzYW4uc3llZEA1MDBhcHBzLmNvbQ0KQVRURU5ERUU7Q1VUWVBF
+PUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNUSU9OO1JT
+VlA9DQogVFJVRTtDTj1zaXJlZXNoYS5rb3NhcmFqdUA1MDBhcHBzLmNvbTtYLU5VTS1HVUVTVFM9
+MDptYWlsdG86c2lyZWVzaGEua29zYXJhDQoganVANTAwYXBwcy5jb20NCkFUVEVOREVFO0NVVFlQ
+RT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtS
+U1ZQPQ0KIFRSVUU7Q049cm9iZXJ0LnNtaXRoQDUwMGFwcHMuY29tO1gtTlVNLUdVRVNUUz0wOm1h
+aWx0bzpyb2JlcnQuc21pdGhANTAwYXBwcw0KIC5jb20NCkFUVEVOREVFO0NVVFlQRT1JTkRJVklE
+VUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtSU1ZQPQ0KIFRS
+VUU7Q049aGlkYXlhdGgubW9oYW1tZWRANTAwYXBwcy5jb207WC1OVU0tR1VFU1RTPTA6bWFpbHRv
+OmhpZGF5YXRoLm1vaGFtbQ0KIGVkQDUwMGFwcHMuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJ
+RFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBU
+UlVFO0NOPWFydW4ubXVwcGluYUA1MDBhcHBzLmNvbTtYLU5VTS1HVUVTVFM9MDptYWlsdG86YXJ1
+bi5tdXBwaW5hQDUwMGFwcHMNCiAuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVBTDtST0xF
+PVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBUUlVFO0NOPXBh
+dmFuaS5wdWNoYWtheWFsYUA1MDBhcHBzLmNvbTtYLU5VTS1HVUVTVFM9MDptYWlsdG86cGF2YW5p
+LnB1Y2hha2ENCiB5YWxhQDUwMGFwcHMuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVBTDtS
+T0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBUUlVFO0NO
+PWNoYW5kcmFzZWtoYXIuYmFuZGFydUA1MDBhcHBzLmNvbTtYLU5VTS1HVUVTVFM9MDptYWlsdG86
+Y2hhbmRyYXNla2gNCiBhci5iYW5kYXJ1QDUwMGFwcHMuY29tDQpBVFRFTkRFRTtDVVRZUEU9SU5E
+SVZJRFVBTDtST0xFPVJFUS1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0N
+CiBUUlVFO0NOPWNoYWtyYWRoYXIua2FsYXB1cmVkZHlANTAwYXBwcy5jb207WC1OVU0tR1VFU1RT
+PTA6bWFpbHRvOmNoYWtyYWRoYXINCiAua2FsYXB1cmVkZHlANTAwYXBwcy5jb20NCkFUVEVOREVF
+O0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFD
+VElPTjtSU1ZQPQ0KIFRSVUU7Q049YWJoaWppdC5kYXNANTAwYXBwcy5jb207WC1OVU0tR1VFU1RT
+PTA6bWFpbHRvOmFiaGlqaXQuZGFzQDUwMGFwcHMuYw0KIG9tDQpYLU1JQ1JPU09GVC1DRE8tT1dO
+RVJBUFBUSUQ6LTE2NDUyNjQxMzQNCkNSRUFURUQ6MjAyMjA3MDFUMTUwNTI1Wg0KREVTQ1JJUFRJ
+T046RGVhciBBbGxcLDxicj48YnI+TGV0J3MgZ2F0aGVyIGluIHRoZSAybmQtZmxvb3IgbWVldGlu
+ZyByb29tIGZvDQogciZuYnNwXDs8Yj5NJ2dhdWdlIHdpdGggQWJoaWppdCZuYnNwXDs8L2I+KE5l
+dyBqb2luZXJzIGludGVyYWN0aXZlIHNlc3Npb24pDQogIG9uIDxiPjA0LjA3LjIyIChNb25kYXkp
+IEAgMTEuMDAgYW0uPC9iPiZuYnNwXDs8YnI+PGJyPjxicj5SZWdhcmRzPGJyPlByYXNhDQogbnRo
+IENoPGJyPkhSIE9wczxicj5NOiA5NDk0OTQwOTg3PGJyPk1hbnRyYSBUZWNobm9sb2dpZXMgUHZ0
+IEx0ZDxiPjxicj48L2I+DQogPGJyPjxhIGhyZWY9Imh0dHBzOi8vbWFudHJhZ3JvdXAuY29tLyI+
+aHR0cHM6Ly9tYW50cmFncm91cC5jb20vPC9hPlxuXG4tOjp+DQogOn46On46fjp+On46fjp+On46
+fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+
+DQogOjp+On46Oi1cbkRvIG5vdCBlZGl0IHRoaXMgc2VjdGlvbiBvZiB0aGUgZGVzY3JpcHRpb24u
+XG5cblZpZXcgeW91ciBldmVudCBhDQogdCBodHRwczovL2NhbGVuZGFyLmdvb2dsZS5jb20vY2Fs
+ZW5kYXIvZXZlbnQ/YWN0aW9uPVZJRVcmZWlkPU5tdHpiMm96WWpVelluDQogVXlZWEJwWTJaMVpU
+VnpOVEZxT0hFZ2FHRnlhUzVpYVd4bGFHRnNRRzFoYm5SeVlXZHliM1Z3TG1OdmJRJnRvaz1NalFq
+YzJGMGVXDQogRXVZMmhwYm5SaFFEVXdNR0Z3Y0hNdVkyOXRaalZpTldJNE5tUTFNRGcxWVdOaE5q
+UmpaR05tWVRVMU1UWTJaV1UzTWpVeE5HVXhZDQogakF3TmcmY3R6PUFzaWElMkZLb2xrYXRhJmhs
+PWVuJmVzPTEuXG4tOjp+On46On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+DQogOn46fjp+
+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+Ojp+On46Oi0NCkxBU1QtTU9ESUZJ
+RUQ6MjAyMjA3MDFUMTUwNTI3Wg0KTE9DQVRJT046DQpTRVFVRU5DRTowDQpTVEFUVVM6Q09ORklS
+TUVEDQpTVU1NQVJZOk0nR2F1Z2Ugd2l0aCBBYmhpaml0DQpUUkFOU1A6T1BBUVVFDQpBVFRBQ0g7
+RklMRU5BTUU9TSdHYXVnZSB3aXRoIEFiaGlqaXQucG5nO0ZNVFRZUEU9aW1hZ2UvcG5nOmh0dHBz
+Oi8vZHJpdmUuZ28NCiBvZ2xlLmNvbS9vcGVuP2lkPTFKRTlvQTJILVc3cm9ZQ2dKbk11QmFNQ3Ay
+YW10MWFIcyZhdXRodXNlcj0wDQpFTkQ6VkVWRU5UDQpFTkQ6VkNBTEVOREFSDQo=
+--0000000000007cf59305e2bfb70b--
+From - Fri Jul  1 21:46:59 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from mail-qv1-f70.google.com (mail-qv1-f70.google.com [209.85.219.70])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id 2B41C40207
+	for <hari.bilehal@mantragroup.com>; Fri,  1 Jul 2022 16:16:54 +0000 (UTC)
+Received: by mail-qv1-f70.google.com with SMTP
+	id s14-20020ad4438e000000b0047084e1931dsf2860363qvr.3
+	for <hari.bilehal@mantragroup.com>; Fri, 01 Jul 2022 09:16:54 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1656692212; cv=pass;        d=google.com;
+ s=arc-20160816;       
+ b=nkKmHA8tg4WkH0aeaoZJPLveQ65zVpKau8jjn7qJm4WV1jCoNwupRta19pYHDQa2Ca        
+ wFEmK4L6NY6a/oX9Ej2/XeluKgJyfEG2LcEupawS2IIM/ndHhJ09/VM519McgcBfuAmE        
+ T/fOKBqzhpm8SRU3HgZbS5KOUY5xJvGxMpL8dDqleiiWwRiydr28sdZXQh696Wcljpac        
+ ExQCu32K4bPasNhPqFpQ0wguWQYTAaWOhkvKLgQGLQvzXuCt6NqVB7kU47L8ER0JLGXG        
+ AikHXoiIkSJWWpXhw69C19aQMyqpBsc+CkD8vBhP9viB6dLslscGsK/kg8xG6FiUDTEr        
+ fcqA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=list-unsubscribe:list-archive:list-help:list-post:list-id        
+ :mailing-list:precedence:reply-to:to:subject:message-id:mime-version        
+ :from:date:content-transfer-encoding:dkim-signature;       
+ bh=jdPUgP1dLoJEmr8CoT+5X4D2pOCzanK2awduzPx/BM4=;       
+ b=hPpKl8WSKoAG5zLmOuv1ljPDhaFndKdCbI+SKaDKx1POkx6pXAMZ0M4F5LcvNk3QGg        
+ IyZzK9Er4jkuJTCGPj52tGd2JgQof5/0emLTg22miID6gVmiv+JE+Ylii1I+Ewx4vsKH        
+ n4bi4+2mpqhN0tSo5WRSSfXyP5bEArzOZHK25ncfA3z50DmBBEC1r9S3vAkE9ICL5kSD        
+ Z29TkeoLots3jZ6sztyKGguwQ8SafrN5MNBjRZGm1Pz3DdIic9M81AT4mctXY686vdrO        
+ 3fuEEwSGIhY2dmjUaBW/+jHIvWjcKNQ3tLeE5sHm+Xto2xblqHBkzmkpbOVqAQqNGdak        
+ /hKQ==
+ARC-Authentication-Results: i=2; mx.google.com;       dkim=pass
+ header.i=@500apps-campaigns.com header.s=s1 header.b=MpMCGiIn;       spf=pass
+ (google.com: domain of
+ bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-campaigns.com
+ designates 208.117.61.166 as permitted sender)
+ smtp.mailfrom="bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-
+	campaigns.com";       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps-campaigns.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=500apps.com;
+ s=google;       
+ h=content-transfer-encoding:date:from:mime-version:message-id:subject        
+ :to:x-original-sender:x-original-authentication-results:reply-to        
+ :precedence:mailing-list:list-id:list-post:list-help:list-archive        
+ :list-unsubscribe;        bh=jdPUgP1dLoJEmr8CoT+5X4D2pOCzanK2awduzPx/BM4=;       
+ b=dAH2DphciCAcb63BeSm0r6EnzYtx2HQTNU7LsPsxxWXxsMU9rs/l7tGX9kp4D25Kb+        
+ bWOBAUGmkf9deDUhCH9XM3VcUae1BqUGRrOXHEzxtkojjMknnwMAkOr6gAt5/zCzZQsD        
+ QKFdK1/DfUcQrpGJTZMvOAROSMnTWVgQ09DAM=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20210112;       
+ h=x-gm-message-state:content-transfer-encoding:date:from:mime-version        
+ :message-id:subject:to:x-original-sender        
+ :x-original-authentication-results:reply-to:precedence:mailing-list        
+ :list-id:x-spam-checked-in-group:list-post:list-help:list-archive        
+ :list-unsubscribe;        bh=jdPUgP1dLoJEmr8CoT+5X4D2pOCzanK2awduzPx/BM4=;       
+ b=eYdBrr0txT8NUheMti7WHHhBLXo7z8Vp5xIU3X5D5bfggrNlnOVKZjKvZ3xcXVgcwp        
+ 5k4piFdVzxJxsTuiuHXc/XmylTwnfFQ8+nqW0ZxjY0+xRx4az8W/IA5BlYBDHU+Y9vb9        
+ 8Uv2yyJOpZ15WSiEBEbfH6qtq8gmbwuQtcES3XVzOF6wP7e6yuYpPmMTJHSKTXgGYQ0S        
+ 1xajK1DZue/SpoBiptFJEo3dlzNstNtl08Yk1bsV9/I+VE5pBqvDxZN97sgF9DZMlU2m        
+ 8twZhDHNBdB7Uk9SJJgnV75jasuuZ9fe4iQOXKATwh20N3F7NaCGhMrFu6RMnXvlLAdn        
+ xZWg==
+X-Gm-Message-State: AJIora8CwJ8DndIuEBlMoXQ7UAOw1UjxbXz0YGgy7c84xy12HZrgaBTq
+	caamtTb/rGlW6Hj1G3IHC5wvxAcu
+X-Google-Smtp-Source: 
+ AGRyM1sm7WElfjjuRyz7rj7kHV9CyMQ6sMkAwUhh6pAyYjCWCDpAy7Eqrjac83cpGeM9SgtKqE4Bx
+	g==
+X-Received: by 2002:a05:620a:440e:b0:6b2:4d91:2e89 with SMTP id
+ v14-20020a05620a440e00b006b24d912e89mr5696890qkp.14.1656692211653;       
+ Fri, 01 Jul 2022 09:16:51 -0700 (PDT)
+X-BeenThere: hari.bilehal@500apps.com
+Received: by 2002:a05:622a:4e:b0:319:86af:3fb0 with SMTP
+	id y14-20020a05622a004e00b0031986af3fb0ls9877866qtw.11.gmail; Fri, 01 Jul 2022 09:16:51 -0700 (PDT)
+X-Received: by 2002:a05:622a:18a1:b0:31d:2a7d:d4ca with SMTP id
+ v33-20020a05622a18a100b0031d2a7dd4camr9425413qtc.163.1656692210647;       
+ Fri, 01 Jul 2022 09:16:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1656692210; cv=none;        d=google.com;
+ s=arc-20160816;       
+ b=as/nWjYcBS/lTyYjlKvordRFAYbJcWJNf8APxfgLms0ojdKjEoZTSmaol5u8kFG+Al        
+ jiFJGZRXDcg3+6Yuegja+Thf1E0EnMbYAm3RglUV7O7d4CM92jS0w6SM3HesSme2y5IC        
+ GAfCdyDXvPVEozCDshLdyMFfrC6c7CxnC97hFZl9u7wYIqbgq/eNE4rMrw6rggAQWbKQ        
+ EOPXAT3qPjno4JoqZItUsvMuu7gx3MY4J+Xi08fLQMbypgO/2f8zVpHeYVVtATqiXdpe        
+ QwTti2RsfOv49oHw7gTIPtbVrEwMhfBvI4cSgA9WSt0TYfH23yfzEbRSESnnayOaIyhV        
+ JD2A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;        h=to:subject:message-id:mime-version:from:date        
+ :content-transfer-encoding:dkim-signature;       
+ bh=jdPUgP1dLoJEmr8CoT+5X4D2pOCzanK2awduzPx/BM4=;       
+ b=BkKkSUJ803hDfMO6FWIKL3mEDghaOPyEAfkWQla0daHgZYBbfftYeRsprHD+oCloGc        
+ IscSddfh1TVsOKfoYq01wqm1TV2+pBLgWnX89FsTX8K+ZJwfe6PksFVlSVKXbCrjQvhV        
+ 3WrLtH3fTILgKA/BwgmqSmktgD8g0mxvYAAHrhuTtBsnibIiIgM+8XlNjOhnMwH2y6PP        
+ I6fET1LIZNHMnFkvoWnSIjOl8abOsZgFWxIwnc6YJVstvYzogIHGWu+2oHbhhXmdUQ26        
+ 6g7vrafwu3ftrS+4yxo8Y/hPUT+YpTbjGAqfG6Jp45oJPewVkfVXJORN+m2f1gTR3onV        
+ aifg==
+ARC-Authentication-Results: i=1; mx.google.com;       dkim=pass
+ header.i=@500apps-campaigns.com header.s=s1 header.b=MpMCGiIn;       spf=pass
+ (google.com: domain of
+ bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-campaigns.com
+ designates 208.117.61.166 as permitted sender)
+ smtp.mailfrom="bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-
+	campaigns.com";       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps-campaigns.com
+Received: from o7.ptr7742.500apps-campaigns.com (o7.ptr7742.500apps-campaigns.com. [208.117.61.166])
+	by mx.google.com with ESMTPS
+	id m20-20020a05620a215400b006a6ad5d4b18si5295772qkm.435.2022.07.01.09.16.50
+	for <hari.bilehal@500apps.com>        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);        Fri, 01 Jul 2022 09:16:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of
+ bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-campaigns.com
+ designates 208.117.61.166 as permitted sender) client-ip=208.117.61.166;
+Received: by filterdrecv-679d49d7d8-b85vj with SMTP
+	id filterdrecv-679d49d7d8-b85vj-1-62BF1DF2-25        2022-07-01 16:16:50.408491634 +0000 UTC m=+1983259.294369717
+Received: from MjM0NzIyMTM (unknown)	by geopod-ismtpd-1-1 (SG) with HTTP
+	id nq9PToYTRyO2WnlsdHZuTg	Fri, 01 Jul 2022 16:16:50.063 +0000 (UTC)
+Date: Fri, 01 Jul 2022 16:16:50 +0000 (UTC)
+From: 'Sign' via Bilehal Hari Krishna <hari.bilehal@500apps.com>
+Mime-Version: 1.0
+Message-ID: <nq9PToYTRyO2WnlsdHZuTg@geopod-ismtpd-1-1>
+Subject: Signature Required
+X-infinity-mail-ip: 45.127.59.62
+X-infinity-mail-url: http:||api.ap1.500apps.com|sign|v1|mail
+X-infinity-mail-template-name: Signature
+X-infinity-mail-user: Sign
+X-infinity-mail-region: ap1
+X-SG-EID: 
+ =?us-ascii?Q?8yIzqdgis7u9TCQnq4syqHw6pI7Gsva1Wzmk1GnUM+i0lHMtMjuJd2AEXx5wCN?=
+ =?us-ascii?Q?cBtMOkZT4+nwaJo5TSKjuiHwdjnLVqwGie55gfh?=
+ =?us-ascii?Q?ycr08TDSv4U=2FNUoNAHoBOU2SzG37UqdgwmmuJ3J?=
+ =?us-ascii?Q?fb0DjdVzGCqXRBATBnKJJZ6cykUg9BbOJsbQVr4?=
+ =?us-ascii?Q?ybULTqbXA0SqcV23d5VkVYt0+HmfxsV2OcdagCO?=
+ =?us-ascii?Q?9N3Wtu7y275ySp+gjEjpoIr5q1Bch6PrUxnHBl?=
+To: Hari <hari.bilehal@500apps.com>
+X-Entity-ID: DUfc9d0a39x6GmHiDeHJDw==
+X-Original-Sender: noreply@500apps-campaigns.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@500apps-campaigns.com header.s=s1 header.b=MpMCGiIn;       spf=pass
+ (google.com: domain of
+ bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-campaigns.com
+ designates 208.117.61.166 as permitted sender)
+ smtp.mailfrom="bounces+23472213-4969-hari.bilehal=500apps.com@em9700.500apps-
+	campaigns.com";       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE)
+ header.from=500apps-campaigns.com
+X-Original-From: Sign <noreply@500apps-campaigns.com>
+Reply-To: Sign <noreply@500apps-campaigns.com>
+Precedence: list
+Mailing-list: list hari.bilehal@500apps.com; contact
+ hari.bilehal+owners@500apps.com
+List-ID: <hari.bilehal.500apps.com>
+X-Spam-Checked-In-Group: hari.bilehal@500apps.com
+X-Google-Group-Id: 342163588535
+List-Post: <https://groups.google.com/a/500apps.com/group/hari.bilehal/post>,
+ <mailto:hari.bilehal@500apps.com>
+List-Help: 
+ <https://support.google.com/a/500apps.com/bin/topic.py?topic=25838>,
+ <mailto:hari.bilehal+help@500apps.com>
+List-Archive: <https://groups.google.com/a/500apps.com/group/hari.bilehal/>
+List-Unsubscribe: 
+ <mailto:googlegroups-manage+342163588535+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/500apps.com/group/hari.bilehal/subscribe>
+Return-Path: hari.bilehal+bncBAABB4537SKQMGQEH4VF4PQ@500apps.com
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+
+<!doctype html>
+<html>
+<head>
+  <title>Grow like the Fortune 500</title>
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <style type=3D"text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    table,
+    td {
+      border-collapse: collapse;
+    }
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+    }
+    p {
+      display: block;
+      margin: 13px 0;
+    }
+    ul, ol{
+      margin-top: 5px !important;
+      padding: 0px !important;
+      margin-bottom: 5px !important;
+    }
+    li{
+      line-height:1.6rem !important;;
+    }
+  </style>
+  <style type=3D"text/css">
+  </style>
+</head>
+<body style=3D"background-color:#f4f4f4;">
+  <div class=3D"body-section" style=3D"padding-top: 60px; padding-bottom: 6=
+0px; background-color: #f4f4f4;">
+    <div style=3D"margin:0px auto;max-width:600px;">
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"width:100%;">
+        <tbody>
+          <tr>
+            <td style=3D"direction:ltr;font-size:0px;padding:0px;">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style=3D"background:#ffffff;background-color:#ffffff;margin:0px au=
+to;border-radius:5px !important;max-width:600px;">
+      <table  border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pres=
+entation" style=3D"background:#ffffff;background-color:#ffffff;width:100%;b=
+order-radius:5px !important;">
+        <tbody>
+          <tr>
+            <td style=3D"direction:ltr;font-size:0px;padding:30px 50px;">
+             <div class=3D"mj-column-per-100 mj-outlook-group-fix"
+    style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-blo=
+ck;vertical-align:top;width:100%;">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"present=
+ation" width=3D"100%">
+        <tbody>
+            <tr>
+                <td style=3D"vertical-align:top;padding-top:0px;">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style width=3D"100%">
+                        <tr>
+                            <td>
+                                <table width=3D"600" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"
+            border-collapse: collapse;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15pt;
+            color: #777777;
+            ">
+                                    <tbody>
+                                        <tr>
+                                            <td bgcolor=3D"#ffffff" width=
+=3D"600" valign=3D"left" style=3D"
+                     padding: 25px 0px 0px;
+                     font-family: Arial, Helvetica, sans-serif;
+                     font-size: 12px;
+                     line-height: 100%;
+                     color: #5187bd;
+                     text-align: -webkit-center;
+                     ">
+                                                <a href=3D"#" target=3D"_bl=
+ank"><img alt=3D"Logo"
+                                                        src=3D"https://infi=
+nity.500apps.com/images/mail/sign.png"
+                                                        width=3D"120" align=
+=3D"left" border=3D"0" vspace=3D"0" hspace=3D"0"
+                                                        style=3D"display: b=
+lock" /></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=3D"left" style=3D"font-size:0px;paddi=
+ng:0;word-break:break-word;">
+                                <div
+                                    style=3D"font-family:Ubuntu, Helvetica,=
+ Arial, sans-serif;font-size:15px;font-weight:400;line-height:30px;text-ali=
+gn:left;color:#000000;">
+                                    <p
+                                        style=3D"font-size: 18px; line-heig=
+ht: 1.6rem; color: #333; font-family: Helvetica,Arial,sans-serif; margin-bo=
+ttom: 10px; margin-top: 40px;">
+                                        <span>Hi <span style=3D"color:#3660=
+eb;">B Harikrishna</span></span> <span><img
+                                                alt=3D"Logo" src=3D"https:/=
+/infinity.500apps.com/img/botup/hand.png"
+                                                width=3D"22" height=3D"22" =
+border=3D"0" vspace=3D"0" hspace=3D"0"
+                                                style=3D"margin-left: 5px;"=
+ /></span>
+                                    </p>
+                                    <p
+                                        style=3D"font-size: 16px; line-heig=
+ht: 1.6rem; color: #333; font-weight: 300; font-family: Helvetica,Arial,san=
+s-serif; margin-bottom: 10px; margin-top: 10px;">
+                                        </p>
+                                    <div
+                                        style=3D"background:#e7f0fd;padding=
+: 30px;border-radius: 4px;text-align: center;">
+<p
+                                            style=3D"font-size: 16px; line-=
+height: 1.6rem; color: #333; font-weight: 300; font-family: Helvetica,Arial=
+,sans-serif; margin-bottom: 10px; margin-top: 10px;">
+                                            Prasanth Chinta has requested y=
+ou to sign the document - <span style=3D"
+                                            font-size: 15px;
+                                            line-height: 1.6rem;
+                                            color: #000;
+                                            font-weight: 600;
+                                        ">B Harikrishna</span>
+                                        </p>
+<p style=3D"text-align:center;margin-bottom: 0px;margin-top: 25px;"><a
+                                                style=3D"color: #FFFFFF;bac=
+kground-color: #3861eb;border-color: #3861eb;padding: 8px 16px;text-decorat=
+ion: none;border-radius: 4px;"
+                                                href=3D"https://sign-ap1-13=
+416-42715.public.500apps.org/sign/5252/187287?type=3Dwidget">Review and Sig=
+n
+                                                Document</a></p>
+                                    </div>
+                                    <p
+                                        style=3D"font-size: 16px; line-heig=
+ht: 1.6rem; color: #000; font-weight: 500; font-family: Helvetica,Arial,san=
+s-serif; margin-bottom: 0px; margin-top: 18px;">
+                                        <span style=3D"font-size: 16px;font=
+-weight: 500;color: #333;margin-right: 5px;">Requester
+                                            Name:</span>Prasanth Chinta
+                                    </p>
+                                    <p
+                                        style=3D"font-size: 16px; line-heig=
+ht: 1.6rem; color: #333; font-weight: 500; font-family: Helvetica,Arial,san=
+s-serif; margin-bottom: 6px; margin-top: 0px;">
+                                        <span style=3D"font-size: 16px;font=
+-weight: 500;color: #333;margin-right: 5px;">Requester
+                                            Email:</span>satya.chinta@500ap=
+ps.com
+                                    </p>
+
+
+
+
+                                    <br>
+                                    <p
+                                    style=3D"font-size: 16px; line-height: =
+1.6rem; color: #333; font-weight: 300; font-family: Helvetica,Arial,sans-se=
+rif; margin-bottom: 5px; margin-top: 0px;">
+                                    This document is intended only for the =
+signees and cannot be shared.</p>
+
+                                    <p style=3D"
+                                    margin-bottom: 0px;
+                                    margin-top: 5px;
+                                    font-size: 15px;
+                                "><a href=3D"https://sign.cc/" target=3D"_b=
+lank"
+                                            style=3D"text-decoration: none;=
+color: #3861eb;">Signup For Sign.cc
+                                        </a></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+              <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=
+=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertic=
+al-align:top;width:100%;">
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+                  <tr>
+                    <td align=3D"left" style=3D"font-size:0px;padding:0;wor=
+d-break:break-word;">
+                      <div style=3D"font-family:Ubuntu, Helvetica, Arial, s=
+ans-serif;font-size:15px;font-weight:400;line-height:30px;text-align:left;c=
+olor:#000000;">
+                       =20
+                        <p style=3D"color: #333; font-weight: 300; font-fam=
+ily: Helvetica,Arial,sans-serif; font-size: 16px; line-height: 28px; margin=
+-bottom: 20px;">
+                          <br>Thanks,<br>
+                          <b><span> 500apps team </span> </b><br>
+                        </p>
+                      </div>
+                    </td>
+
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+From - Mon Jul  4 15:54:48 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from mail-pl1-f199.google.com (mail-pl1-f199.google.com [209.85.214.199])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id 0DC864004A
+	for <hari.bilehal@mantragroup.com>; Mon,  4 Jul 2022 10:24:38 +0000 (UTC)
+Received: by mail-pl1-f199.google.com with SMTP
+	id o9-20020a170902d4c900b0016a629e2f1bsf4973296plg.20
+	for <hari.bilehal@mantragroup.com>; Mon, 04 Jul 2022 03:24:37 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1656930276; cv=pass;        d=google.com;
+ s=arc-20160816;       
+ b=WUQEb14Zs8CQm5Qg/ygSuoJHBAfoUvu5ZnVFJ1ys+uyMzfFqSowcDa6Mo6Bv7wKhsA        
+ fODw5KrGZRMN0WnIMHHcm/m5c1foX1bRmGEuhn/OzhDUMgtS5tk6f/WicCkUlmK5taJ+        
+ Se1t6IA7FyG9cZpFjdDaGxkf+bkC8IL/PAR9yhNwCSlSFnhgV0Kyx2u5QWNbN/TnLFMD        
+ 3ztqEh9oxXVccHKVBeFaP0ClBdjHQHCXXTf/jZcZ9gc8VPHFu2ZXwEi9omGonMk2oO7N        
+ BwGBrnnoxlnIsSW2TPhgfFkbbJdOkOZ2+OqestPPq4AEDANVsfvdKkkdgUx+J7XlBRjc        
+ +zKQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=list-unsubscribe:list-archive:list-help:list-post:list-id        
+ :mailing-list:precedence:feedback-id:tenant-id:mime-version:subject        
+ :message-id:to:reply-to:from:date:dkim-signature;       
+ bh=xxDX3pmAR5B4jjjVeO9ZL4GmbNz/z1aApfptKiNLaBs=;       
+ b=VDE/1fyj20nwQeLIPpJTIEHDalV8KmcrScfK/sozSo7NqE5WfoS3j1D5CesVYeSBE1        
+ 2qAL3jphnbCIhKhrg3k+VROCHxRvrYFppBhHE+gAh4PCK0Y4ahSvaRyki+o97UIObXgN        
+ CMfo1K22qZI67F/QBZC5HdO+1urKIUhLAgYbINmEtQsQBhwNFREqaYCXVBB8dPD8ioqo        
+ OvJLI5eJgvFSPH18UErJmjYflCMuQQF2z5J3sv+tMWKEMqBSV0EZbsPMX0gg3FVsRbmw        
+ q8ZSaRFwovordC7MDf30wMjh12l5btrq5DGGuTlHzd4NKaR52/hjBBPst4hQ7OcjDvo4        
+ TDeg==
+ARC-Authentication-Results: i=2; mx.google.com;       dkim=pass
+ header.i=@greythr.com header.s=7o7yktfkcmxuto2rfa26sf5dqr2hjkds
+ header.b=JFHlH7aC;       dkim=pass header.i=@amazonses.com
+ header.s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h header.b=bP4LZVDQ;       spf=pass
+ (google.com: domain of
+ 01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap-south-1.amazo
+	nses.com designates 76.223.190.43 as permitted sender)
+ smtp.mailfrom=01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap
+	-south-1.amazonses.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE
+ dis=NONE) header.from=greythr.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=500apps.com;
+ s=google;       
+ h=date:from:reply-to:to:message-id:subject:mime-version:tenant-id        
+ :feedback-id:x-original-sender:x-original-authentication-results        
+ :precedence:mailing-list:list-id:list-post:list-help:list-archive        
+ :list-unsubscribe;        bh=xxDX3pmAR5B4jjjVeO9ZL4GmbNz/z1aApfptKiNLaBs=;       
+ b=Asta4HPMsKgbwXZVqwClGrpodkov8pK+TJmqDSHK0ZEAGUZc5HfYnBeYmrQ/GZBwwv        
+ 6dCOGpk6YL6VOMdloJ8TdfshY7eCG3dydRSDLbT+nqoCywmAVTiGk09GSOT6XA+WPS2r        
+ AkafgLweEJx4w4cjwRRnb73aW7oDVeu8smjZM=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20210112;       
+ h=x-gm-message-state:date:from:reply-to:to:message-id:subject        
+ :mime-version:tenant-id:feedback-id:x-original-sender        
+ :x-original-authentication-results:precedence:mailing-list:list-id        
+ :x-spam-checked-in-group:list-post:list-help:list-archive        
+ :list-unsubscribe;        bh=xxDX3pmAR5B4jjjVeO9ZL4GmbNz/z1aApfptKiNLaBs=;       
+ b=IBK3gAorF3sI9NIY+8P2VuY9g2/FVYXmRABFMV/k72A1AJ2X5Qrjmn+ZB3evp8t3ZD        
+ XXEWUog7HtJ5VT0btJZw3QG9YDKiN6x7kyf6XvZRmJgr2XxdPdcZqraDUwqEd/5du0ga        
+ BMgQH0tQExzdzlW4/Vu4Or4mdmzjfoLBupjaAhiVm4KFo9Lz7VvKnqgQJUhg2l8J0opO        
+ zC3GOg6tj99J9jYBH6MpiW/LoD87qcxO/ODyoIodkYg0o6Mi4KmnEy/+EeJVXGtN07CS        
+ 2rruGUJt8t3oRLa83Zfx7mX5NjJd7ia7CTo+A4dIlmI4KF10DuBtROoY/MJ3DfIs8TD/        
+ Wtcw==
+X-Gm-Message-State: AJIora9SsrPRKqkoLYaOhw5qnIcI8I4DVsVScWwEL9FvZCFJ9T48Xcn+
+	xf0iPuOAWELMaoR+UIRFxft0vQyU
+X-Google-Smtp-Source: 
+ AGRyM1vwadN4iadOKVoCQeop0Y1t0SRTBBM4+OefeeLJxXc8D562obw3sn4Jb5aXX/lf+1ozXHn1D
+	A==
+X-Received: by 2002:a63:5a5b:0:b0:411:8cff:93fb with SMTP id
+ k27-20020a635a5b000000b004118cff93fbmr22456691pgm.40.1656930275633;       
+ Mon, 04 Jul 2022 03:24:35 -0700 (PDT)
+X-BeenThere: hari.bilehal@500apps.com
+Received: by 2002:a17:903:18c:b0:16a:2c14:1ccd with SMTP
+	id z12-20020a170903018c00b0016a2c141ccdls20360233plg.10.gmail; Mon, 04 Jul 2022 03:24:35 -0700 (PDT)
+X-Received: by 2002:a17:90a:eb17:b0:1ef:81d5:1fd0 with SMTP id
+ j23-20020a17090aeb1700b001ef81d51fd0mr8927719pjz.29.1656930274876;       
+ Mon, 04 Jul 2022 03:24:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1656930274; cv=none;        d=google.com;
+ s=arc-20160816;       
+ b=lu2qX46xi+3XU+l4JjFubf3RLiMrtS0V5aeQnXTV2N8H7ZBkWHDhOiaHwHGbExzRSD        
+ 8h7GZda8fMB4MifFEQHE81MV97UNAZJISXQmemuSX0eaiVpaQZ1RBpjsk2qXhZnqhVF2        
+ qkGVBlo0yYckQyUYyBNYGaLdP5EVDIWjlDxBoouyWXg7EsicEnMwMpmjsAkvK9wgrCdV        
+ zRLvxCd4nsM2FG0dVZoul0yrdwymFDfSLJc38SFlBUJL2DwaVd4RH3tsIGtKasN68LIO        
+ zz1FJpJQ+lDVy4p18PC21ElNId2Z4718HWSWYS+TMel20hm6+8onAkwI4rG6rIKac86t        
+ xwCA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;       
+ h=feedback-id:tenant-id:mime-version:subject:message-id:to:reply-to        
+ :from:date:dkim-signature:dkim-signature;       
+ bh=xxDX3pmAR5B4jjjVeO9ZL4GmbNz/z1aApfptKiNLaBs=;       
+ b=Qs5WO6bC1PWTzswc/YYRDrUCDSzS2STzu0tfmrhPIHXDw2YXykRgTHdZR3GEVLBpKo        
+ sLKsRocC7zHMfSjHwbW67ES/q+wTXokQwwXJ5RiztqY+XXWsBrfndrTw/cua7lCFQVFc        
+ Ky2WEiW5lUiurW4AhnAX6hFudER1JCZ0xjuZEMsoQrYkUj3q0J8Dn1o1rO08QQt+ckBG        
+ zlLqQstl/BQ4chyzvzlfpqfQG8tf3XaeKE2F/MQ3ii6edTBs9Zj5CXgviXWb6pb3Fuar        
+ Ywo9CdR7KFIoNxwGn/2lr+C8PxACw81t25ijMuepJIhMZR+zQTWtkxi9MQGq+5Fq3/4L        
+ q/qQ==
+ARC-Authentication-Results: i=1; mx.google.com;       dkim=pass
+ header.i=@greythr.com header.s=7o7yktfkcmxuto2rfa26sf5dqr2hjkds
+ header.b=JFHlH7aC;       dkim=pass header.i=@amazonses.com
+ header.s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h header.b=bP4LZVDQ;       spf=pass
+ (google.com: domain of
+ 01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap-south-1.amazo
+	nses.com designates 76.223.190.43 as permitted sender)
+ smtp.mailfrom=01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap
+	-south-1.amazonses.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE
+ dis=NONE) header.from=greythr.com
+Received: from c190-43.smtp-out.ap-south-1.amazonses.com (c190-43.smtp-out.ap-south-1.amazonses.com. [76.223.190.43])
+	by mx.google.com with ESMTPS
+	id bb23-20020a17090b009700b001ef826b9223si4853403pjb.153.2022.07.04.03.24.34
+	for <hari.bilehal@500apps.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);        Mon, 04 Jul 2022 03:24:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of
+ 01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap-south-1.amazo
+	nses.com designates 76.223.190.43 as permitted sender)
+ client-ip=76.223.190.43;
+Date: Mon, 4 Jul 2022 10:24:32 +0000
+From: 'HR Portal' via Bilehal Hari Krishna <hari.bilehal@500apps.com>
+Reply-To: hr@agilecrm.com
+To: hari.bilehal@500apps.com
+Message-ID: <01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap-south-1.amazonses.com>
+Subject: Welcome to greytHR
+MIME-Version: 1.0
+Tenant-Id: 32irR.0R.aMrssR2HhySThAYNW9ia
+Feedback-ID: 
+ 1.ap-south-1./EK5bNmWTOu/r+mL29FwxpD7HMyvGrHwpw5gbtl8ynk=:AmazonSES
+X-SES-Outgoing: 2022.07.04-76.223.190.43
+X-Original-Sender: no-reply@greythr.com
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@greythr.com header.s=7o7yktfkcmxuto2rfa26sf5dqr2hjkds
+ header.b=JFHlH7aC;       dkim=pass header.i=@amazonses.com
+ header.s=dvogjbaa3ou3tduyzvyu4rj5tkuzdi4h header.b=bP4LZVDQ;       spf=pass
+ (google.com: domain of
+ 01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap-south-1.amazo
+	nses.com designates 76.223.190.43 as permitted sender)
+ smtp.mailfrom=01090181c8bd8602-3f0233bb-27bc-4e05-bddc-8080a777af25-000000@ap
+	-south-1.amazonses.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE
+ dis=NONE) header.from=greythr.com
+X-Original-From: HR Portal <no-reply@greythr.com>
+Precedence: list
+Mailing-list: list hari.bilehal@500apps.com; contact
+ hari.bilehal+owners@500apps.com
+List-ID: <hari.bilehal.500apps.com>
+X-Spam-Checked-In-Group: hari.bilehal@500apps.com
+X-Google-Group-Id: 342163588535
+List-Post: <https://groups.google.com/a/500apps.com/group/hari.bilehal/post>,
+ <mailto:hari.bilehal@500apps.com>
+List-Help: 
+ <https://support.google.com/a/500apps.com/bin/topic.py?topic=25838>,
+ <mailto:hari.bilehal+help@500apps.com>
+List-Archive: <https://groups.google.com/a/500apps.com/group/hari.bilehal/>
+List-Unsubscribe: 
+ <mailto:googlegroups-manage+342163588535+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/500apps.com/group/hari.bilehal/subscribe>
+Return-Path: hari.bilehal+bncBCOK5ZHVSEKBBY77RKLAMGQE2BU66BY@500apps.com
+Content-Type: multipart/mixed;
+	boundary="----=_Part_53940_2029047191.1656930272751"
+
+
+------=_Part_53940_2029047191.1656930272751
+Content-Type: multipart/related; 
+	boundary="----=_Part_53941_944834524.1656930272751"
+
+
+------=_Part_53941_944834524.1656930272751
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear B Harikrishna,<br><br>
+
+Welcome to greytHR! greytHR provides you access to your Payslips, Reimbursements, Tax Calculations and other compensation-related information right from your desk.<br><br>
+
+Your username is <b>&lt;1293&gt;</b><br><br>
+
+To generate your greytHR password, click <a href="https://clickdesk.greythr.com/uas/portal/auth/reset?domain=Y2xpY2tkZXNrLmdyZXl0aHIuY29t&guid=265ddbe6-1c1e-49ce-8b01-c26f074e0ff6">here</a> or paste the following link into your browser:<br> https://clickdesk.greythr.com/uas/portal/auth/reset?domain=Y2xpY2tkZXNrLmdyZXl0aHIuY29t&guid=265ddbe6-1c1e-49ce-8b01-c26f074e0ff6<br><br>
+
+After changing the password,  you can login using this link:&nbsp;https://clickdesk.greythr.com/<br><br>
+
+Note that the link will expire in 4 days.<br><br>
+
+If you have any trouble logging in or using the application, write to us at hr@agilecrm.com. We will revert to you and help you with your queries.<br><br>
+
+Regards
+
+------=_Part_53941_944834524.1656930272751--
+
+------=_Part_53940_2029047191.1656930272751--
+From - Mon Jul  4 16:54:06 2022
+X-Mozilla-Status: 0001
+X-Mozilla-Status2: 00000000
+Received: from smtp.github.com (out-18.smtp.github.com [192.30.252.201])
+	by mail.ap1.500mail.com (Postfix) with ESMTPS id AB46F4004F
+	for <hari.bilehal@mantragroup.com>; Mon,  4 Jul 2022 11:23:43 +0000 (UTC)
+Received: from github-highworker-ae8a4c9.ash1-iad.github.net (github-highworker-ae8a4c9.ash1-iad.github.net [10.56.24.19])
+	by smtp.github.com (Postfix) with ESMTP id D22DE3401FB
+	for <hari.bilehal@mantragroup.com>; Mon,  4 Jul 2022 04:23:41 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;	s=pf2014;
+ t=1656933821;	bh=HpyRbQpVQnNPbQybVnGySG0H6+b7/WqIr5gF4TFyVEo=;
+	h=Date:From:To:Subject:From;
+	b=0ZQNDiPslUOxjwoAYGW9tTOg0TvGtGnCPf43XSDT61pEhg/lojttxuYnUDReyi6pB
+	 W1xuA0C0zFh0HSHjm+Uxn+hhrgG8qF67X192Zi79aLv+90cAUPcNu/oI1EA7unT9Ft
+	 pZwkeKGngbGiV1tMRjjwqEaMsN3nScqgDcgNERko=
+Date: Mon, 04 Jul 2022 04:23:41 -0700
+From: GitHub <noreply@github.com>
+To: BilehalHarikrishna <hari.bilehal@mantragroup.com>
+Message-ID: <62c2cdbdc392a_148fd7786153f@github-highworker-ae8a4c9.ash1-iad.github.net.mail>
+Subject: =?UTF-8?Q?=F0=9F=9A=80_Your_GitHub_launch_code?=
+Mime-Version: 1.0
+X-Auto-Response-Suppress: All
+X-GitHub-Verify: BilehalHarikrishna
+Return-Path: noreply@github.com
+Content-Type: multipart/alternative;
+	boundary="--==_mimepart_62c2cdbd59a4_148fd77861422"; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_62c2cdbd59a4_148fd77861422
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Here's your GitHub launch code, @BilehalHarikrishna!=0D
+=0D
+Continue signing up for GitHub by entering the code below:=0D
+=0D
+03986616=0D
+=0D
+You can enter it by visiting the link below:=0D
+=0D
+https://github.com/account_verifications?via_launch_code_email=3Dtrue=0D
+=0D
+You=E2=80=99re receiving this email because you recently created a new Gi=
+tHub account. If this wasn=E2=80=99t you, please ignore this email.=0D
+=0D
+Not able to enter the code? Paste the following link into your browser:=0D=
+
+=0D
+https://github.com/users/BilehalHarikrishna/emails/209582055/confirm_veri=
+fication/03986616?via_launch_code_email=3Dtrue=0D
+=0D
+---=0D
+Sent with <3 by GitHub.=0D
+GitHub, Inc. 88 Colin P Kelly Jr Street=0D
+San Francisco, CA 94107=0D
+
+----==_mimepart_62c2cdbd59a4_148fd77861422
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" style="font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; box-sizing: border-box;" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    
+  </head>
+  <body style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;; font-size: 14px; line-height: 1.5; color: #24292e; background-color: #fff; margin: 0;" bgcolor="#fff">
+    <table align="center" class="container-sm width-full" width="100%" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; max-width: 544px; margin-right: auto; margin-left: auto; width: 100% !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+        <td class="center p-3" align="center" valign="top" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 16px;">
+          <center style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+            <table border="0" cellspacing="0" cellpadding="0" align="center" class="width-full container-md" width="100%" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; max-width: 768px; margin-right: auto; margin-left: auto; width: 100% !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <td align="center" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">
+              <table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+              <table border="0" cellspacing="0" cellpadding="0" align="left" width="100%" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+                <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+                  <td class="text-left" style="box-sizing: border-box; text-align: left !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;" align="left">
+                    <img src="https://github.githubassets.com/images/email/global/octocat-logo.png" alt="GitHub" width="32" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; border: none;" />
+                    <h2 class="lh-condensed mt-2 text-normal" style="box-sizing: border-box; margin-top: 8px !important; margin-bottom: 0; font-size: 24px; font-weight: 400 !important; line-height: 1.25 !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+                        Here's your GitHub launch code, @BilehalHarikrishna!
+
+                    </h2>
+                  </td>
+                </tr>
+              </table>
+              <table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+</td>
+  </tr>
+</table>
+            <table width="100%" class="width-full" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; width: 100% !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+              <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+                <td class="border rounded-2 d-block" style="box-sizing: border-box; border-radius: 6px !important; display: block !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0; border: 1px solid #e1e4e8;">
+                  <table align="center" class="width-full text-center" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; width: 100% !important; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+                    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+                      <td class="p-3 p-sm-4" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 24px;">
+                        <table border="0" cellspacing="0" cellpadding="0" align="center" class="width-full" width="100%" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; width: 100% !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <td align="center" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">
+                          
+<img src="https://github.githubassets.com/images/email/signup/mona-launch-rocket.png" alt="an octocat standing next to a rocket" width="110" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; border: none;" />
+
+<table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<span class="text-mono f4" style="box-sizing: border-box; font-size: 16px !important; font-family: &quot;SFMono-Regular&quot;,Consolas,&quot;Liberation Mono&quot;,Menlo,monospace !important;">
+  Continue signing up for GitHub by entering the code below:
+</span>
+
+<table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<span class="branch-name f00-light text-gray-dark text-mono" style="box-sizing: border-box; color: #24292e !important; display: inline-block; background-color: #eaf5ff; border-radius: 6px; padding: 2px 6px; font: 300 48px &quot;SFMono-Regular&quot;,Consolas,&quot;Liberation Mono&quot;, Menlo, monospace;">03986616</span>
+
+<table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <td style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">
+      <table border="0" cellspacing="0" cellpadding="0" width="100%" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+        <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+          <td align="center" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">
+              <a href="https://github.com/account_verifications?via_launch_code_email=true" target="_blank" class="btn btn-primary btn-large" style="background-color: #28a745 !important; box-sizing: border-box; color: #fff; text-decoration: none; position: relative; display: inline-block; font-size: inherit; font-weight: 500; line-height: 1.5; white-space: nowrap; vertical-align: middle; cursor: pointer; -webkit-user-select: none; user-select: none; border-radius: .5em; -webkit-appearance: none; appearance: none; box-shadow: 0 1px 0 rgba(27,31,35,.1),inset 0 1px 0 rgba(255,255,255,.03); transition: background-color .2s cubic-bezier(0.3, 0, 0.5, 1); font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: .75em 1.5em; border: 1px solid #28a745;">Open GitHub</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+
+
+</td>
+  </tr>
+</table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+              <table border="0" cellspacing="0" cellpadding="0" align="center" class="width-full f5 text-gray-light" width="100%" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; color: #6a737d !important; width: 100% !important; font-size: 14px !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <td align="center" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">
+                <table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+                  <table class="width-full" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; width: 100% !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      
+    <td style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">
+  <table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td class="text-left" style="box-sizing: border-box; text-align: left !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;" align="left">
+      Once completed, you can start using all of GitHub's features to explore, build, and share projects.
+
+      <table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+
+      Not able to enter the code? Paste the following link into your browser: <br style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;" />
+      <a href="https://github.com/users/BilehalHarikrishna/emails/209582055/confirm_verification/03986616?via_launch_code_email=true" class="wb-break-all" style="background-color: transparent; box-sizing: border-box; color: #0366d6; text-decoration: none; word-break: break-all !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">https://github.com/users/BilehalHarikrishna/emails/209582055/confirm_verification/03986616?via_launch_code_email=true</a>
+</td>
+      <td data-test-selector="expander" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;"></td>
+    </tr>
+  </table>
+</td>
+
+    </tr>
+  </tbody>
+</table>
+
+                <hr style="box-sizing: content-box; height: 0; overflow: hidden; background-color: transparent; border-bottom-color: #dfe2e5; border-bottom-style: solid; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; margin: 15px 0; border-width: 0 0 1px;" />
+</td>
+  </tr>
+</table>
+
+            <table border="0" cellspacing="0" cellpadding="0" align="center" class="width-full text-center" width="100%" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; width: 100% !important; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <td align="center" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">
+              <table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+                  <p class="f6" style="box-sizing: border-box; margin-top: 0; margin-bottom: 10px; font-size: 12px !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+                      <a href="https://github.com/settings/emails" class="d-inline-block" style="background-color: transparent; box-sizing: border-box; color: #0366d6; text-decoration: none; display: inline-block !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">Email preferences</a> &#12539;
+                      <a href="https://docs.github.com/articles/github-terms-of-service/" class="d-inline-block" style="background-color: transparent; box-sizing: border-box; color: #0366d6; text-decoration: none; display: inline-block !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">Terms</a> &#12539;
+                      <a href="https://docs.github.com/articles/github-privacy-policy/" class="d-inline-block" style="background-color: transparent; box-sizing: border-box; color: #0366d6; text-decoration: none; display: inline-block !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">Privacy</a> &#12539;
+                      <a href="https://github.com/login" class="d-inline-block" style="background-color: transparent; box-sizing: border-box; color: #0366d6; text-decoration: none; display: inline-block !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">Sign in to GitHub</a> 
+                  </p>
+              <table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+              <p class="f5 text-gray-light" style="box-sizing: border-box; margin-top: 0; margin-bottom: 10px; color: #6a737d !important; font-size: 14px !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">  You&#8217;re receiving this email because you recently created a new GitHub account. If this wasn&#8217;t you, please ignore this email.
+</p>
+</td>
+  </tr>
+</table>
+            <table border="0" cellspacing="0" cellpadding="0" align="center" class="width-full text-center" width="100%" style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; width: 100% !important; text-align: center !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <td align="center" style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">
+  <table style="box-sizing: border-box; border-spacing: 0; border-collapse: collapse; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+  <tbody style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+    <tr style="box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">
+      <td height="16" style="font-size: 16px; line-height: 16px; box-sizing: border-box; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important; padding: 0;">&#160;</td>
+    </tr>
+  </tbody>
+</table>
+
+  <p class="f6 text-gray-light" style="box-sizing: border-box; margin-top: 0; margin-bottom: 10px; color: #6a737d !important; font-size: 12px !important; font-family: -apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot; !important;">GitHub, Inc. &#12539;88 Colin P Kelly Jr Street &#12539;San Francisco, CA 94107</p>
+</td>
+  </tr>
+</table>
+
+          </center>
+        </td>
+      </tr>
+    </table>
+    <!-- prevent Gmail on iOS font size manipulation -->
+   <div style="display: none; white-space: nowrap; box-sizing: border-box; font: 15px/0 apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;,Helvetica,Arial,sans-serif,&quot;Apple Color Emoji&quot;,&quot;Segoe UI Emoji&quot;;"> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </div>
+  </body>
+</html>
+
+----==_mimepart_62c2cdbd59a4_148fd77861422--

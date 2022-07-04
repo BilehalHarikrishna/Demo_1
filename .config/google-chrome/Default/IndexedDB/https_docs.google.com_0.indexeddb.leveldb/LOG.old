@@ -1,0 +1,6 @@
+2022/07/01-15:08:24.087 4d9f Creating DB /home/agile/.config/google-chrome/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb since it was missing.
+2022/07/01-15:08:24.106 4d9f Reusing MANIFEST /home/agile/.config/google-chrome/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/07/01-15:08:26.500 4dd8 Level-0 table #5: started
+2022/07/01-15:08:26.507 4dd8 Level-0 table #5: 7373 bytes OK
+2022/07/01-15:08:26.515 4dd8 Delete type=0 #3
+2022/07/01-15:08:26.515 4dd8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

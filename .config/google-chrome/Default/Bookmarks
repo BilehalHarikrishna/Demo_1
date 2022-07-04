@@ -1,0 +1,54 @@
+{
+   "checksum": "a1b9a9be1bf906df26f2b40fb3146350",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13301131209827361",
+            "guid": "c85ad7f4-9f2f-45fb-9ab0-477c476d96b8",
+            "id": "5",
+            "name": "Teams.cc - Chat Collaboration",
+            "type": "url",
+            "url": "https://infinity.500apps.com/teams/11344"
+         }, {
+            "date_added": "13301131227427091",
+            "guid": "74e34560-2ae0-4e0c-945b-7ea9d9ce285f",
+            "id": "6",
+            "name": "google - Google Search",
+            "type": "url",
+            "url": "https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&oq=g&aqs=chrome.2.69i57j0i131i433i512j46i131i199i433i465i512j0i131i433i512l4j46i131i199i433i465i512l2j0i131i433i512.1624j0j15&sourceid=chrome&ie=UTF-8"
+         }, {
+            "date_added": "13301407004409268",
+            "guid": "8a1ed67d-fe5b-4792-b8c5-dd6ecc528e8d",
+            "id": "7",
+            "name": "Move and copy items in your system - Learn the Command Line in Terminal - OpenClassrooms",
+            "type": "url",
+            "url": "https://openclassrooms.com/en/courses/4614926-learn-the-command-line-in-terminal/4634381-move-and-copy-items-in-your-system"
+         } ],
+         "date_added": "13301130056329665",
+         "date_modified": "13301407004409268",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13301130056329667",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13301130056329667",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

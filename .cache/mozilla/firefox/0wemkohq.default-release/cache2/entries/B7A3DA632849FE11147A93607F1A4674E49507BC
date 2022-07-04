@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Python Compiler (Interpreter)</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.programiz.com/sites/tutorial2program/files/programiz-favicon_3.png"
+      type="image/png"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=0"
+    />
+    <link rel="canonical" href="https://www.programiz.com/python-programming/online-compiler/" />    <meta
+      name="description"
+      content="Write and run Python code using our online compiler (interpreter). You can use Python Shell like IDLE, and take inputs from the user in our Python compiler."
+    />
+
+    <!-- CMP and header ad code start -->
+    <script src="https://cmp.uniconsent.com/v2/stub.min.js"></script>
+    <script async src='https://cmp.uniconsent.com/v2/a8d3ae4937/cmp.js'></script>
+    <script type="text/javascript">
+    window.googletag = window.googletag || {};
+    window.googletag.cmd = window.googletag.cmd || [];
+    window.googletag.cmd.push(function () {
+        window.googletag.pubads().enableAsyncRendering();
+        window.googletag.pubads().disableInitialLoad();
+    });
+    (adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
+    </script>
+    <script>
+    __tcfapi("addEventListener", 2, function(tcData, success) {
+        if (success && tcData.unicLoad  === true) {
+            if(!window._initAds) {
+                window._initAds = true;
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = '//dsh7ky7308k4b.cloudfront.net/publishers/Programizcomnew.min.js';
+                document.head.appendChild(script);
+            }
+
+            try {
+                fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+            return true;
+            }).catch(function(e) {
+            document.getElementsByClassName("content-top-ad")[0].style.display = "none";
+            var ad_elements = document.getElementsByClassName("pub-ad");
+            while(ad_elements.length > 0){
+                ad_elements[0].parentNode.removeChild(ad_elements[0]);
+            }
+            var carbonScript = document.createElement("script");
+            carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CKYDL27L&placement=wwwprogramizcom";
+            carbonScript.id = "_carbonads_js";
+            document.getElementById("carbon-block").appendChild(carbonScript);
+
+            });
+        } catch (error) {
+            console.log(error);
+        }
+        }
+    });
+    </script>
+    <!-- CMP and header tag ad code end -->
+
+    <!-- Buy sellads CSS-->
+    <style>
+        .pgAdWrapper {
+          min-height: 0!important;
+        }
+        #carbonads{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",Helvetica,Arial,sans-serif;--width:728px;--font-size:22px}#carbonads{display:block;overflow:hidden;max-width:var(--width);position:relative;background-color:#fcfcfc;border:solid 1px #eee;font-size:var(--font-size);box-sizing:border-box;margin:36px 0 36px 0;max-height:90px}.detail #carbonads{margin-top:12px}#carbonads a{color:inherit;text-decoration:none}#carbonads a:hover{color:inherit}.carbon-wrap{display:flex;align-items:center}carbon-img{display:block;float:left;margin:0;max-width:var(--width);line-height:1}.carbon-img img{display:block;margin:0;height:90px;width:auto}.carbon-text{display:block;float:left;padding:0 1em;line-height:1.35;max-width:calc(100% - 130px - 2em);text-align:left}.carbon-poweredby{display:block;position:absolute;bottom:0;right:0;padding:6px 10px;background:repeating-linear-gradient(-45deg,transparent,transparent 5px,hsla(0,0%,0%,.025) 5px,hsla(0,0%,0%,.025) 10px) hsla(203,11%,95%,.8);text-align:center;text-transform:uppercase;letter-spacing:.5px;font-weight:601;font-size:8px;border-top-left-radius:4px;line-height:1}@media only screen and (min-width:320px) and (max-width:759px){.carbon-text{font-size:14px}}
+     </style>
+
+    <!-- Generated using https://dns-prefetch-generator.github.io/ -->
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="dns-prefetch" href="//www.googletagservices.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//c.amazon-adsystem.com" />
+    <link rel="dns-prefetch" href="//dsh7ky7308k4b.cloudfront.net" />
+    <link rel="dns-prefetch" href="//securepubads.g.doubleclick.net" />
+    <link rel="dns-prefetch" href="//adservice.google.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
+    <link rel="stylesheet" href="playground.css?v=1fsaf" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  </head>
+
+  <body>
+    <!-- <select id="language-changer"></select> -->
+    <div class="container" id="root" data-lang="python">
+      <div class="spinner">
+        <div class="loader"><span>{</span><span>}</span></div>
+      </div>
+      <div class="mobile-nav-drawer">
+        <div class="nav-backdrop">
+        </div>
+        <div class="nav-menu">
+          <div class="nav-header-wrapper">
+              <div class="nav-logo-title-wrapper">
+                <a href="https://www.programiz.com/" target="_blank" class="nav-logo-link" >
+                  <img id="nav-logo" src="assets/logos/logo.svg" />
+                </a>
+              </div>
+            <button type="button" class="close-nav-btn" title="Close navigation">
+              <img class="svg" src="assets/icons/close.svg" />
+            </button>
+          </div>
+          <div class="nav-menu-list">
+            <a
+              target="_blank"
+              href="https://www.programiz.com/python-programming/online-compiler/"
+              class="change-lang-row python active"
+              title="Python Online Compiler"
+            >
+              <span class="change-lang-btn">
+                <img
+                  class="change-lang-btn-icon svg"
+                  src="assets/icons/python.svg"
+                />
+              </span>
+              <span class="nav-menu-text">
+                Python Online Compiler
+              </span>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.programiz.com/c-programming/online-compiler/"
+              class="change-lang-row c "
+              title="C Online Compiler"
+            >
+              <span class="change-lang-btn">
+                <img
+                  class="change-lang-btn-icon svg"
+                  src="assets/icons/c.svg"
+                />
+              </span>
+              <span class="nav-menu-text">
+                C Online Compiler
+              </span>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.programiz.com/cpp-programming/online-compiler/"
+              class="change-lang-row cpp "
+              title="C++ Online Compiler"
+            >
+              <span class="change-lang-btn">
+                <img
+                  class="change-lang-btn-icon svg"
+                  src="assets/icons/cpp.svg"
+                />
+              </span>
+              <span class="nav-menu-text">
+                C++ Online Compiler
+              </span>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.programiz.com/java-programming/online-compiler/"
+              class="change-lang-row java "
+              title="Java Online Compiler"
+            >
+              <span class="change-lang-btn">
+                <img
+                  class="change-lang-btn-icon svg"
+                  src="assets/icons/java.svg"
+                />
+              </span>
+              <span class="nav-menu-text">
+                Java Online Compiler
+              </span>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.programiz.com/csharp-programming/online-compiler/"
+              class="change-lang-row csharp "
+              title="C# Online Compiler"
+            >
+              <span class="change-lang-btn">
+                <img
+                  class="change-lang-btn-icon svg"
+                  src="assets/icons/csharp.svg"
+                />
+              </span>
+              <span class="nav-menu-text">
+                C# Online Compiler
+              </span>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.programiz.com/javascript/online-compiler/"
+              class="change-lang-row javascript "
+              title="JavaScript Online Compiler (Editor)"
+            >
+              <span class="change-lang-btn">
+                <img
+                  class="change-lang-btn-icon svg"
+                  src="assets/icons/javascript.svg"
+                />
+              </span>
+              <span class="nav-menu-text">
+                JavaScript Online Compiler
+              </span>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.programiz.com/sql/online-compiler/"
+              class="change-lang-row sql"
+              title="SQL Online Editor"
+            >
+              <span class="change-lang-btn">
+                <img
+                  class="change-lang-btn-icon svg"
+                  src="assets/icons/sql.svg"
+                />
+              </span>
+              <span class="nav-menu-text">
+                SQL Online Editor
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+                <div class="header">
+          <div class="header-wrapper">
+            <div class="burger-menu">
+              <button type="button" class="burger-menu-btn" title="Open navigation">
+                <img class="svg burger-menu-btn-icon" src="assets/icons/burger.svg" />
+              </button>
+            </div>
+            <div class="logo-wrapper">
+              <h1 class="logo-title-wrapper">
+                <a href="https://www.programiz.com/" target="_blank" class="logo-link" >
+                  <img id="logo" src="assets/logos/logo.svg" />
+                  <span class="logo-sub-title-wrapper">
+                    <span class="logo-sub-title">Python Online Compiler</span>
+                  </span>
+                </a>
+              </h1>
+            </div>
+          </div>
+          <div class="compiler-header-ad">
+            <div id="div-gpt-ad-Programizcom36786" class="content-top-ad">
+            </div>
+
+            <!-- buysell ads -->
+                <div class="compiler-header-ad" id="carbon-block"></div>
+
+          </div>
+          <div id="add-replacement"></div>
+          <div id="feedback-desktop">
+            <a id="ad-link"
+              >&nbsp;Learn Python App</a
+            >
+          </div>
+          <div id="feedback-mobile">
+            <a id="mobile-ad-link"
+              >&nbsp;Learn Python</a>
+          </div>
+        </div>
+        <div class="mobile-top-bar clearfix">
+          <div class="options-wrapper">
+            <div id="back-button" class="options-item-wrapper clearfix">
+              <img class="svg options-item" src="assets/icons/back-arrow.svg" />
+            </div>
+          </div>
+          <div class="pills-wrapper">
+            <div class="pills clearfix">
+              <button class="pill active compiler-pill">
+                main.py              </button>
+              <button class="pill shell-pill">
+                Shell              </button>
+            </div>
+          </div>
+          <div class="other-options-wrapper">
+            <!-- <div id="feedback-mobile" class="options-item-wrapper">
+              <a href="https://programiz.com/contact" class="options-item">
+                <img class="svg" src="assets/icons/message-square.svg" />
+              </a>
+            </div> -->
+            <div
+              id="toggle-dark-mode-mobile"
+              class="options-item-wrapper clearfix"
+            >
+              <img
+                class="toggle-dark-mode-mobile-icon moon svg options-item"
+                src="assets/icons/moon.svg"
+              />
+              <img
+                class="toggle-dark-mode-mobile-icon sun svg options-item"
+                src="assets/icons/sun.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-wrapper">
+          <a
+            target="_blank"
+            href="https://www.programiz.com/python-programming/online-compiler/"
+            class="change-lang-btn python active"
+            title="Online Python Compiler"
+          >
+            <img
+              class="change-lang-btn-icon svg"
+              src="assets/icons/python.svg"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.programiz.com/c-programming/online-compiler/"
+            class="change-lang-btn c "
+            title="Online C Compiler"
+          >
+            <img
+              class="change-lang-btn-icon svg"
+              src="assets/icons/c.svg"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.programiz.com/cpp-programming/online-compiler/"
+            class="change-lang-btn cpp "
+            title="Online C++ Compiler"
+          >
+            <img
+              class="change-lang-btn-icon svg"
+              src="assets/icons/cpp.svg"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.programiz.com/java-programming/online-compiler/"
+            class="change-lang-btn java "
+            title="Online Java Compiler"
+          >
+            <img
+              class="change-lang-btn-icon svg"
+              src="assets/icons/java.svg"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.programiz.com/csharp-programming/online-compiler/"
+            class="change-lang-btn csharp "
+            title="Online C# Compiler"
+          >
+            <img
+              class="change-lang-btn-icon svg"
+              src="assets/icons/csharp.svg"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.programiz.com/javascript/online-compiler/"
+            class="change-lang-btn javascript "
+            title="Online JavaScript Compiler (Editor)"
+          >
+            <img
+              class="change-lang-btn-icon svg"
+              src="assets/icons/javascript.svg"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.programiz.com/sql/online-compiler/"
+            class="change-lang-btn sql"
+            title="Online SQL Editor"
+          >
+            <img
+              class="change-lang-btn-icon svg"
+              src="assets/icons/sql.svg"
+            />
+          </a>
+        </div>
+        <div class="editor-wrapper">
+          <div class="editor-desktop-top-bar">
+            <div class="file-name">main.py</div>
+            <div class="desktop-top-bar__btn-wrapper">
+              <button
+                type="button"
+                id="toggle-expanded-mode-desktop"
+                title="Enter Fullscreen"
+              >
+                <img
+                  class="toggle-expanded-mode-mobile-icon expand svg"
+                  src="assets/icons/expand.svg"
+                />
+                <img
+                  class="toggle-expanded-mode-mobile-icon minimize hidden svg"
+                  src="assets/icons/minimize.svg"
+                />
+              </button>
+              <button type="button" id="toggle-dark-mode-desktop" title="Toggle dark mode">
+                <img
+                  class="toggle-dark-mode-mobile-icon moon svg"
+                  src="assets/icons/moon.svg"
+                />
+                <img
+                  class="toggle-dark-mode-mobile-icon sun svg"
+                  src="assets/icons/sun.svg"
+                />
+              </button>
+              <button class="desktop-run-button run">
+                &nbsp;Run&nbsp;
+              </button>
+            </div>
+          </div>
+          <button class="mobile-run-button run">
+            Run
+          </button>
+          <div id="editor"># Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+print("Hello world")</div>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-desktop-top-bar">
+            <div class="shell-name">
+              Shell            </div>
+            <div class="terminal-desktop-top-bar__btn-wrapper">
+              <button class="desktop-clear-button">
+                  &nbsp;Clear&nbsp;
+              </button>
+            </div>
+            <div class="pop-up" id="get-started-pop-up">
+              <div style="display: flex; justify-content: space-between;">
+                <div style="display: flex; flex-direction: column; gap: 1px; font-size: 18px; font-weight: 500;">
+                  <h4 style="margin: 0">üëã Introducing the most</h4>
+                  <div style="display: flex; gap: 4px;">
+                    <h4 style="margin: 0">interactive</h4>
+                    <h4 class="pop-up-coursename" style="color: #6539a8; margin: 0; display: inline">Python Course.</h4>
+                  </div>
+                  <h6 class="pop-up-subheading" style="margin:0; margin-top: 6px; color: #646476; font-size: 14px; font-weight: 400;">Learn practically and get certified.</h6>
+                </div>
+                <div class="close-icon-container">
+                  <button type="button"  class="close-pop-up-btn close-popup" title="Close Pop Up" style="margin: 0">
+                    <img class="svg-grey svg" src="assets/icons/close.svg" />
+                  </button>
+                </div>
+              </div>
+              <a id="pop-up-link" target="_blank" style="margin-top: 10px; text-decoration: none; color: #ffffff; border-radius: 4px;" class="desktop-get-started-anchor close-popup run">
+                &nbsp;Get Started!&nbsp;
+              </a>
+            </div>
+            <div class="summer-sale-popup" id="summer-sale-popup">
+              <div class="close-icon-container-summer-sale">
+                  <button type="button"  class="close-pop-up-btn close-sale-popup" title="Close Pop Up" style="margin: 0">
+                    <img class="svg-grey svg" src="assets/icons/big-close-icon.svg" />
+                  </button>
+              </div>
+              <div class="summer-sale-container">
+                <h3 id="summer-sale-description">üòé Summer Sale is here with <span>60% off</span> on PRO.</h3>
+                <h5>Learn practically and get certified.</h5>
+              </div>
+                <a href="https://programiz.pro/offer/summer-sale?utm_source=programiz-compiler-summer-sale&utm_campaign=programiz&utm_medium=referral" title="Programiz Pro Claim Discount" class="run" target="_blank">
+                  Claim Discount
+                </a>
+            </div>
+          </div>
+          <div id="terminal"></div>
+        </div>
+      </div>
+    </div>
+
+    <script defer type="text/javascript">
+
+      const lang = "python";
+
+      var playStoreUrl =
+          "https://play.google.com/store/apps/details?id=com.programiz.learnpython",
+        appStoreUrl =
+          "https://apps.apple.com/app/apple-store/id1472188189?pt=120228772",
+        desktopUrl = "https://www.programiz.com/learn-python";
+
+      var os, a;
+
+      a = document.getElementById("ad-link");
+      b = document.getElementById("mobile-ad-link");
+
+      let baseURL = "https://programiz.pro"
+
+      let utm = "utm_source=compiler-nav&utm_campaign=programiz&utm_medium=referral"
+
+      let uri = "learn"
+
+
+      let href = `${baseURL}/${uri}/master-python?${utm}`;
+
+      let app = "Python";
+
+      if(lang == 'c') {
+        href = `${baseURL}/${uri}/master-c-programming?${utm}`;
+        app = "C";
+      } else if(lang == 'java') {
+        href = `${baseURL}/${uri}/master-java?${utm}`;
+        app = "Java";
+      }
+
+      a.innerHTML = `Interactive ${app} Course`;
+      b.innerHTML = `${app} Course`;
+      a.href = href;
+      b.href = href;
+    </script>
+    <!-- The use of the cloudflare cdn for all external libraries is intential. We are trying to reduce the number
+         of DNS lookups.
+    -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+    ></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"
+    ></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+    <script defer src="build/final.js?v=resize-fixv3"></script>
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=UA-36675496-1"
+    ></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-36675496-1");
+    </script>
+  </body>
+</html>
+ªè\´c      bΩv£bΩ{dDq §bΩv§   i    O^partitionKey=%28https%2Cprogramiz.com%29,:https://www.programiz.com/python-programming/online-compiler/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/2 200 OK
+server: nginx/1.18.0 (Ubuntu)
+date: Thu, 30 Jun 2022 10:10:43 GMT
+content-type: text/html; charset=UTF-8
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+X-Firefox-Spdy: h2
+ original-response-headers server: nginx/1.18.0 (Ubuntu)
+date: Thu, 30 Jun 2022 10:10:43 GMT
+content-type: text/html; charset=UTF-8
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+X-Firefox-Spdy: h2
+ ctid 1 uncompressed-len 0 net-response-time-onstart 973 net-response-time-onstop 1176   SP
